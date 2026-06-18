@@ -1,0 +1,321 @@
+{
+  "_meta": {
+    "quarter": "Q2 2026",
+    "period": "Apr 1 – Jun 30",
+    "updated": "Jun 16",
+    "recruiters": "Andres Castaneda & Anabella Cordido"
+  },
+  "kpis": {
+    "hires": 1,
+    "hires_target": 5,
+    "avg_time_to_hire": 64,
+    "avg_time_to_hire_prev": 88,
+    "bench_time_to_hire": 44,
+    "open_roles": 13,
+    "offer_acceptance_pct": 100,
+    "offers_extended": 2,
+    "active_candidates": 108
+  },
+  "pipeline": {
+    "app_review": {
+      "count": 1156,
+      "avg_days": 11
+    },
+    "phone_screen": {
+      "count": 98,
+      "avg_days": 17
+    },
+    "onsite": {
+      "count": 9,
+      "avg_days": 32
+    },
+    "offer": {
+      "count": 1,
+      "avg_days": 4
+    },
+    "hired": {
+      "count": 1,
+      "avg_days": 0
+    }
+  },
+  "passthrough": {
+    "app_to_phone": 8,
+    "phone_to_onsite": 9,
+    "onsite_to_offer": 11,
+    "offer_to_hired": 100
+  },
+  "outreach": [
+    {
+      "month": "June 2026",
+      "sent": 657,
+      "open_pct": 70,
+      "reply_pct": 8,
+      "interested_pct": 4,
+      "trending": "down"
+    },
+    {
+      "month": "May 2026",
+      "sent": 978,
+      "open_pct": 78,
+      "reply_pct": 13,
+      "interested_pct": 6,
+      "trending": null
+    },
+    {
+      "month": "April 2026",
+      "sent": 85,
+      "open_pct": 85,
+      "reply_pct": 13,
+      "interested_pct": 7,
+      "trending": null
+    }
+  ],
+  "recruiter_tth": [
+    {
+      "name": "Andres",
+      "days": 63,
+      "hires": 8
+    },
+    {
+      "name": "Anabella",
+      "days": 83,
+      "hires": 1
+    }
+  ],
+  "flags": [
+    {
+      "color": "red",
+      "title": "BI Data Scientist — needs team decision",
+      "body": "Open since July 2025 (11+ months). 755 applicants reviewed, 2 prior offers declined. Current candidates Sohan & Yufei in deep dive. Team needs to meet and realign scope before the search can close."
+    },
+    {
+      "color": "yellow",
+      "title": "Onsite stage averages 32 days — scheduling bottleneck",
+      "body": "The longest stage in the process and the main driver of our 64-day TTH vs. 44-day industry benchmark. Recommend setting a 14-day target for onsite scheduling and identifying which roles have recurring delays."
+    },
+    {
+      "color": "yellow",
+      "title": "Outreach interested rate declining month over month",
+      "body": "April 7% → May 6% → June 4%, despite open rates holding at 70–85%. High visibility but low conversion. Consider refreshing sequence copy and tightening ICP targeting, especially for tech roles."
+    },
+    {
+      "color": "green",
+      "title": "Strong Q2 finish — 180% of target, TTH improved 24 days",
+      "body": "9 hires against a target of 5. Offer acceptance at 89%. Recent accepted offers: Rafe (Lead Designer, signed), Amy (Social Media Manager, offer out), Aaron (Agentic Systems, offer out), Danny Smith (Finance & Biz Ops, near offer)."
+    }
+  ],
+  "roles": [
+    {
+      "title": "Backend Go Engineer — T&S",
+      "meta": "R33 · Andres · Hiring 1",
+      "priority": "high",
+      "stages": [
+        {
+          "label": "Screen 4",
+          "type": "default"
+        },
+        {
+          "label": "HM 2",
+          "type": "default"
+        },
+        {
+          "label": "PP 1",
+          "type": "default"
+        }
+      ],
+      "status": "at-risk",
+      "status_label": "At risk",
+      "note": "Comp needs increase to IC4–IC5. Sydney Klei promising — move forward if team agrees on range."
+    },
+    {
+      "title": "Fullstack TS Engineer — T&S",
+      "meta": "R34 · Anabella · Hiring 2",
+      "priority": "high",
+      "stages": [
+        {
+          "label": "Screen 3",
+          "type": "default"
+        },
+        {
+          "label": "HM 2",
+          "type": "default"
+        }
+      ],
+      "status": "progress",
+      "status_label": "In progress",
+      "note": "Anabella prioritizing. No candidates in pair programming yet — next threshold to hit."
+    },
+    {
+      "title": "ML Engineer",
+      "meta": "R21 · Andres · 2 of 5 remaining",
+      "priority": "high",
+      "stages": [
+        {
+          "label": "Screen 12",
+          "type": "default"
+        },
+        {
+          "label": "PP 1",
+          "type": "default"
+        },
+        {
+          "label": "DD 1",
+          "type": "dd"
+        }
+      ],
+      "status": "progress",
+      "status_label": "In progress",
+      "note": "Maxwell in pair programming with Ian. Sahil in deep dive. Strong pipeline depth."
+    },
+    {
+      "title": "BI Data Scientist",
+      "meta": "R31 · Andres · Open Jul '25",
+      "priority": "high",
+      "stages": [
+        {
+          "label": "DD 2",
+          "type": "dd"
+        }
+      ],
+      "status": "blocked",
+      "status_label": "Blocked",
+      "note": "Team meeting to align on scope before proceeding. Sohan & Yufei in DD. Rishav on hold. 2 prior offers fell through."
+    },
+    {
+      "title": "Finance & Business Ops Lead",
+      "meta": "R53 · Andres · Hiring 1",
+      "priority": "high",
+      "stages": [
+        {
+          "label": "HM 1",
+          "type": "default"
+        },
+        {
+          "label": "Take home 2",
+          "type": "default"
+        },
+        {
+          "label": "DD 2",
+          "type": "dd"
+        }
+      ],
+      "status": "near-offer",
+      "status_label": "Near offer",
+      "note": "Danny Smith trial day Tue. Potential offer as early as this week."
+    },
+    {
+      "title": "VP of Engineering",
+      "meta": "Andres · Hiring 1",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "Exec 3",
+          "type": "default"
+        },
+        {
+          "label": "HM 1",
+          "type": "default"
+        }
+      ],
+      "status": "progress",
+      "status_label": "In progress",
+      "note": "Michi meeting with Jay & Rose this week. Annop trial day Tue. Decision likely within 2 weeks."
+    },
+    {
+      "title": "Sr Product Engineer, Agentic",
+      "meta": "R49 · Andres · Hiring 1",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "Offer 1",
+          "type": "offer"
+        }
+      ],
+      "status": "offer",
+      "status_label": "Offer out 🎉",
+      "note": "Aaron offer extended. Awaiting response."
+    },
+    {
+      "title": "Sports Partnership Manager",
+      "meta": "R47 · Andres · Hiring 1",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "Screen 2",
+          "type": "default"
+        },
+        {
+          "label": "DD 3",
+          "type": "dd"
+        }
+      ],
+      "status": "progress",
+      "status_label": "In progress",
+      "note": "Mary, Patrick, Brooklyn in deep dive. Decision expected soon."
+    },
+    {
+      "title": "Lead Product Designer",
+      "meta": "R51 · Andres · Hiring 1",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "Screen 2",
+          "type": "default"
+        },
+        {
+          "label": "HM 1",
+          "type": "default"
+        }
+      ],
+      "status": "signed",
+      "status_label": "Signed 🎉",
+      "note": "Rafe contract signed. Needs Rose countersignature. Role closing."
+    },
+    {
+      "title": "Social Media Manager",
+      "meta": "R59 · Andres · Hiring 1",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "Take home 2",
+          "type": "default"
+        },
+        {
+          "label": "HM 2",
+          "type": "default"
+        }
+      ],
+      "status": "offer",
+      "status_label": "Offer out 🎉",
+      "note": "Amy — extending offer. Working on rate & contract terms."
+    },
+    {
+      "title": "Staff Fullstack Eng, App Team",
+      "meta": "R52 · Anabella · Hiring 1",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "—",
+          "type": "default"
+        }
+      ],
+      "status": "new",
+      "status_label": "Just kicked off",
+      "note": "Anabella ramping sourcing. Building pipeline."
+    },
+    {
+      "title": "Senior SRE, Platform",
+      "meta": "Andres · Hiring 1",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "—",
+          "type": "default"
+        }
+      ],
+      "status": "new",
+      "status_label": "Kickoff this week",
+      "note": "Kickoff this week. JD and intake in progress."
+    }
+  ]
+}
