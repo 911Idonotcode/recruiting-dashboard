@@ -23,19 +23,17 @@ jobs:
       - name: Import Gem pipeline CSV
         if: ${{ hashFiles('gem-exports/pipeline.csv') != '' }}
         run: node scripts/gem-import.js --pipeline gem-exports/pipeline.csv
-        working-directory: hiring-tracker
 
       - name: Import Gem outreach CSV
         if: ${{ hashFiles('gem-exports/outreach.csv') != '' }}
         run: node scripts/gem-import.js --outreach gem-exports/outreach.csv
-        working-directory: hiring-tracker
 
       # Commit updated data.json back if the import changed it
       - name: Commit updated data files
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add hiring-tracker/data.js hiring-tracker/data.json
+          git add data.js data.json
           git diff --cached --quiet || git commit -m "chore: auto-update data.json from Gem export [skip ci]"
           git push
         continue-on-error: true   # no-op if nothing changed
@@ -46,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: hiring-tracker
+          path: .
 
       - id: deploy
         name: Deploy to GitHub Pages
