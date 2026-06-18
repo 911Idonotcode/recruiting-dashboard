@@ -41,8 +41,8 @@
     @media (max-width: 480px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
     .kpi-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
     .kpi-label { font-size: 13px; color: var(--text-3); font-weight: 500; letter-spacing: 0.02em; margin-bottom: 5px; }
-    .kpi-value { font-size: 31px; font-weight: 600; line-height: 1; letter-spacing: -0.5px; }
-    .kpi-value.green { color: var(--green); }
+    .kpi-value { font-size: 31px; font-weight: 600; line-height: 1; letter-spacing: -0.5px; color: var(--blue); }
+    .kpi-value.green { color: var(--blue); }
     .kpi-value.blue { color: var(--blue); }
     .kpi-value .unit { font-size: 17px; font-weight: 400; color: var(--text-3); margin-left: 2px; }
     .kpi-sub { font-size: 13px; color: var(--text-3); margin-top: 5px; }
@@ -56,6 +56,7 @@
     .bar-track { flex: 1; background: var(--bg-3); border-radius: 3px; height: 18px; overflow: hidden; }
     .bar-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; min-width: 24px; }
     .bar-fill-val { font-size: 13px; font-weight: 500; color: #fff; white-space: nowrap; }
+    .bar-outside-val { font-size: 13px; font-weight: 500; color: var(--text-2); white-space: nowrap; margin-left: 6px; }
     .bar-fill.blue { background: var(--blue); }
     .bar-fill.green { background: var(--green); }
     .bar-fill.muted { background: var(--bg-3); border: 1px solid var(--border); }
@@ -188,11 +189,13 @@ function ptColor(pct, goodThreshold, warnThreshold) {
 }
 
 function bar(label, pct, color, val) {
+  const inside = pct >= 20;
   return `<div class="bar-row">
     <span class="bar-label">${label}</span>
-    <div class="bar-track"><div class="bar-fill ${color}" style="width:${pct}%">
-      <span class="bar-fill-val">${val}</span>
+    <div class="bar-track"><div class="bar-fill ${color}" style="width:${Math.max(pct,3)}%">
+      ${inside ? `<span class="bar-fill-val">${val}</span>` : ''}
     </div></div>
+    ${!inside ? `<span class="bar-outside-val">${val}</span>` : ''}
   </div>`;
 }
 
@@ -293,7 +296,7 @@ function render(d) {
           <div class="chart-card">
             <div class="chart-card-title">Candidates by stage</div>
             <div class="bar-chart">
-              ${pipelineStages.map((s,i) => bar(s.label, s.pct, i >= 3 ? 'green' : 'blue', i === 0 ? s.count.toLocaleString() : '')).join('')}
+              ${pipelineStages.map((s,i) => bar(s.label, s.pct, i >= 3 ? 'green' : 'blue', s.count.toLocaleString())).join('')}
             </div>
             <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-3); margin-top:4px; padding-left:120px;">
               <span>Phone screen: <strong style="color:var(--text-2)">${p.phone_screen.count}</strong></span>
