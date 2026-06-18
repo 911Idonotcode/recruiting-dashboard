@@ -3,977 +3,630 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bluesky Recruiting Dashboard · Q2 2026</title>
+  <title>Bluesky Recruiting Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #ffffff;
-      --bg-2: #f7f8fa;
-      --bg-3: #eef0f4;
-      --text-1: #0f1117;
-      --text-2: #4a5061;
-      --text-3: #8891a5;
-      --border: rgba(0,0,0,0.08);
+      --bg-2: #F9FAFB;
+      --bg-3: #F0F6FF;
+      --text-1: #232E3E;
+      --text-2: #8492A6;
+      --text-3: #8492A6;
+      --border: #E0E4EA;
       --blue: #0560FF;
-      --blue-light: #e8f0ff;
-      --green: #1a9e6e;
-      --green-light: #e4f7f0;
-      --yellow: #b86e00;
-      --yellow-light: #fff4e0;
-      --red: #c0392b;
-      --red-light: #fdecea;
-      --radius: 10px;
-      --radius-sm: 6px;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f1117;
-        --bg-2: #1a1d26;
-        --bg-3: #252836;
-        --text-1: #f0f2f7;
-        --text-2: #9aa0b5;
-        --text-3: #5c6278;
-        --border: rgba(255,255,255,0.08);
-        --blue: #4d8eff;
-        --blue-light: #0d1e3d;
-        --green: #25c28a;
-        --green-light: #0a2318;
-        --yellow: #e09500;
-        --yellow-light: #2a1f00;
-        --red: #e05c52;
-        --red-light: #2a1110;
-      }
+      --blue-dark: #0047D4;
+      --blue-light: #E8F4FF;
+      --green: #0560FF;
+      --green-light: #E8F4FF;
+      --yellow: #F5A623;
+      --yellow-light: #FFF8E6;
+      --red: #E5484D;
+      --red-light: #FFF0F0;
+      --radius: 12px;
+      --radius-sm: 8px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text-1);
-      font-size: 14px;
-      line-height: 1.5;
-    }
-    .page {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 32px 24px 64px;
-    }
-    /* Header */
-    .header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-    }
-    .header-left h1 {
-      font-size: 22px;
-      font-weight: 600;
-      letter-spacing: -0.3px;
-    }
-    .header-left p {
-      font-size: 13px;
-      color: var(--text-2);
-      margin-top: 3px;
-    }
-    .header-meta {
-      font-size: 12px;
-      color: var(--text-3);
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      padding: 6px 12px;
-      border-radius: var(--radius-sm);
-      white-space: nowrap;
-      align-self: flex-start;
-    }
-    /* Section */
-    .section {
-      margin-bottom: 28px;
-    }
-    .section-title {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      margin-bottom: 12px;
-    }
-    hr.div {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 28px 0;
-    }
-    /* KPI Cards */
-    .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-    }
-    @media (max-width: 780px) {
-      .kpi-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 480px) {
-      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    .kpi-card {
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 14px 16px;
-    }
-    .kpi-label {
-      font-size: 11px;
-      color: var(--text-3);
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      margin-bottom: 5px;
-    }
-    .kpi-value {
-      font-size: 26px;
-      font-weight: 600;
-      line-height: 1;
-      letter-spacing: -0.5px;
-    }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text-1); font-size: 17px; line-height: 1.5; }
+    .page { max-width: 1040px; margin: 0 auto; padding: 32px 24px 64px; }
+    .header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .header-left h1 { font-size: 31px; font-weight: 600; letter-spacing: -0.3px; }
+    .header-left p { font-size: 16px; color: var(--text-2); margin-top: 3px; }
+    .header-meta { font-size: 17px; color: var(--text-3); background: var(--bg-2); border: 1px solid var(--border); padding: 6px 12px; border-radius: var(--radius-sm); white-space: nowrap; align-self: flex-start; }
+    .section { margin-bottom: 28px; }
+    .section-title { font-size: 13px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-3); margin-bottom: 12px; }
+    hr.div { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+    @media (max-width: 780px) { .kpi-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 480px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+    .kpi-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+    .kpi-label { font-size: 13px; color: var(--text-3); font-weight: 500; letter-spacing: 0.02em; margin-bottom: 5px; }
+    .kpi-value { font-size: 31px; font-weight: 600; line-height: 1; letter-spacing: -0.5px; }
     .kpi-value.green { color: var(--green); }
     .kpi-value.blue { color: var(--blue); }
-    .kpi-value .unit {
-      font-size: 14px;
-      font-weight: 400;
-      color: var(--text-3);
-      margin-left: 2px;
-    }
-    .kpi-sub {
-      font-size: 11px;
-      color: var(--text-3);
-      margin-top: 5px;
-    }
-    /* Charts */
-    .chart-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    @media (max-width: 640px) {
-      .chart-grid { grid-template-columns: 1fr; }
-    }
-    .chart-card {
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-    }
-    .chart-card-title {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-2);
-      margin-bottom: 12px;
-    }
-    /* CSS bar chart */
+    .kpi-value .unit { font-size: 17px; font-weight: 400; color: var(--text-3); margin-left: 2px; }
+    .kpi-sub { font-size: 13px; color: var(--text-3); margin-top: 5px; }
+    .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 640px) { .chart-grid { grid-template-columns: 1fr; } }
+    .chart-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+    .chart-card-title { font-size: 17px; font-weight: 500; color: var(--text-2); margin-bottom: 12px; }
     .bar-chart { display: flex; flex-direction: column; gap: 8px; padding: 4px 0; }
     .bar-row { display: flex; align-items: center; gap: 10px; }
-    .bar-label { font-size: 12px; color: var(--text-2); width: 110px; flex-shrink: 0; text-align: right; }
+    .bar-label { font-size: 17px; color: var(--text-2); width: 110px; flex-shrink: 0; text-align: right; }
     .bar-track { flex: 1; background: var(--bg-3); border-radius: 3px; height: 18px; overflow: hidden; }
-    .bar-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; min-width: 24px; transition: width 0.4s ease; }
-    .bar-fill-val { font-size: 11px; font-weight: 500; color: #fff; white-space: nowrap; }
+    .bar-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; min-width: 24px; }
+    .bar-fill-val { font-size: 13px; font-weight: 500; color: #fff; white-space: nowrap; }
     .bar-fill.blue { background: var(--blue); }
     .bar-fill.green { background: var(--green); }
     .bar-fill.muted { background: var(--bg-3); border: 1px solid var(--border); }
     .bar-fill.muted .bar-fill-val { color: var(--text-3); }
     .bar-fill.warn { background: var(--yellow); }
-    .chart-note {
-      font-size: 11px;
-      color: var(--text-3);
-      margin-top: 10px;
-    }
+    .chart-note { font-size: 13px; color: var(--text-3); margin-top: 10px; }
     .chart-note .warn { color: var(--yellow); font-weight: 500; }
-    /* Passthrough rates */
-    .pt-rates {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      margin-top: 12px;
-    }
-    @media (max-width: 640px) {
-      .pt-rates { grid-template-columns: repeat(2, 1fr); }
-    }
-    .pt-cell {
-      text-align: center;
-      padding: 8px;
-      background: var(--bg-3);
-      border-radius: var(--radius-sm);
-    }
-    .pt-cell .pct {
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: -0.3px;
-    }
+    .pt-rates { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
+    @media (max-width: 640px) { .pt-rates { grid-template-columns: repeat(2, 1fr); } }
+    .pt-cell { text-align: center; padding: 8px; background: var(--bg-3); border-radius: var(--radius-sm); }
+    .pt-cell .pct { font-size: 22px; font-weight: 600; letter-spacing: -0.3px; }
     .pt-cell .pct.good { color: var(--green); }
     .pt-cell .pct.warn { color: var(--yellow); }
-    .pt-cell .pct.med { color: var(--blue); }
-    .pt-cell .label {
-      font-size: 10px;
-      color: var(--text-3);
-      margin-top: 2px;
-      line-height: 1.3;
-    }
-    /* Outreach */
-    .outreach-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    @media (max-width: 560px) {
-      .outreach-grid { grid-template-columns: 1fr; }
-    }
-    .outreach-card {
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 14px 16px;
-    }
-    .outreach-month {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--text-3);
-      margin-bottom: 6px;
-    }
-    .outreach-stat {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      padding: 3px 0;
-    }
+    .pt-cell .pct.med  { color: var(--blue); }
+    .pt-cell .label { font-size: 12px; color: var(--text-3); margin-top: 2px; line-height: 1.3; }
+    .outreach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px; }
+    @media (max-width: 560px) { .outreach-grid { grid-template-columns: 1fr; } }
+    .outreach-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+    .outreach-month { font-size: 13px; font-weight: 600; color: var(--text-3); margin-bottom: 6px; }
+    .outreach-stat { display: flex; justify-content: space-between; align-items: center; font-size: 17px; padding: 3px 0; }
     .outreach-stat .key { color: var(--text-2); }
     .outreach-stat .val { font-weight: 500; }
-    .outreach-stat .val.trending-down { color: var(--yellow); }
-    /* Role table */
-    .role-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .role-table th {
-      font-size: 11px;
-      font-weight: 500;
-      color: var(--text-3);
-      text-align: left;
-      padding: 7px 12px;
-      border-bottom: 1px solid var(--border);
-      white-space: nowrap;
-    }
-    .role-table td {
-      padding: 11px 12px;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-    .role-table tr:last-child td {
-      border-bottom: none;
-    }
-    .role-table tr:hover td {
-      background: var(--bg-2);
-    }
-    .role-name {
-      font-weight: 500;
-      font-size: 13px;
-    }
-    .role-meta {
-      font-size: 11px;
-      color: var(--text-3);
-      margin-top: 2px;
-    }
-    /* Stage pills */
-    .stage-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-    }
-    .stage-pill {
-      font-size: 11px;
-      background: var(--bg-3);
-      color: var(--text-2);
-      border-radius: 4px;
-      padding: 2px 7px;
-      white-space: nowrap;
-    }
+    .outreach-stat .val.trending-down { color: var(--red); }
+    .outreach-stat .val.trending-up   { color: #16a34a; }
+    .role-table { width: 100%; border-collapse: collapse; }
+    .role-table th { font-size: 13px; font-weight: 500; color: var(--text-3); text-align: left; padding: 7px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .role-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .role-table tr:last-child td { border-bottom: none; }
+    .role-table tr:hover td { background: var(--bg-2); }
+    .role-name { font-weight: 500; font-size: 16px; }
+    .role-meta { font-size: 13px; color: var(--text-3); margin-top: 2px; }
+    .date-edit-btn { background: none; border: none; cursor: pointer; font-size: 13px; padding: 0 2px; opacity: 0.4; line-height: 1; }
+    .date-edit-btn:hover { opacity: 1; }
+    .stage-row { display: flex; flex-wrap: wrap; gap: 4px; }
+    .stage-pill { font-size: 13px; background: var(--bg-3); color: var(--text-2); border-radius: 4px; padding: 2px 7px; white-space: nowrap; }
     .stage-pill.offer { background: var(--green-light); color: var(--green); }
-    .stage-pill.dd { background: var(--blue-light); color: var(--blue); }
-    /* Badges */
-    .badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 500;
-      padding: 2px 8px;
-      border-radius: 4px;
-      white-space: nowrap;
+    .stage-pill.dd    { background: var(--blue-light);  color: var(--blue);  }
+    .badge { font-size: 13px; font-weight: 500; padding: 3px 10px; border-radius: 20px; white-space: nowrap; display: inline-block; letter-spacing: 0.01em; }
+    .badge.high            { background: var(--red-light);    color: var(--red); }
+    .badge.normal          { background: var(--bg-2);         color: var(--text-2); border: 1px solid var(--border); }
+    .badge.status-risk     { background: var(--red-light);    color: var(--red); }
+    .badge.status-progress { background: var(--blue-light);   color: var(--blue); }
+    .badge.status-offer    { background: var(--blue-light);   color: var(--blue); }
+    .badge.status-signed   { background: var(--blue-light);   color: var(--blue); }
+    .badge.status-blocked  { background: var(--yellow-light); color: var(--yellow); }
+    .badge.status-new      { background: var(--bg-2);         color: var(--text-2); border: 1px solid var(--border); }
+    .role-note { font-size: 17px; color: var(--text-2); line-height: 1.5; cursor: text; }
+    .role-note:hover { background: var(--bg-2); border-radius: var(--radius-sm); }
+    .role-note textarea {
+      width: 100%; font: inherit; font-size: 17px; color: var(--text-2); line-height: 1.5;
+      border: 1px solid var(--blue); border-radius: var(--radius-sm); padding: 5px 7px;
+      background: var(--bg); resize: vertical; min-height: 56px; outline: none;
     }
-    .badge.high { background: var(--red-light); color: var(--red); }
-    .badge.normal { background: var(--bg-3); color: var(--text-3); }
-    .badge.status-offer { background: var(--green-light); color: var(--green); }
-    .badge.status-signed { background: var(--green-light); color: var(--green); }
-    .badge.status-progress { background: var(--blue-light); color: var(--blue); }
-    .badge.status-risk { background: var(--yellow-light); color: var(--yellow); }
-    .badge.status-blocked { background: var(--red-light); color: var(--red); }
-    .badge.status-new { background: var(--bg-3); color: var(--text-3); }
-    /* Notes */
-    .role-note {
-      font-size: 12px;
-      color: var(--text-2);
+    .priority-select, .headcount-select, .status-select {
+      font: inherit; font-size: 13px; font-weight: 500;
+      border: 1px solid var(--border); border-radius: 20px; padding: 3px 8px;
+      cursor: pointer; outline: none; appearance: none; -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238891a5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 6px center; padding-right: 20px;
     }
-    /* Flags */
-    .flag-list {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    .priority-select.priority-high   { background-color: var(--red-light);    color: var(--red);     border-color: var(--red-light); }
+    .priority-select.priority-normal { background-color: #dcfce7;              color: #16a34a;        border-color: #bbf7d0; }
+    .priority-select.priority-low    { background-color: var(--yellow-light);  color: var(--yellow);  border-color: var(--yellow-light); }
+    .headcount-select { background-color: var(--bg-2); color: var(--text-1); }
+    .status-select {
+      font: inherit; font-size: 13px; font-weight: 500;
+      border: 1px solid var(--border); border-radius: 20px; padding: 3px 8px;
+      cursor: pointer; outline: none; appearance: none; -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238891a5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 6px center; padding-right: 20px;
     }
-    .flag {
-      border-left: 3px solid;
-      padding: 10px 14px;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    .status-select.status-progress { background-color: var(--blue-light);   color: var(--blue);    border-color: var(--blue-light); }
+    .status-select.status-on-time  { background-color: var(--blue-light);   color: var(--blue);    border-color: var(--blue-light); }
+    .status-select.status-risk     { background-color: var(--red-light);    color: var(--red);     border-color: var(--red-light); }
+    .status-select.status-blocked  { background-color: var(--yellow-light); color: var(--yellow);  border-color: var(--yellow-light); }
+    .status-select.status-offer    { background-color: var(--blue-light);   color: var(--blue);    border-color: var(--blue-light); }
+    .status-select.status-signed   { background-color: var(--blue-light);   color: var(--blue);    border-color: var(--blue-light); }
+    .status-select.status-new      { background-color: var(--bg-2);         color: var(--text-2);  border-color: var(--border); }
+    .save-bar {
+      position: fixed; bottom: 20px; right: 20px; display: flex; gap: 8px; z-index: 100;
     }
-    .flag.red { border-color: var(--red); background: var(--red-light); }
-    .flag.yellow { border-color: var(--yellow); background: var(--yellow-light); }
-    .flag.green { border-color: var(--green); background: var(--green-light); }
-    .flag-title {
-      font-size: 13px;
-      font-weight: 500;
-      margin-bottom: 3px;
+    .save-btn {
+      font-size: 17px; font-weight: 500; padding: 8px 16px; border-radius: 20px;
+      border: 1px solid var(--border); cursor: pointer; background: #fff; color: var(--text-1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-family: inherit;
     }
-    .flag.red .flag-title { color: var(--red); }
+    .save-btn.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .save-btn.primary:hover { background: var(--blue-dark); border-color: var(--blue-dark); box-shadow: 0 2px 8px rgba(5,96,255,0.25); }
+    .save-btn:hover { background: var(--bg-2); }
+    .flag-list { display: flex; flex-direction: column; gap: 10px; }
+    .flag { border-radius: var(--radius); padding: 14px 16px; border-left: 3px solid transparent; }
+    .flag.red    { background: var(--red-light);    border-color: var(--red); }
+    .flag.yellow { background: var(--yellow-light); border-color: var(--yellow); }
+    .flag.green  { background: var(--green-light);  border-color: var(--green); }
+    .flag-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+    .flag.red    .flag-title { color: var(--red); }
     .flag.yellow .flag-title { color: var(--yellow); }
-    .flag.green .flag-title { color: var(--green); }
-    .flag-body {
-      font-size: 12px;
-      color: var(--text-2);
-    }
-    /* Edit mode */
-    .edit-btn {
-      font-size: 12px;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border);
-      background: var(--bg-2);
-      color: var(--text-2);
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .edit-btn:hover { background: var(--bg-3); }
-    .edit-btn.active {
-      background: var(--blue);
-      color: #fff;
-      border-color: var(--blue);
-    }
-    .edit-banner {
-      display: none;
-      font-size: 12px;
-      color: var(--blue);
-      background: var(--blue-light);
-      border: 1px solid var(--blue);
-      border-radius: var(--radius-sm);
-      padding: 7px 14px;
-      margin-bottom: 16px;
-    }
-    body.editing .edit-banner { display: block; }
-    /* Make editable cells obvious in edit mode */
-    body.editing [contenteditable="true"] {
-      outline: 1.5px dashed var(--blue);
-      border-radius: 4px;
-      padding: 3px 5px;
-      cursor: text;
-      min-width: 40px;
-      min-height: 1em;
-    }
-    body.editing [contenteditable="true"]:focus {
-      outline: 2px solid var(--blue);
-      background: var(--blue-light);
-    }
-    body.editing .stage-row { flex-wrap: wrap; gap: 4px; }
-    /* Footer */
-    .footer {
-      margin-top: 40px;
-      font-size: 11px;
-      color: var(--text-3);
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    /* Gem watermark */
-    .data-source {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      color: var(--text-3);
-      margin-top: 6px;
-    }
-    /* Tab navigation */
-    .tab-nav {
-      display: flex;
-      gap: 4px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 24px;
-    }
-    .tab {
-      font-size: 13px;
-      font-weight: 500;
-      padding: 8px 16px;
-      color: var(--text-3);
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -1px;
-      background: none;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      transition: color 0.15s;
-    }
+    .flag.green  .flag-title { color: var(--green); }
+    .flag-body { font-size: 17px; color: var(--text-2); line-height: 1.55; }
+    .footer { display: flex; gap: 20px; font-size: 13px; color: var(--text-3); flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border); }
+    .tab-nav { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+    .tab { font-size: 16px; font-weight: 500; padding: 8px 16px; color: var(--text-3); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; background: none; border-top: none; border-left: none; border-right: none; transition: color 0.15s; }
     .tab:hover { color: var(--text-2); }
-    .tab.active {
-      color: var(--blue);
-      border-bottom-color: var(--blue);
-    }
+    .tab.active { color: var(--blue); border-bottom-color: var(--blue); }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
+    #loading { text-align: center; padding: 80px 0; color: var(--text-3); font-size: 16px; }
   </style>
 </head>
 <body>
 <div class="page">
+  <div id="loading">Loading dashboard…</div>
+  <div id="app" style="display:none"></div>
+</div>
 
-  <!-- Header -->
-  <div class="header">
-    <div class="header-left">
-      <h1>Recruiting Dashboard</h1>
-      <p>Bluesky Social · 13 active searches · Andres Castaneda &amp; Anabella Cordido</p>
-    </div>
-    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-      <div class="header-meta" id="dateLabel" contenteditable="false">
-        Q2 2026 · Apr 1 – Jun 30 · Updated Jun 15
-      </div>
-      <button class="edit-btn" id="editBtn" onclick="toggleEdit()">✏ Edit</button>
-      <button class="edit-btn" id="copyBtn" onclick="copyHTML()">⬇ Copy HTML</button>
-    </div>
-  </div>
-
-  <div class="edit-banner" id="editBanner">
-    ✏ Edit mode on — click any dashed field to update it. When done, click <strong>Copy HTML</strong> to copy the updated file to your clipboard.
-  </div>
-
-  <!-- Tab nav -->
-  <div class="tab-nav">
-    <button class="tab active" onclick="showTab('executive',this)">Executive view</button>
-    <button class="tab" onclick="showTab('pipeline',this)">Pipeline detail</button>
-    <button class="tab" onclick="showTab('roles',this)">All roles</button>
-  </div>
-
-  <!-- ===================== EXECUTIVE TAB ===================== -->
-  <div class="tab-panel active" id="tab-executive">
-
-    <!-- KPIs -->
-    <div class="section">
-      <div class="section-title">Q2 at a glance</div>
-      <div class="kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-label">Q2 Hires</div>
-          <div class="kpi-value green">9 <span class="unit">/ 5</span></div>
-          <div class="kpi-sub">180% of target</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Avg Time to Hire</div>
-          <div class="kpi-value">64 <span class="unit">days</span></div>
-          <div class="kpi-sub">↓ 24d vs Q1 · bench 44d</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Open Roles</div>
-          <div class="kpi-value blue">13</div>
-          <div class="kpi-sub">Andres 13 · Anabella 8</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Offer Acceptance</div>
-          <div class="kpi-value green">89<span class="unit">%</span></div>
-          <div class="kpi-sub">11 extended · 8 hired</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Active Candidates</div>
-          <div class="kpi-value">93</div>
-          <div class="kpi-sub">2,227 in app review</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Charts -->
-    <div class="section">
-      <div class="section-title">Pipeline health</div>
-      <div class="chart-grid">
-        <div class="chart-card">
-          <div class="chart-card-title">Candidates by stage</div>
-          <div class="bar-chart">
-            <div class="bar-row">
-              <span class="bar-label">App review</span>
-              <div class="bar-track"><div class="bar-fill blue" style="width:100%"><span class="bar-fill-val">2,227</span></div></div>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Phone screen</span>
-              <div class="bar-track"><div class="bar-fill blue" style="width:9.7%"><span class="bar-fill-val"></span></div></div>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Onsite</span>
-              <div class="bar-track"><div class="bar-fill blue" style="width:2.2%"><span class="bar-fill-val"></span></div></div>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Offer</span>
-              <div class="bar-track"><div class="bar-fill green" style="width:0.5%"><span class="bar-fill-val"></span></div></div>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Hired</span>
-              <div class="bar-track"><div class="bar-fill green" style="width:0.36%"><span class="bar-fill-val"></span></div></div>
-            </div>
-          </div>
-          <!-- secondary labels since bars are tiny at bottom -->
-          <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-3); margin-top:4px; padding-left:120px;">
-            <span>Phone screen: <strong style="color:var(--text-2)">217</strong></span>
-            <span>Onsite: <strong style="color:var(--text-2)">48</strong></span>
-            <span>Offer: <strong style="color:var(--text-2)">11</strong></span>
-            <span>Hired: <strong style="color:var(--green)">8</strong></span>
-          </div>
-          <div class="chart-note">Outgoing passthrough rates shown below</div>
-          <div class="pt-rates">
-            <div class="pt-cell">
-              <div class="pct med">17%</div>
-              <div class="label">App → Phone screen</div>
-            </div>
-            <div class="pt-cell">
-              <div class="pct med">24%</div>
-              <div class="label">Phone → Onsite</div>
-            </div>
-            <div class="pt-cell">
-              <div class="pct warn">18%</div>
-              <div class="label">Onsite → Offer ⚠</div>
-            </div>
-            <div class="pt-cell">
-              <div class="pct good">89%</div>
-              <div class="label">Offer → Hired</div>
-            </div>
-          </div>
-        </div>
-        <div class="chart-card">
-          <div class="chart-card-title">Average days in stage</div>
-          <div class="bar-chart">
-            <div class="bar-row">
-              <span class="bar-label">App review</span>
-              <div class="bar-track"><div class="bar-fill blue" style="width:27.5%"><span class="bar-fill-val">11 days</span></div></div>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Phone screen</span>
-              <div class="bar-track"><div class="bar-fill blue" style="width:42.5%"><span class="bar-fill-val">17 days</span></div></div>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Onsite</span>
-              <div class="bar-track"><div class="bar-fill warn" style="width:80%"><span class="bar-fill-val">32 days</span></div></div>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Offer</span>
-              <div class="bar-track"><div class="bar-fill blue" style="width:10%"><span class="bar-fill-val">4 days</span></div></div>
-            </div>
-            <div class="bar-row">
-              <span class="bar-label">Hired</span>
-              <div class="bar-track"><div class="bar-fill muted" style="width:3%"><span class="bar-fill-val">0d</span></div></div>
-            </div>
-          </div>
-          <div class="chart-note"><span class="warn">⚠ Onsite stage averaging 32 days</span> — primary bottleneck. Faster scheduling would push time-to-hire toward industry benchmark (44d).</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Flags -->
-    <div class="section">
-      <div class="section-title">Key topics for discussion</div>
-      <div class="flag-list">
-        <div class="flag red">
-          <div class="flag-title">BI Data Scientist — needs team decision</div>
-          <div class="flag-body">Open since July 2025 (11+ months). 755 applicants reviewed, 2 prior offers declined. Current candidates Sohan &amp; Yufei in deep dive. Team needs to meet and realign scope before the search can close.</div>
-        </div>
-        <div class="flag yellow">
-          <div class="flag-title">Onsite stage averages 32 days — scheduling bottleneck</div>
-          <div class="flag-body">The longest stage in the process and the main driver of our 64-day TTH vs. 44-day industry benchmark. Recommend setting a 14-day target for onsite scheduling and identifying which roles have recurring delays.</div>
-        </div>
-        <div class="flag yellow">
-          <div class="flag-title">Outreach interested rate declining month over month</div>
-          <div class="flag-body">April 7% → May 6% → June 4%, despite open rates holding at 70–85%. High visibility but low conversion. Consider refreshing sequence copy and tightening ICP targeting, especially for tech roles.</div>
-        </div>
-        <div class="flag green">
-          <div class="flag-title">Strong Q2 finish — 180% of target, TTH improved 24 days</div>
-          <div class="flag-body">9 hires against a target of 5. Offer acceptance at 89%. Recent accepted offers: Rafe (Lead Designer, signed), Amy (Social Media Manager, offer out), Aaron (Agentic Systems, offer out), Danny Smith (Finance &amp; Biz Ops, near offer).</div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /executive tab -->
-
-  <!-- ===================== PIPELINE TAB ===================== -->
-  <div class="tab-panel" id="tab-pipeline">
-
-    <div class="section">
-      <div class="section-title">Q2 pipeline summary</div>
-      <div class="kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-label">App Review</div>
-          <div class="kpi-value">2,227</div>
-          <div class="kpi-sub">Avg 11 days</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Phone Screen</div>
-          <div class="kpi-value">217</div>
-          <div class="kpi-sub">Avg 17 days · 17% PT</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Onsite</div>
-          <div class="kpi-value">48</div>
-          <div class="kpi-sub">Avg 32 days · 24% PT</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Offer</div>
-          <div class="kpi-value">11</div>
-          <div class="kpi-sub">Avg 4 days · 18% PT</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Hired</div>
-          <div class="kpi-value green">8</div>
-          <div class="kpi-sub">89% offer acceptance</div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="div">
-
-    <div class="section">
-      <div class="section-title">Outreach performance</div>
-      <div class="outreach-grid">
-        <div class="outreach-card">
-          <div class="outreach-month">June 2026</div>
-          <div class="outreach-stat"><span class="key">Sent</span><span class="val">657</span></div>
-          <div class="outreach-stat"><span class="key">Open rate</span><span class="val">70%</span></div>
-          <div class="outreach-stat"><span class="key">Reply rate</span><span class="val">8%</span></div>
-          <div class="outreach-stat"><span class="key">Interested</span><span class="val trending-down">4% ↓</span></div>
-        </div>
-        <div class="outreach-card">
-          <div class="outreach-month">May 2026</div>
-          <div class="outreach-stat"><span class="key">Sent</span><span class="val">978</span></div>
-          <div class="outreach-stat"><span class="key">Open rate</span><span class="val">78%</span></div>
-          <div class="outreach-stat"><span class="key">Reply rate</span><span class="val">13%</span></div>
-          <div class="outreach-stat"><span class="key">Interested</span><span class="val">6%</span></div>
-        </div>
-        <div class="outreach-card">
-          <div class="outreach-month">April 2026</div>
-          <div class="outreach-stat"><span class="key">Sent</span><span class="val">85</span></div>
-          <div class="outreach-stat"><span class="key">Open rate</span><span class="val">85%</span></div>
-          <div class="outreach-stat"><span class="key">Reply rate</span><span class="val">13%</span></div>
-          <div class="outreach-stat"><span class="key">Interested</span><span class="val">7%</span></div>
-        </div>
-      </div>
-      <p style="font-size:12px; color: var(--text-3); margin-top: 4px;">April volume was low (85 sent), so rate comparison should be weighted against May/June. Trend direction still signals message fatigue.</p>
-    </div>
-
-    <hr class="div">
-
-    <div class="section">
-      <div class="section-title">Time to hire by recruiter</div>
-      <div class="kpi-grid" style="grid-template-columns: repeat(2,1fr); max-width: 360px;">
-        <div class="kpi-card">
-          <div class="kpi-label">Andres</div>
-          <div class="kpi-value">63 <span class="unit">days</span></div>
-          <div class="kpi-sub">8 hires Q2</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Anabella</div>
-          <div class="kpi-value">83 <span class="unit">days</span></div>
-          <div class="kpi-sub">1 hire Q2</div>
-        </div>
-      </div>
-      <p style="font-size:12px; color: var(--text-3); margin-top: 10px;">Anabella's TTH is based on 1 hire — not statistically meaningful yet. Watch as her pipeline matures in Q3.</p>
-    </div>
-
-  </div><!-- /pipeline tab -->
-
-  <!-- ===================== ROLES TAB ===================== -->
-  <div class="tab-panel" id="tab-roles">
-
-    <div class="section">
-      <div class="section-title">Active searches &nbsp;·&nbsp; 12 roles &nbsp;·&nbsp; Jun 15</div>
-      <table class="role-table">
-        <thead>
-          <tr>
-            <th style="width:28%">Role</th>
-            <th>Priority</th>
-            <th>Pipeline</th>
-            <th>Status</th>
-            <th style="width:32%">This week</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <!-- Priority roles -->
-          <tr>
-            <td>
-              <div class="role-name">Backend Go Engineer — T&S</div>
-              <div class="role-meta">R33 · Andres · Hiring 1</div>
-            </td>
-            <td><span class="badge high">High</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill">Screen 4</span>
-                <span class="stage-pill">HM 2</span>
-                <span class="stage-pill">PP 1</span>
-              </div>
-            </td>
-            <td><span class="badge status-risk">At risk</span></td>
-            <td class="role-note">Comp needs increase to IC4–IC5. Sydney Klei promising — move forward if team agrees on range.</td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="role-name">Fullstack TS Engineer — T&S</div>
-              <div class="role-meta">R34 · Anabella · Hiring 2</div>
-            </td>
-            <td><span class="badge high">High</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill">Screen 3</span>
-                <span class="stage-pill">HM 2</span>
-              </div>
-            </td>
-            <td><span class="badge status-progress">In progress</span></td>
-            <td class="role-note">Anabella prioritizing. No candidates in pair programming yet — next threshold to hit.</td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="role-name">ML Engineer</div>
-              <div class="role-meta">R21 · Andres · 2 of 5 remaining</div>
-            </td>
-            <td><span class="badge high">High</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill">Screen 12</span>
-                <span class="stage-pill">PP 1</span>
-                <span class="stage-pill dd">DD 1</span>
-              </div>
-            </td>
-            <td><span class="badge status-progress">In progress</span></td>
-            <td class="role-note">Maxwell in pair programming with Ian. Sahil in deep dive. Strong pipeline depth.</td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="role-name">BI Data Scientist</div>
-              <div class="role-meta">R31 · Andres · Open Jul '25</div>
-            </td>
-            <td><span class="badge high">High</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill dd">DD 2</span>
-              </div>
-            </td>
-            <td><span class="badge status-blocked">Blocked</span></td>
-            <td class="role-note">Team meeting to align on scope before proceeding. Sohan &amp; Yufei in DD. Rishav on hold. 2 prior offers fell through.</td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="role-name">Finance &amp; Business Ops Lead</div>
-              <div class="role-meta">R53 · Andres · Hiring 1</div>
-            </td>
-            <td><span class="badge high">High</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill">HM 1</span>
-                <span class="stage-pill">Take home 2</span>
-                <span class="stage-pill dd">DD 2</span>
-              </div>
-            </td>
-            <td><span class="badge status-offer">Near offer</span></td>
-            <td class="role-note">Danny Smith trial day Tue. Potential offer as early as this week.</td>
-          </tr>
-
-          <!-- Other active roles -->
-          <tr>
-            <td>
-              <div class="role-name">VP of Engineering</div>
-              <div class="role-meta">Andres · Hiring 1</div>
-            </td>
-            <td><span class="badge normal">Normal</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill">Exec 3</span>
-                <span class="stage-pill">HM 1</span>
-              </div>
-            </td>
-            <td><span class="badge status-progress">In progress</span></td>
-            <td class="role-note">Michi meeting with Jay &amp; Rose this week. Annop trial day Tue. Decision likely within 2 weeks.</td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="role-name">Sr Product Engineer, Agentic</div>
-              <div class="role-meta">R49 · Andres · Hiring 1</div>
-            </td>
-            <td><span class="badge normal">Normal</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill offer">Offer 1</span>
-              </div>
-            </td>
-            <td><span class="badge status-offer">Offer out 🎉</span></td>
-            <td class="role-note">Aaron offer extended. Awaiting response.</td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="role-name">Sports Partnership Manager</div>
-              <div class="role-meta">R47 · Andres · Hiring 1</div>
-            </td>
-            <td><span class="badge normal">Normal</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill">Screen 2</span>
-                <span class="stage-pill dd">DD 3</span>
-              </div>
-            </td>
-            <td><span class="badge status-progress">In progress</span></td>
-            <td class="role-note">Mary, Patrick, Brooklyn in deep dive. Decision expected soon.</td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="role-name">Lead Product Designer</div>
-              <div class="role-meta">R51 · Andres · Hiring 1</div>
-            </td>
-            <td><span class="badge normal">Normal</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill">Screen 2</span>
-                <span class="stage-pill">HM 1</span>
-              </div>
-            </td>
-            <td><span class="badge status-signed">Signed 🎉</span></td>
-            <td class="role-note">Rafe contract signed. Needs Rose countersignature. Role closing.</td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="role-name">Social Media Manager</div>
-              <div class="role-meta">R59 · Andres · Hiring 1</div>
-            </td>
-            <td><span class="badge normal">Normal</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill">Take home 2</span>
-                <span class="stage-pill">HM 2</span>
-              </div>
-            </td>
-            <td><span class="badge status-offer">Offer out 🎉</span></td>
-            <td class="role-note">Amy — extending offer. Working on rate &amp; contract terms.</td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="role-name">Staff Fullstack Eng, App Team</div>
-              <div class="role-meta">R52 · Anabella · Hiring 1</div>
-            </td>
-            <td><span class="badge normal">Normal</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill">—</span>
-              </div>
-            </td>
-            <td><span class="badge status-new">Just kicked off</span></td>
-            <td class="role-note">Anabella ramping sourcing. Building pipeline.</td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="role-name">Senior SRE, Platform</div>
-              <div class="role-meta">Andres · Hiring 1</div>
-            </td>
-            <td><span class="badge normal">Normal</span></td>
-            <td>
-              <div class="stage-row">
-                <span class="stage-pill">—</span>
-              </div>
-            </td>
-            <td><span class="badge status-new">Kickoff this week</span></td>
-            <td class="role-note">Kickoff this week. JD and intake in progress.</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-  </div><!-- /roles tab -->
-
-  <!-- Footer -->
-  <div class="footer">
-    <span>Data source: Gem ATS + weekly agenda</span>
-    <span>Q2: Apr 1 – Jun 30, 2026</span>
-    <span>Refresh: update weekly after Gem export</span>
-    <span style="margin-left:auto;">Bluesky Social PBC</span>
-  </div>
-
-</div><!-- /page -->
-
+<script src="data.js"></script>
 <script>
-  function showTab(id, el) {
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.getElementById('tab-' + id).classList.add('active');
-    el.classList.add('active');
-  }
+function loadData() {
+  return Promise.resolve(DASHBOARD_DATA);
+}
 
-  // Selectors for everything that can be edited
-  const EDITABLE = [
-    'td.role-note',          // "This week" column
-    '.stage-pill',           // stage counts (e.g. "Screen 4")
-    '.badge.status-risk, .badge.status-progress, .badge.status-offer, .badge.status-signed, .badge.status-blocked, .badge.status-new', // status badges only
-    '.kpi-value',            // KPI numbers
-    '.kpi-sub',              // KPI subtitles
-    '#dateLabel',            // date / quarter label
-  ].join(', ');
+function pct(color, value, label) {
+  return `<div class="pt-cell"><div class="pct ${color}">${value}%</div><div class="label">${label}</div></div>`;
+}
 
-  function toggleEdit() {
-    const editing = document.body.classList.toggle('editing');
-    const btn = document.getElementById('editBtn');
-    btn.textContent = editing ? '✓ Done editing' : '✏ Edit';
-    btn.classList.toggle('active', editing);
+function ptColor(pct, goodThreshold, warnThreshold) {
+  if (pct >= goodThreshold) return 'good';
+  if (pct >= warnThreshold) return 'med';
+  return 'warn';
+}
 
-    document.querySelectorAll(EDITABLE).forEach(el => {
-      el.contentEditable = editing ? 'true' : 'false';
+function bar(label, pct, color, val) {
+  return `<div class="bar-row">
+    <span class="bar-label">${label}</span>
+    <div class="bar-track"><div class="bar-fill ${color}" style="width:${pct}%">
+      <span class="bar-fill-val">${val}</span>
+    </div></div>
+  </div>`;
+}
+
+function stagePill(s) {
+  const cls = s.type === 'offer' ? 'offer' : s.type === 'dd' ? 'dd' : '';
+  return `<span class="stage-pill ${cls}">${esc(s.label)}</span>`;
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function render(d) {
+  const m = d._meta;
+  const k = d.kpis;
+  const p = d.pipeline;
+
+  const pctHires = Math.round((k.hires / k.hires_target) * 100);
+  const tthDelta = k.avg_time_to_hire_prev - k.avg_time_to_hire;
+  const maxPipelineCount = p.app_review.count;
+  const maxDays = 40;
+
+  // Pipeline bar widths
+  const pipelineStages = [
+    { label: 'App review',    count: p.app_review.count,   pct: 100 },
+    { label: 'Phone screen',  count: p.phone_screen.count, pct: Math.round(p.phone_screen.count / maxPipelineCount * 100 * 10) / 10 },
+    { label: 'Onsite',        count: p.onsite.count,        pct: Math.round(p.onsite.count / maxPipelineCount * 100 * 10) / 10 },
+    { label: 'Offer',         count: p.offer.count,         pct: Math.round(p.offer.count / maxPipelineCount * 100 * 10) / 10 },
+    { label: 'Hired',         count: p.hired.count,         pct: Math.round(p.hired.count / maxPipelineCount * 100 * 10) / 10 },
+  ];
+  const daysStages = [
+    { label: 'App review',   days: p.app_review.avg_days,  color: 'blue', pct: Math.round(p.app_review.avg_days / maxDays * 100) },
+    { label: 'Phone screen', days: p.phone_screen.avg_days, color: 'blue', pct: Math.round(p.phone_screen.avg_days / maxDays * 100) },
+    { label: 'Onsite',       days: p.onsite.avg_days,       color: p.onsite.avg_days > 25 ? 'warn' : 'blue', pct: Math.round(p.onsite.avg_days / maxDays * 100) },
+    { label: 'Offer',        days: p.offer.avg_days,        color: 'blue', pct: Math.round(p.offer.avg_days / maxDays * 100) },
+    { label: 'Hired',        days: p.hired.avg_days,        color: 'muted', pct: 3 },
+  ];
+
+  const pt = d.passthrough;
+  const roleCount = d.roles.length;
+
+  const html = `
+    <div class="header">
+      <div class="header-left" style="display:flex;align-items:center;gap:14px;">
+        <svg width="32" height="28" viewBox="0 0 568 501" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+          <path d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 388.56 473.333 453.32C353.473 576.312 301.061 422.461 287.631 383.039C285.169 375.812 284.017 372.431 284 375.306C283.983 372.431 282.831 375.812 280.369 383.039C266.939 422.461 214.527 576.312 94.6667 453.32C31.5556 388.56 60.7778 323.8 175.653 304.249C109.933 315.434 36.0535 296.954 15.7778 224.501C9.94525 203.659 0 75.2916 0 57.9464C0 -28.9064 76.1345 -1.61183 123.121 33.6637Z" fill="#0560FF"/>
+        </svg>
+        <div>
+          <h1>Recruiting Dashboard</h1>
+          <p>Bluesky Recruiting Team · ${roleCount} active searches</p>
+        </div>
+      </div>
+      <div class="header-meta">${esc(m.period_label || m.quarter + ' · ' + m.period)} · Updated ${esc(m.updated)}</div>
+    </div>
+
+    <div class="tab-nav">
+      <button class="tab active" onclick="showTab('executive',this)">Executive view</button>
+      <button class="tab" onclick="showTab('pipeline',this)">Pipeline detail</button>
+      <button class="tab" onclick="showTab('roles',this)">All roles</button>
+    </div>
+
+    <!-- EXECUTIVE TAB -->
+    <div class="tab-panel active" id="tab-executive">
+      <div class="section">
+        <div class="section-title">Q2 at a glance</div>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-label">Q2 Hires</div>
+            <div class="kpi-value green">${k.hires} <span class="unit">/ ${k.hires_target}</span></div>
+            <div class="kpi-sub">${pctHires}% of target</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Avg Time to Hire</div>
+            <div class="kpi-value">${k.avg_time_to_hire} <span class="unit">days</span></div>
+            <div class="kpi-sub">↓ ${tthDelta}d vs Q1 · bench ${k.bench_time_to_hire}d</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Open Roles</div>
+            <div class="kpi-value blue">${k.open_roles}</div>
+            <div class="kpi-sub">${roleCount} active searches</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Offer Acceptance</div>
+            <div class="kpi-value green">${k.offer_acceptance_pct}<span class="unit">%</span></div>
+            <div class="kpi-sub">${k.offers_extended} extended · ${k.hires} hired</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Active Candidates</div>
+            <div class="kpi-value">${k.active_candidates}</div>
+            <div class="kpi-sub">${p.app_review.count.toLocaleString()} in app review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Pipeline health</div>
+        <div class="chart-grid">
+          <div class="chart-card">
+            <div class="chart-card-title">Candidates by stage</div>
+            <div class="bar-chart">
+              ${pipelineStages.map((s,i) => bar(s.label, s.pct, i >= 3 ? 'green' : 'blue', i === 0 ? s.count.toLocaleString() : '')).join('')}
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-3); margin-top:4px; padding-left:120px;">
+              <span>Phone screen: <strong style="color:var(--text-2)">${p.phone_screen.count}</strong></span>
+              <span>Onsite: <strong style="color:var(--text-2)">${p.onsite.count}</strong></span>
+              <span>Offer: <strong style="color:var(--text-2)">${p.offer.count}</strong></span>
+              <span>Hired: <strong style="color:var(--green)">${p.hired.count}</strong></span>
+            </div>
+            <div class="chart-note">Outgoing passthrough rates shown below</div>
+            <div class="pt-rates">
+              ${pct(ptColor(pt.app_to_phone, 30, 15), pt.app_to_phone, 'App → Phone screen')}
+              ${pct(ptColor(pt.phone_to_onsite, 35, 20), pt.phone_to_onsite, 'Phone → Onsite')}
+              ${pct(pt.onsite_to_offer < 20 ? 'warn' : 'med', pt.onsite_to_offer, 'Onsite → Offer' + (pt.onsite_to_offer < 20 ? ' ⚠' : ''))}
+              ${pct(pt.offer_to_hired >= 80 ? 'good' : 'warn', pt.offer_to_hired, 'Offer → Hired')}
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-title">Average days in stage</div>
+            <div class="bar-chart">
+              ${daysStages.map(s => bar(s.label, s.pct, s.color, s.days > 0 ? s.days + ' days' : '0d')).join('')}
+            </div>
+            <div class="chart-note">${p.onsite.avg_days > 25 ? `<span class="warn">⚠ Onsite stage averaging ${p.onsite.avg_days} days</span> — primary bottleneck.` : `Onsite stage: ${p.onsite.avg_days} days.`} Faster scheduling would push time-to-hire toward industry benchmark (${k.bench_time_to_hire}d).</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Key topics for discussion</div>
+        <div class="flag-list">
+          ${d.flags.map(f => `
+            <div class="flag ${f.color}">
+              <div class="flag-title">${esc(f.title)}</div>
+              <div class="flag-body">${esc(f.body)}</div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>
+
+    <!-- PIPELINE TAB -->
+    <div class="tab-panel" id="tab-pipeline">
+      <div class="section">
+        <div class="section-title">Q2 pipeline summary</div>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-label">App Review</div>
+            <div class="kpi-value">${p.app_review.count.toLocaleString()}</div>
+            <div class="kpi-sub">Avg ${p.app_review.avg_days} days</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Phone Screen</div>
+            <div class="kpi-value">${p.phone_screen.count}</div>
+            <div class="kpi-sub">Avg ${p.phone_screen.avg_days} days · ${pt.app_to_phone}% PT</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Onsite</div>
+            <div class="kpi-value">${p.onsite.count}</div>
+            <div class="kpi-sub">Avg ${p.onsite.avg_days} days · ${pt.phone_to_onsite}% PT</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Offer</div>
+            <div class="kpi-value">${p.offer.count}</div>
+            <div class="kpi-sub">Avg ${p.offer.avg_days} days · ${pt.onsite_to_offer}% PT</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Hired</div>
+            <div class="kpi-value">${p.hired.count}</div>
+            <div class="kpi-sub">${pt.offer_to_hired}% offer acceptance</div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="div">
+
+      <div class="section">
+        <div class="section-title">Outreach performance</div>
+        <div class="outreach-grid">
+          ${d.outreach.map(o => `
+            <div class="outreach-card">
+              <div class="outreach-month">${esc(o.month)}</div>
+              <div class="outreach-stat"><span class="key">Sent</span><span class="val">${o.sent.toLocaleString()}</span></div>
+              <div class="outreach-stat"><span class="key">Open rate</span><span class="val">${o.open_pct}%</span></div>
+              <div class="outreach-stat"><span class="key">Reply rate</span><span class="val">${o.reply_pct}%</span></div>
+              <div class="outreach-stat"><span class="key">Interested</span><span class="val${o.trending === 'down' ? ' trending-down' : o.trending === 'up' ? ' trending-up' : ''}">${o.interested_pct}%${o.trending === 'down' ? ' ↓' : o.trending === 'up' ? ' ↑' : ''}</span></div>
+            </div>`).join('')}
+        </div>
+        <p style="font-size:12px; color:var(--text-3); margin-top:4px;">April volume was low (${d.outreach[2]?.sent ?? 0} sent), so rate comparison should be weighted against May/June. Trend direction still signals message fatigue.</p>
+      </div>
+
+      <hr class="div">
+
+      <div class="section">
+        <div class="section-title">Time to hire by recruiter</div>
+        <div class="kpi-grid" style="grid-template-columns: repeat(2,1fr); max-width: 360px;">
+          ${d.recruiter_tth.map(r => `
+            <div class="kpi-card">
+              <div class="kpi-label">${esc(r.name)}</div>
+              <div class="kpi-value">${r.days} <span class="unit">days</span></div>
+              <div class="kpi-sub">${r.hires} hire${r.hires !== 1 ? 's' : ''} Q2</div>
+            </div>`).join('')}
+        </div>
+        ${d.recruiter_tth.some(r => r.hires === 1) ? `<p style="font-size:12px; color:var(--text-3); margin-top:10px;">${d.recruiter_tth.find(r => r.hires === 1)?.name}'s TTH is based on 1 hire — not statistically meaningful yet. Watch as their pipeline matures in Q3.</p>` : ''}
+      </div>
+    </div>
+
+    <!-- ROLES TAB -->
+    <div class="tab-panel" id="tab-roles">
+      <div class="section">
+        <div class="section-title">Active searches &nbsp;·&nbsp; ${roleCount} roles &nbsp;·&nbsp; ${esc(m.updated)}</div>
+        <table class="role-table">
+          <thead>
+            <tr>
+              <th style="width:26%">Role</th>
+              <th>Priority</th>
+              <th>Headcount</th>
+              <th>Pipeline</th>
+              <th>Status</th>
+              <th style="width:28%">This week</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${d.roles.map((r, i) => {
+              const daysOpen = r.date_opened ? Math.floor((Date.now() - new Date(r.date_opened)) / 86400000) : null;
+              const displayStatus = (r.status_overridden || daysOpen === null || daysOpen <= 75) ? r.status : 'risk';
+              const fmtDate = r.date_opened ? new Date(r.date_opened).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : '—';
+              return `
+              <tr>
+                <td>
+                  <div class="role-name">${esc(r.title)}</div>
+                  <div class="role-meta">${r.req_id ? esc(r.req_id) + ' · ' : ''}${esc(r.recruiter || '')}</div>
+                  <div class="role-meta date-opened-row" style="margin-top:2px;display:flex;align-items:center;gap:5px;">
+                    <span class="date-opened-label">${r.date_opened ? 'Opened ' + fmtDate : 'No open date'}</span>
+                    <button class="date-edit-btn" title="Edit open date" onclick="editOpenDate(this,${i})">📅</button>
+                  </div>
+                  ${daysOpen !== null ? `<div class="role-meta" style="margin-top:1px">${daysOpen}d open</div>` : ''}
+                </td>
+                <td>
+                  <select class="priority-select priority-${r.priority}" data-role="${i}" onchange="onPriorityChange(this)">
+                    <option value="high"   ${r.priority==='high'   ?'selected':''}>High</option>
+                    <option value="normal" ${r.priority==='normal' ?'selected':''}>Normal</option>
+                    <option value="low"    ${r.priority==='low'    ?'selected':''}>Low</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="headcount-select" data-role="${i}" onchange="onHeadcountChange(this)">
+                    ${[1,2,3,4,5].map(n => `<option value="${n}" ${(r.headcount||1)===n?'selected':''}>${n}</option>`).join('')}
+                  </select>
+                </td>
+                <td><div class="stage-row">${r.stages.map(stagePill).join('')}</div></td>
+                <td>
+                  <select class="status-select status-${displayStatus}" data-role="${i}" onchange="onStatusChange(this)">
+                    <option value="progress"  ${displayStatus==='progress'  ?'selected':''}>In progress</option>
+                    <option value="on-time"   ${displayStatus==='on-time'   ?'selected':''}>On time</option>
+                    <option value="risk"      ${displayStatus==='risk'      ?'selected':''}>At risk</option>
+                    <option value="blocked"   ${displayStatus==='blocked'   ?'selected':''}>Blocked</option>
+                    <option value="near-offer"${displayStatus==='near-offer'?'selected':''}>Near offer</option>
+                    <option value="offer"     ${displayStatus==='offer'     ?'selected':''}>Offer out 🎉</option>
+                    <option value="signed"    ${displayStatus==='signed'    ?'selected':''}>Signed 🎉</option>
+                    <option value="new"       ${displayStatus==='new'       ?'selected':''}>Just kicked off</option>
+                  </select>
+                </td>
+                <td class="role-note" data-role="${i}" onclick="startEditNote(this)">${esc(r.note)}</td>
+              </tr>`;
+            }).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Data source: Gem ATS + weekly agenda</span>
+      <span>${esc(m.quarter)}: ${esc(m.period)}</span>
+      <span>Refresh: push updated data.js to auto-deploy</span>
+      <span style="margin-left:auto;">Bluesky Social PBC</span>
+    </div>
+  `;
+
+  // Inject floating save bar
+  document.body.insertAdjacentHTML('beforeend', `
+    <div class="save-bar" id="saveBar" style="display:none">
+      <button class="save-btn" onclick="discardEdits()">Discard</button>
+      <button class="save-btn primary" onclick="exportDataJs()">⬇ Save data.js</button>
+    </div>
+  `);
+
+  document.getElementById('app').innerHTML = html;
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+}
+
+function showTab(id, el) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  el.classList.add('active');
+}
+
+const STATUS_LABELS = {
+  'progress':  'In progress',
+  'on-time':   'On time',
+  'risk':      'At risk',
+  'blocked':   'Blocked',
+  'near-offer':'Near offer',
+  'offer':     'Offer out 🎉',
+  'signed':    'Signed 🎉',
+  'new':       'Just kicked off',
+};
+
+// Load any saved edits from localStorage and merge into data
+function applyLocalEdits(data) {
+  const saved = localStorage.getItem('dashboard-edits');
+  if (!saved) return data;
+  try {
+    const edits = JSON.parse(saved);
+    edits.forEach(e => {
+      if (data.roles[e.i]) {
+        if (e.note             !== undefined) data.roles[e.i].note             = e.note;
+        if (e.priority         !== undefined) data.roles[e.i].priority         = e.priority;
+        if (e.headcount        !== undefined) data.roles[e.i].headcount        = e.headcount;
+        if (e.date_opened      !== undefined) data.roles[e.i].date_opened      = e.date_opened;
+        if (e.status_overridden!== undefined) data.roles[e.i].status_overridden= e.status_overridden;
+        if (e.status !== undefined) {
+          data.roles[e.i].status       = e.status;
+          data.roles[e.i].status_label = STATUS_LABELS[e.status] || e.status;
+        }
+      }
     });
+  } catch(_) {}
+  return data;
+}
 
-  }
+function markDirty() {
+  const bar = document.getElementById('saveBar');
+  if (bar) bar.style.display = 'flex';
+}
 
-  function copyHTML() {
-    // Turn off contenteditable before copying so the saved file is clean
-    document.querySelectorAll(EDITABLE).forEach(el => {
-      el.contentEditable = 'false';
-    });
-    document.body.classList.remove('editing');
-    document.getElementById('editBtn').textContent = '✏ Edit';
-    document.getElementById('editBtn').classList.remove('active');
+function saveEdits() {
+  const edits = DASHBOARD_DATA.roles.map((r, i) => ({ i, note: r.note, status: r.status, status_overridden: r.status_overridden, priority: r.priority, headcount: r.headcount, date_opened: r.date_opened }));
+  localStorage.setItem('dashboard-edits', JSON.stringify(edits));
+}
 
-    const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
-    navigator.clipboard.writeText(html).then(() => {
-      const btn = document.getElementById('copyBtn');
-      btn.textContent = '✓ Copied!';
-      btn.style.background = 'var(--green)';
-      btn.style.color = '#fff';
-      btn.style.borderColor = 'var(--green)';
-      setTimeout(() => {
-        btn.textContent = '⬇ Copy HTML';
-        btn.style.background = '';
-        btn.style.color = '';
-        btn.style.borderColor = '';
-      }, 2500);
-    });
-  }
+function onStatusChange(sel) {
+  const i = parseInt(sel.dataset.role);
+  const newStatus = sel.value;
+  DASHBOARD_DATA.roles[i].status           = newStatus;
+  DASHBOARD_DATA.roles[i].status_label     = STATUS_LABELS[newStatus] || newStatus;
+  DASHBOARD_DATA.roles[i].status_overridden = true;
+  sel.className = 'status-select status-' + newStatus;
+  saveEdits();
+  markDirty();
+}
+
+function editOpenDate(btn, i) {
+  const row = btn.closest('.date-opened-row');
+  const r   = DASHBOARD_DATA.roles[i];
+  const input = document.createElement('input');
+  input.type  = 'date';
+  input.value = r.date_opened || '';
+  input.style.cssText = 'font:inherit;font-size:13px;border:1px solid var(--blue);border-radius:6px;padding:2px 6px;outline:none;';
+  row.innerHTML = '';
+  row.appendChild(input);
+  input.focus();
+  const commit = () => {
+    const val = input.value;
+    r.date_opened = val || null;
+    saveEdits();
+    markDirty();
+    // Re-render just the affected row by re-rendering the whole table
+    loadData().then(d => applyLocalEdits(d)).then(d => { DASHBOARD_DATA = d; render(d); showTab('roles', document.querySelectorAll('.tab')[2]); });
+  };
+  input.onblur  = commit;
+  input.onkeydown = e => { if (e.key === 'Enter') { input.blur(); } if (e.key === 'Escape') { input.blur(); } };
+}
+
+function onPriorityChange(sel) {
+  const i = parseInt(sel.dataset.role);
+  const newPriority = sel.value;
+  DASHBOARD_DATA.roles[i].priority = newPriority;
+  sel.className = 'priority-select priority-' + newPriority;
+  saveEdits();
+  markDirty();
+}
+
+function onHeadcountChange(sel) {
+  const i = parseInt(sel.dataset.role);
+  DASHBOARD_DATA.roles[i].headcount = parseInt(sel.value);
+  saveEdits();
+  markDirty();
+}
+
+function startEditNote(td) {
+  if (td.querySelector('textarea')) return; // already editing
+  const i = parseInt(td.dataset.role);
+  const current = DASHBOARD_DATA.roles[i].note;
+  td.innerHTML = '';
+  const ta = document.createElement('textarea');
+  ta.value = current;
+  ta.onclick = e => e.stopPropagation();
+  ta.onblur = () => {
+    const val = ta.value.trim();
+    DASHBOARD_DATA.roles[i].note = val;
+    td.textContent = val;
+    saveEdits();
+    markDirty();
+  };
+  td.appendChild(ta);
+  ta.focus();
+}
+
+function discardEdits() {
+  localStorage.removeItem('dashboard-edits');
+  location.reload();
+}
+
+function exportDataJs() {
+  const json = JSON.stringify(DASHBOARD_DATA, null, 2);
+  const blob = new Blob(['var DASHBOARD_DATA = ' + json + ';\n'], { type: 'application/javascript' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'data.js';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+loadData()
+  .then(d => applyLocalEdits(d))
+  .then(d => { DASHBOARD_DATA = d; return d; })
+  .then(render)
+  .then(() => {
+    // Show save bar if there are unsaved edits in localStorage
+    if (localStorage.getItem('dashboard-edits')) markDirty();
+  })
+  .catch(err => {
+    document.getElementById('loading').textContent = 'Failed to load dashboard — ' + err.message;
+  });
 </script>
 </body>
 </html>
