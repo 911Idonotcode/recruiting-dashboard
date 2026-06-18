@@ -1,10 +1,3 @@
-The Deploy Dashboard workflow is running but failing. Let me check the error:
-
-The issue is the workflow is looking for files in a `hiring-tracker` subfolder, but the files are in the repo root. The `deploy.yml` was written for a repo where `hiring-tracker` is a subfolder — but your GitHub repo has the files directly at the root. Let me fix the workflow:
-
-Now update it on GitHub — go to **[github.com/911Idonotcode/recruiting-dashboard/blob/main/.github/workflows/deploy.yml](https://github.com/911Idonotcode/recruiting-dashboard/blob/main/.github/workflows/deploy.yml)**, click the **pencil (edit) icon**, replace the content with the corrected version below, then commit:
-
-```yaml
 name: Deploy Dashboard
 
 on:
@@ -54,4 +47,3 @@ jobs:
       - id: deploy
         name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-```
