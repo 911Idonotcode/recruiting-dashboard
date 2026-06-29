@@ -2,8 +2,8 @@ var DASHBOARD_DATA = {
   "_meta": {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
-    "period_label": "Q2 2026 · Apr 1 – Jun 16",
-    "updated": "Jun 16"
+    "period_label": "Custom Mar 31 – Jun 29",
+    "updated": "Jun 29"
   },
   "kpis": {
     "hires": 1,
