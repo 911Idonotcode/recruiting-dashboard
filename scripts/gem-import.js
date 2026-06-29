@@ -30,7 +30,7 @@ const DATA_JSON_PATH = path.join(__dirname, '..', 'data.json');
 function readData() {
   if (fs.existsSync(DATA_JS_PATH)) {
     const src = fs.readFileSync(DATA_JS_PATH, 'utf8');
-    return JSON.parse(src.replace(/^const DASHBOARD_DATA\s*=\s*/, '').replace(/;\s*$/, ''));
+    return JSON.parse(src.replace(/^(?:const|var|let)\s+DASHBOARD_DATA\s*=\s*/, '').replace(/;\s*$/, ''));
   }
   return JSON.parse(fs.readFileSync(DATA_JSON_PATH, 'utf8'));
 }
@@ -122,22 +122,41 @@ function normaliseMonth(raw) {
 // ── Pipeline import ───────────────────────────────────────────────────────────
 function importPipeline(csvPath, data) {
   const rows = parseCSV(fs.readFileSync(csvPath, 'utf8'));
+  if (!rows.length) return;
 
-  // Aggregate by normalised stage
   const stages = {};
-  for (const row of rows) {
-    // Find the stage column (flexible naming)
-    const stageRaw = row['stage'] ?? row['stage name'] ?? row['interview stage'] ?? '';
-    const key = normaliseStage(stageRaw);
-    if (!key) continue;
 
-    const count   = num(row['candidate count'] ?? row['candidates'] ?? row['count'] ?? 0);
-    const avgDays = num(row['avg days in stage'] ?? row['average days'] ?? row['days in stage'] ?? row['avg days'] ?? 0);
+  // Detect wide format: stages are column headers (one row per job)
+  const firstRow = rows[0];
+  const stageColKeys = Object.keys(firstRow).filter(k => normaliseStage(k));
 
-    if (!stages[key]) stages[key] = { count: 0, daySum: 0, rowCount: 0 };
-    stages[key].count    += count;
-    stages[key].daySum   += avgDays * (count || 1);
-    stages[key].rowCount += count || 1;
+  if (stageColKeys.length > 0) {
+    // Wide format: sum each stage column across all job rows
+    for (const row of rows) {
+      for (const col of stageColKeys) {
+        const key = normaliseStage(col);
+        if (!key) continue;
+        const count = num(row[col]);
+        if (!stages[key]) stages[key] = { count: 0, daySum: 0, rowCount: 0 };
+        stages[key].count += count;
+        stages[key].rowCount += 1;
+      }
+    }
+  } else {
+    // Narrow format: one row per stage
+    for (const row of rows) {
+      const stageRaw = row['stage'] ?? row['stage name'] ?? row['interview stage'] ?? '';
+      const key = normaliseStage(stageRaw);
+      if (!key) continue;
+
+      const count   = num(row['candidate count'] ?? row['candidates'] ?? row['count'] ?? 0);
+      const avgDays = num(row['avg days in stage'] ?? row['average days'] ?? row['days in stage'] ?? row['avg days'] ?? 0);
+
+      if (!stages[key]) stages[key] = { count: 0, daySum: 0, rowCount: 0 };
+      stages[key].count    += count;
+      stages[key].daySum   += avgDays * (count || 1);
+      stages[key].rowCount += count || 1;
+    }
   }
 
   // Patch pipeline

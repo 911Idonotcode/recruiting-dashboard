@@ -6,43 +6,43 @@
     "updated": "Jun 29"
   },
   "kpis": {
-    "hires": 1,
+    "hires": 10,
     "hires_target": 5,
     "avg_time_to_hire": 64,
     "avg_time_to_hire_prev": 88,
     "bench_time_to_hire": 44,
     "open_roles": 13,
-    "offer_acceptance_pct": 100,
-    "offers_extended": 2,
-    "active_candidates": 108
+    "offer_acceptance_pct": 77,
+    "offers_extended": 23,
+    "active_candidates": 325
   },
   "pipeline": {
     "app_review": {
-      "count": 1156,
-      "avg_days": 11
+      "count": 2695,
+      "avg_days": 0
     },
     "phone_screen": {
-      "count": 98,
-      "avg_days": 17
+      "count": 261,
+      "avg_days": 0
     },
     "onsite": {
-      "count": 9,
-      "avg_days": 32
+      "count": 51,
+      "avg_days": 0
     },
     "offer": {
-      "count": 1,
-      "avg_days": 4
+      "count": 13,
+      "avg_days": 0
     },
     "hired": {
-      "count": 1,
+      "count": 10,
       "avg_days": 0
     }
   },
   "passthrough": {
-    "app_to_phone": 8,
-    "phone_to_onsite": 9,
-    "onsite_to_offer": 11,
-    "offer_to_hired": 100
+    "app_to_phone": 10,
+    "phone_to_onsite": 20,
+    "onsite_to_offer": 25,
+    "offer_to_hired": 77
   },
   "outreach": [
     {
