@@ -83,6 +83,11 @@
     .outreach-stat .val.trending-up   { color: #16a34a; }
     .role-table { width: 100%; border-collapse: collapse; }
     .role-table th { font-size: 13px; font-weight: 500; color: var(--text-3); text-align: left; padding: 7px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .role-table th.sortable { cursor: pointer; user-select: none; }
+    .role-table th.sortable:hover { color: var(--text-1); }
+    .role-table th.sortable::after { content: ' ↕'; opacity: 0.35; font-size: 11px; }
+    .role-table th.sort-asc::after  { content: ' ↑'; opacity: 1; color: var(--blue); }
+    .role-table th.sort-desc::after { content: ' ↓'; opacity: 1; color: var(--blue); }
     .role-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
     .role-table tr:last-child td { border-bottom: none; }
     .role-table tr:hover td { background: var(--bg-2); }
@@ -407,59 +412,15 @@ function render(d) {
         <table class="role-table">
           <thead>
             <tr>
-              <th style="width:26%">Role</th>
-              <th>Priority</th>
-              <th>Headcount</th>
+              <th style="width:26%" class="sortable" data-sort="role" onclick="sortRolesTable('role')">Role</th>
+              <th class="sortable" data-sort="priority" onclick="sortRolesTable('priority')">Priority</th>
+              <th class="sortable" data-sort="headcount" onclick="sortRolesTable('headcount')">Headcount</th>
               <th>Pipeline</th>
-              <th>Status</th>
+              <th class="sortable" data-sort="status" onclick="sortRolesTable('status')">Status</th>
               <th style="width:28%">This week</th>
             </tr>
           </thead>
-          <tbody>
-            ${d.roles.map((r, i) => {
-              const daysOpen = r.date_opened ? Math.floor((Date.now() - new Date(r.date_opened)) / 86400000) : null;
-              const displayStatus = (r.status_overridden || daysOpen === null || daysOpen <= 75) ? r.status : 'risk';
-              const fmtDate = r.date_opened ? new Date(r.date_opened).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : '—';
-              return `
-              <tr>
-                <td>
-                  <div class="role-name">${esc(r.title)}</div>
-                  <div class="role-meta">${r.req_id ? esc(r.req_id) + ' · ' : ''}${esc(r.recruiter || '')}</div>
-                  <div class="role-meta date-opened-row" style="margin-top:2px;display:flex;align-items:center;gap:5px;">
-                    <span class="date-opened-label">${r.date_opened ? 'Opened ' + fmtDate : 'No open date'}</span>
-                    <button class="date-edit-btn" title="Edit open date" onclick="editOpenDate(this,${i})">📅</button>
-                  </div>
-                  ${daysOpen !== null ? `<div class="role-meta" style="margin-top:1px">${daysOpen}d open</div>` : ''}
-                </td>
-                <td>
-                  <select class="priority-select priority-${r.priority}" data-role="${i}" onchange="onPriorityChange(this)">
-                    <option value="high"   ${r.priority==='high'   ?'selected':''}>High</option>
-                    <option value="normal" ${r.priority==='normal' ?'selected':''}>Normal</option>
-                    <option value="low"    ${r.priority==='low'    ?'selected':''}>Low</option>
-                  </select>
-                </td>
-                <td>
-                  <select class="headcount-select" data-role="${i}" onchange="onHeadcountChange(this)">
-                    ${[1,2,3,4,5].map(n => `<option value="${n}" ${(r.headcount||1)===n?'selected':''}>${n}</option>`).join('')}
-                  </select>
-                </td>
-                <td><div class="stage-row">${r.stages.map(stagePill).join('')}</div></td>
-                <td>
-                  <select class="status-select status-${displayStatus}" data-role="${i}" onchange="onStatusChange(this)">
-                    <option value="progress"  ${displayStatus==='progress'  ?'selected':''}>In progress</option>
-                    <option value="on-time"   ${displayStatus==='on-time'   ?'selected':''}>On time</option>
-                    <option value="risk"      ${displayStatus==='risk'      ?'selected':''}>At risk</option>
-                    <option value="blocked"   ${displayStatus==='blocked'   ?'selected':''}>Blocked</option>
-                    <option value="near-offer"${displayStatus==='near-offer'?'selected':''}>Near offer</option>
-                    <option value="offer"     ${displayStatus==='offer'     ?'selected':''}>Offer out 🎉</option>
-                    <option value="signed"    ${displayStatus==='signed'    ?'selected':''}>Signed 🎉</option>
-                    <option value="new"       ${displayStatus==='new'       ?'selected':''}>Just kicked off</option>
-                  </select>
-                </td>
-                <td class="role-note" data-role="${i}" onclick="startEditNote(this)">${esc(r.note)}</td>
-              </tr>`;
-            }).join('')}
-          </tbody>
+          <tbody id="roles-tbody"></tbody>
         </table>
       </div>
     </div>
@@ -483,6 +444,83 @@ function render(d) {
   document.getElementById('app').innerHTML = html;
   document.getElementById('loading').style.display = 'none';
   document.getElementById('app').style.display = 'block';
+  renderRolesBody();
+}
+
+let _sort = { col: null, dir: 1 };
+
+function buildRoleRow(r, i) {
+  const daysOpen = r.date_opened ? Math.floor((Date.now() - new Date(r.date_opened)) / 86400000) : null;
+  const displayStatus = (r.status_overridden || daysOpen === null || daysOpen <= 75) ? r.status : 'risk';
+  const fmtDate = r.date_opened ? new Date(r.date_opened).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : '—';
+  return `<tr>
+    <td>
+      <div class="role-name">${esc(r.title)}</div>
+      <div class="role-meta">${r.req_id ? esc(r.req_id) + ' · ' : ''}${esc(r.recruiter || '')}</div>
+      <div class="role-meta date-opened-row" style="margin-top:2px;display:flex;align-items:center;gap:5px;">
+        <span class="date-opened-label">${r.date_opened ? 'Opened ' + fmtDate : 'No open date'}</span>
+        <button class="date-edit-btn" title="Edit open date" onclick="editOpenDate(this,${i})">📅</button>
+      </div>
+      ${daysOpen !== null ? `<div class="role-meta" style="margin-top:1px">${daysOpen}d open</div>` : ''}
+    </td>
+    <td>
+      <select class="priority-select priority-${r.priority}" data-role="${i}" onchange="onPriorityChange(this)">
+        <option value="high"   ${r.priority==='high'   ?'selected':''}>High</option>
+        <option value="normal" ${r.priority==='normal' ?'selected':''}>Normal</option>
+        <option value="low"    ${r.priority==='low'    ?'selected':''}>Low</option>
+      </select>
+    </td>
+    <td>
+      <select class="headcount-select" data-role="${i}" onchange="onHeadcountChange(this)">
+        ${[1,2,3,4,5].map(n => `<option value="${n}" ${(r.headcount||1)===n?'selected':''}>${n}</option>`).join('')}
+      </select>
+    </td>
+    <td><div class="stage-row">${r.stages.map(stagePill).join('')}</div></td>
+    <td>
+      <select class="status-select status-${displayStatus}" data-role="${i}" onchange="onStatusChange(this)">
+        <option value="progress"  ${displayStatus==='progress'  ?'selected':''}>In progress</option>
+        <option value="on-time"   ${displayStatus==='on-time'   ?'selected':''}>On time</option>
+        <option value="risk"      ${displayStatus==='risk'      ?'selected':''}>At risk</option>
+        <option value="blocked"   ${displayStatus==='blocked'   ?'selected':''}>Blocked</option>
+        <option value="near-offer"${displayStatus==='near-offer'?'selected':''}>Near offer</option>
+        <option value="offer"     ${displayStatus==='offer'     ?'selected':''}>Offer out 🎉</option>
+        <option value="signed"    ${displayStatus==='signed'    ?'selected':''}>Signed 🎉</option>
+        <option value="new"       ${displayStatus==='new'       ?'selected':''}>Just kicked off</option>
+      </select>
+    </td>
+    <td class="role-note" data-role="${i}" onclick="startEditNote(this)">${esc(r.note)}</td>
+  </tr>`;
+}
+
+function renderRolesBody() {
+  const tbody = document.getElementById('roles-tbody');
+  if (!tbody) return;
+  const PRIORITY_ORDER = { high: 0, normal: 1, low: 2 };
+  const STATUS_ORDER = { risk: 0, blocked: 1, 'near-offer': 2, offer: 3, signed: 4, progress: 5, 'on-time': 6, new: 7 };
+  const roles = DASHBOARD_DATA.roles;
+  const indices = roles.map((_, i) => i);
+  if (_sort.col) {
+    indices.sort((a, b) => {
+      const ra = roles[a], rb = roles[b];
+      let cmp = 0;
+      if (_sort.col === 'role')      cmp = ra.title.localeCompare(rb.title);
+      else if (_sort.col === 'priority') cmp = (PRIORITY_ORDER[ra.priority] ?? 99) - (PRIORITY_ORDER[rb.priority] ?? 99);
+      else if (_sort.col === 'headcount') cmp = (ra.headcount || 1) - (rb.headcount || 1);
+      else if (_sort.col === 'status') cmp = (STATUS_ORDER[ra.status] ?? 99) - (STATUS_ORDER[rb.status] ?? 99);
+      return cmp * _sort.dir;
+    });
+  }
+  tbody.innerHTML = indices.map(i => buildRoleRow(roles[i], i)).join('');
+  document.querySelectorAll('.role-table th.sortable').forEach(th => {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (th.dataset.sort === _sort.col) th.classList.add(_sort.dir === 1 ? 'sort-asc' : 'sort-desc');
+  });
+}
+
+function sortRolesTable(col) {
+  _sort.dir = _sort.col === col ? _sort.dir * -1 : 1;
+  _sort.col = col;
+  renderRolesBody();
 }
 
 function showTab(id, el) {
