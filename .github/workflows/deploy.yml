@@ -3,7 +3,7 @@ name: Deploy Dashboard
 on:
   push:
     branches: [main]
-  workflow_dispatch:        # manual trigger from GitHub UI
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -19,7 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # If a Gem CSV was committed, run the import before deploying
       - name: Import Gem pipeline CSV
         if: ${{ hashFiles('gem-exports/pipeline.csv') != '' }}
         run: node scripts/gem-import.js --pipeline gem-exports/pipeline.csv
@@ -28,7 +27,6 @@ jobs:
         if: ${{ hashFiles('gem-exports/outreach.csv') != '' }}
         run: node scripts/gem-import.js --outreach gem-exports/outreach.csv
 
-      # Commit updated data.json back if the import changed it
       - name: Commit updated data files
         run: |
           git config user.name  "github-actions[bot]"
@@ -36,7 +34,7 @@ jobs:
           git add data.js data.json
           git diff --cached --quiet || git commit -m "chore: auto-update data.json from Gem export [skip ci]"
           git push
-        continue-on-error: true   # no-op if nothing changed
+        continue-on-error: true
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
