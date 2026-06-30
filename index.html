@@ -260,7 +260,7 @@ function render(d) {
       <button class="tab active" onclick="showTab('executive',this)">Executive view</button>
       <button class="tab" onclick="showTab('pipeline',this)">Pipeline detail</button>
       <button class="tab" onclick="showTab('roles',this)">All roles</button>
-      <button class="tab" onclick="showTab('hires',this)">Hires YTD</button>
+      <button class="tab" onclick="showTab('ytd',this)">YTD Hires</button>
     </div>
 
     <!-- EXECUTIVE TAB -->
@@ -443,6 +443,91 @@ function render(d) {
           <tbody id="hires-tbody"></tbody>
         </table>
       </div>
+    </div>
+
+    <!-- YTD HIRES TAB -->
+    <div class="tab-panel" id="tab-ytd">
+      ${(() => {
+        const hires = d.ytd_hires || [];
+        const total = hires.length;
+
+        // Group by month
+        const byMonth = {};
+        hires.forEach(h => {
+          const dt = new Date(h.date);
+          const key = dt.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+          byMonth[key] = (byMonth[key] || 0) + 1;
+        });
+        const months = Object.entries(byMonth);
+        const maxMonthCount = Math.max(...months.map(([,c]) => c));
+
+        // Q1 vs Q2 split
+        const q1 = hires.filter(h => new Date(h.date).getMonth() < 3).length;
+        const q2 = hires.filter(h => new Date(h.date).getMonth() >= 3).length;
+
+        return `
+        <div class="section">
+          <div class="section-title">YTD Hires &nbsp;·&nbsp; Current fiscal year</div>
+          <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);max-width:600px;margin-bottom:24px;">
+            <div class="kpi-card">
+              <div class="kpi-label">Total YTD Hires</div>
+              <div class="kpi-value">${total}</div>
+              <div class="kpi-sub">Current fiscal year</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Q1 Hires</div>
+              <div class="kpi-value">${q1}</div>
+              <div class="kpi-sub">Jan – Mar 2026</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Q2 Hires</div>
+              <div class="kpi-value">${q2}</div>
+              <div class="kpi-sub">Apr – Jun 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Hires by month</div>
+          <div class="chart-card" style="max-width:600px;">
+            <div class="bar-chart">
+              ${months.map(([month, count]) => `
+                <div class="bar-row">
+                  <span class="bar-label" style="width:130px">${month}</span>
+                  <div class="bar-track">
+                    <div class="bar-fill blue" style="width:${Math.round(count/maxMonthCount*100)}%">
+                      ${count >= 2 ? `<span class="bar-fill-val">${count}</span>` : ''}
+                    </div>
+                  </div>
+                  ${count < 2 ? `<span class="bar-outside-val">${count}</span>` : ''}
+                </div>`).join('')}
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">All hires &nbsp;·&nbsp; ${total} total</div>
+          <table class="role-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Date hired</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${hires.map(h => {
+                const fmtDate = new Date(h.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                return `<tr>
+                  <td><div class="role-name">${esc(h.name)}</div></td>
+                  <td><div class="role-meta" style="color:var(--text-1)">${fmtDate}</div></td>
+                  <td><span class="badge status-signed">${esc(h.status)}</span></td>
+                </tr>`;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>`;
+      })()}
     </div>
 
     <div class="footer">

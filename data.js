@@ -70,6 +70,23 @@ var DASHBOARD_DATA = {
       "trending": null
     }
   ],
+  "ytd_hires": [
+    { "name": "Anoop Ranganath", "date": "2026-06-23", "status": "Accepted" },
+    { "name": "Danny Smith",     "date": "2026-06-17", "status": "Accepted" },
+    { "name": "Amy Brown",       "date": "2026-06-10", "status": "Accepted" },
+    { "name": "Lydia Yi",        "date": "2026-05-26", "status": "Accepted" },
+    { "name": "Pieter Montoulieu","date": "2026-04-24", "status": "Accepted" },
+    { "name": "Brittany Ellich", "date": "2026-04-24", "status": "Accepted" },
+    { "name": "Jeffrey Gleason", "date": "2026-04-17", "status": "Accepted" },
+    { "name": "Danielle Yuhan",  "date": "2026-04-09", "status": "Accepted" },
+    { "name": "Cameron Sweeney", "date": "2026-04-09", "status": "Accepted" },
+    { "name": "Michael Black",   "date": "2026-04-07", "status": "Accepted" },
+    { "name": "Alexander Corbeil","date": "2026-02-19", "status": "Accepted" },
+    { "name": "William Brannon", "date": "2026-02-05", "status": "Accepted" },
+    { "name": "Josh Petri",      "date": "2026-01-19", "status": "Accepted" },
+    { "name": "Spencer Pope",    "date": "2026-01-12", "status": "Accepted" },
+    { "name": "DS Boyce",        "date": "2026-01-08", "status": "Accepted" }
+  ],
   "recruiter_tth": [
     {
       "name": "Andres",
