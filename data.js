@@ -2,47 +2,47 @@ var DASHBOARD_DATA = {
   "_meta": {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
-    "period_label": "Q2 2026 · Apr 1 – Jun 16",
-    "updated": "Jun 16"
+    "period_label": "Custom Mar 31 – Jun 29",
+    "updated": "Jun 30"
   },
   "kpis": {
-    "hires": 1,
+    "hires": 10,
     "hires_target": 5,
     "avg_time_to_hire": 64,
     "avg_time_to_hire_prev": 88,
     "bench_time_to_hire": 44,
     "open_roles": 13,
-    "offer_acceptance_pct": 100,
-    "offers_extended": 2,
-    "active_candidates": 108
+    "offer_acceptance_pct": 77,
+    "offers_extended": 23,
+    "active_candidates": 325
   },
   "pipeline": {
     "app_review": {
-      "count": 1156,
-      "avg_days": 11
+      "count": 2695,
+      "avg_days": 0
     },
     "phone_screen": {
-      "count": 98,
-      "avg_days": 17
+      "count": 261,
+      "avg_days": 0
     },
     "onsite": {
-      "count": 9,
-      "avg_days": 32
+      "count": 51,
+      "avg_days": 0
     },
     "offer": {
-      "count": 1,
-      "avg_days": 4
+      "count": 13,
+      "avg_days": 0
     },
     "hired": {
-      "count": 1,
+      "count": 10,
       "avg_days": 0
     }
   },
   "passthrough": {
-    "app_to_phone": 8,
-    "phone_to_onsite": 9,
-    "onsite_to_offer": 11,
-    "offer_to_hired": 100
+    "app_to_phone": 10,
+    "phone_to_onsite": 20,
+    "onsite_to_offer": 25,
+    "offer_to_hired": 77
   },
   "outreach": [
     {
@@ -364,6 +364,128 @@ var DASHBOARD_DATA = {
       "status": "new",
       "status_label": "Kickoff this week",
       "note": "Kickoff this week. JD and intake in progress."
+    }
+  ],
+  "hires_ytd": [
+    {
+      "name": "Anoop Ranganath",
+      "title": "VP of Engineering",
+      "team": "Engineering",
+      "hire_date": "2026-06-23",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Danny Smith",
+      "title": "Finance & Business Ops Lead",
+      "team": "Finance",
+      "hire_date": "2026-06-17",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Amy Brown",
+      "title": "Social Media Manager",
+      "team": "Marketing",
+      "hire_date": "2026-06-10",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Lydia Yi",
+      "title": "Entertainment Partnership Manager",
+      "team": "Partnerships",
+      "hire_date": "2026-05-26",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Pieter Montoulieu",
+      "title": "Sr Product Engineer, Agentic Systems",
+      "team": "Exploration",
+      "hire_date": "2026-04-24",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Brittany Ellich",
+      "title": "Sr Product Engineer, Agentic Systems",
+      "team": "Exploration",
+      "hire_date": "2026-04-24",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Jeffrey Gleason",
+      "title": "Senior ML Engineer",
+      "team": "ML",
+      "hire_date": "2026-04-17",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Danielle Yuhan",
+      "title": "Senior Product Designer",
+      "team": "Design",
+      "hire_date": "2026-04-09",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Cameron Sweeney",
+      "title": "Senior Backend Engineer, GO",
+      "team": "Data / Infra",
+      "hire_date": "2026-04-09",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Michael Black",
+      "title": "Senior Backend Engineer, GO & TS",
+      "team": "App",
+      "hire_date": "2026-04-07",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Alexander Corbeil",
+      "title": "",
+      "team": "",
+      "hire_date": "2026-02-19",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "William Brannon",
+      "title": "Senior ML Engineer",
+      "team": "ML",
+      "hire_date": "2026-02-05",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Josh Petri",
+      "title": "",
+      "team": "",
+      "hire_date": "2026-01-19",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Spencer Pope",
+      "title": "",
+      "team": "",
+      "hire_date": "2026-01-12",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "DS Boyce",
+      "title": "",
+      "team": "",
+      "hire_date": "2026-01-08",
+      "time_to_hire": null,
+      "start_date": ""
     }
   ]
 };
