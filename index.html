@@ -260,6 +260,7 @@ function render(d) {
       <button class="tab active" onclick="showTab('executive',this)">Executive view</button>
       <button class="tab" onclick="showTab('pipeline',this)">Pipeline detail</button>
       <button class="tab" onclick="showTab('roles',this)">All roles</button>
+      <button class="tab" onclick="showTab('hires',this)">Hires YTD</button>
     </div>
 
     <!-- EXECUTIVE TAB -->
@@ -425,6 +426,25 @@ function render(d) {
       </div>
     </div>
 
+    <!-- HIRES YTD TAB -->
+    <div class="tab-panel" id="tab-hires">
+      <div class="section">
+        <div class="section-title" id="hires-ytd-title"></div>
+        <table class="role-table" id="hires-table">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort-hires="name"    onclick="sortHiresTable('name')">Name</th>
+              <th class="sortable" data-sort-hires="title"   onclick="sortHiresTable('title')">Title</th>
+              <th class="sortable" data-sort-hires="team"    onclick="sortHiresTable('team')">Team</th>
+              <th class="sortable" data-sort-hires="tth"     onclick="sortHiresTable('tth')">Time to hire</th>
+              <th class="sortable" data-sort-hires="start"   onclick="sortHiresTable('start')">Start date</th>
+            </tr>
+          </thead>
+          <tbody id="hires-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
     <div class="footer">
       <span>Data source: Gem ATS + weekly agenda</span>
       <span>${esc(m.quarter)}: ${esc(m.period)}</span>
@@ -445,6 +465,7 @@ function render(d) {
   document.getElementById('loading').style.display = 'none';
   document.getElementById('app').style.display = 'block';
   renderRolesBody();
+  renderHiresTable();
 }
 
 let _sort = { col: null, dir: 1 };
@@ -521,6 +542,60 @@ function sortRolesTable(col) {
   _sort.dir = _sort.col === col ? _sort.dir * -1 : 1;
   _sort.col = col;
   renderRolesBody();
+}
+
+let _hiresSort = { col: null, dir: 1 };
+
+function renderHiresTable() {
+  const tbody = document.getElementById('hires-tbody');
+  const titleEl = document.getElementById('hires-ytd-title');
+  if (!tbody) return;
+
+  const hires = (DASHBOARD_DATA.hires_ytd || []);
+  const year = new Date().getFullYear();
+
+  if (titleEl) {
+    titleEl.textContent = hires.length + ' hires · ' + year + ' YTD';
+  }
+
+  const rows = hires.map((h, i) => ({ ...h, _i: i }));
+
+  if (_hiresSort.col) {
+    rows.sort((a, b) => {
+      let cmp = 0;
+      if (_hiresSort.col === 'name')  cmp = (a.name || '').localeCompare(b.name || '');
+      else if (_hiresSort.col === 'title') cmp = (a.title || '').localeCompare(b.title || '');
+      else if (_hiresSort.col === 'team')  cmp = (a.team || '').localeCompare(b.team || '');
+      else if (_hiresSort.col === 'tth')   cmp = (a.time_to_hire || 9999) - (b.time_to_hire || 9999);
+      else if (_hiresSort.col === 'start') cmp = (a.start_date || a.hire_date || 'zzzz').localeCompare(b.start_date || b.hire_date || 'zzzz');
+      return cmp * _hiresSort.dir;
+    });
+  }
+
+  tbody.innerHTML = rows.map(h => {
+    const tth = h.time_to_hire ? h.time_to_hire + ' days' : '<span style="color:var(--text-3)">—</span>';
+    const dateStr = h.start_date || h.hire_date || '';
+    const start = dateStr ? new Date(dateStr + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '<span style="color:var(--text-3)">—</span>';
+    const name = h.name ? `<span style="font-weight:500">${esc(h.name)}</span>` : '<span style="color:var(--text-3)">—</span>';
+    return `<tr>
+      <td>${name}</td>
+      <td>${esc(h.title || '')}</td>
+      <td><span style="font-size:13px;background:var(--bg-3);color:var(--text-2);border-radius:4px;padding:2px 8px">${esc(h.team || '')}</span></td>
+      <td style="color:var(--text-2)">${tth}</td>
+      <td style="color:var(--text-2)">${start}</td>
+    </tr>`;
+  }).join('');
+
+  document.querySelectorAll('#hires-table th.sortable').forEach(th => {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (th.dataset.sortHires === _hiresSort.col) th.classList.add(_hiresSort.dir === 1 ? 'sort-asc' : 'sort-desc');
+  });
+}
+
+function sortHiresTable(col) {
+  _hiresSort.dir = _hiresSort.col === col ? _hiresSort.dir * -1 : 1;
+  _hiresSort.col = col;
+  renderHiresTable();
 }
 
 function showTab(id, el) {

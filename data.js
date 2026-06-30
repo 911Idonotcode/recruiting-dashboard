@@ -365,5 +365,127 @@ var DASHBOARD_DATA = {
       "status_label": "Kickoff this week",
       "note": "Kickoff this week. JD and intake in progress."
     }
+  ],
+  "hires_ytd": [
+    {
+      "name": "Anoop Ranganath",
+      "title": "VP of Engineering",
+      "team": "Engineering",
+      "hire_date": "2026-06-23",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Danny Smith",
+      "title": "Finance & Business Ops Lead",
+      "team": "Finance",
+      "hire_date": "2026-06-17",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Amy Brown",
+      "title": "Social Media Manager",
+      "team": "Marketing",
+      "hire_date": "2026-06-10",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Lydia Yi",
+      "title": "Entertainment Partnership Manager",
+      "team": "Partnerships",
+      "hire_date": "2026-05-26",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Pieter Montoulieu",
+      "title": "Sr Product Engineer, Agentic Systems",
+      "team": "Exploration",
+      "hire_date": "2026-04-24",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Brittany Ellich",
+      "title": "Sr Product Engineer, Agentic Systems",
+      "team": "Exploration",
+      "hire_date": "2026-04-24",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Jeffrey Gleason",
+      "title": "Senior ML Engineer",
+      "team": "ML",
+      "hire_date": "2026-04-17",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Danielle Yuhan",
+      "title": "Senior Product Designer",
+      "team": "Design",
+      "hire_date": "2026-04-09",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Cameron Sweeney",
+      "title": "Senior Backend Engineer, GO",
+      "team": "Data / Infra",
+      "hire_date": "2026-04-09",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Michael Black",
+      "title": "Senior Backend Engineer, GO & TS",
+      "team": "App",
+      "hire_date": "2026-04-07",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Alexander Corbeil",
+      "title": "",
+      "team": "",
+      "hire_date": "2026-02-19",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "William Brannon",
+      "title": "Senior ML Engineer",
+      "team": "ML",
+      "hire_date": "2026-02-05",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Josh Petri",
+      "title": "",
+      "team": "",
+      "hire_date": "2026-01-19",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "Spencer Pope",
+      "title": "",
+      "team": "",
+      "hire_date": "2026-01-12",
+      "time_to_hire": null,
+      "start_date": ""
+    },
+    {
+      "name": "DS Boyce",
+      "title": "",
+      "team": "",
+      "hire_date": "2026-01-08",
+      "time_to_hire": null,
+      "start_date": ""
+    }
   ]
 };
