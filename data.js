@@ -3,7 +3,7 @@ var DASHBOARD_DATA = {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
     "period_label": "Custom Mar 31 – Jun 29",
-    "updated": "Jun 30"
+    "updated": "Jul 1"
   },
   "kpis": {
     "hires": 10,
@@ -11,38 +11,38 @@ var DASHBOARD_DATA = {
     "avg_time_to_hire": 64,
     "avg_time_to_hire_prev": 88,
     "bench_time_to_hire": 44,
-    "open_roles": 13,
+    "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 325
+    "active_candidates": 2383
   },
   "pipeline": {
     "app_review": {
-      "count": 2695,
+      "count": 2277,
       "avg_days": 0
     },
     "phone_screen": {
-      "count": 261,
+      "count": 79,
       "avg_days": 0
     },
     "onsite": {
-      "count": 51,
+      "count": 24,
       "avg_days": 0
     },
     "offer": {
-      "count": 13,
+      "count": 2,
       "avg_days": 0
     },
     "hired": {
-      "count": 10,
+      "count": 15,
       "avg_days": 0
     }
   },
   "passthrough": {
-    "app_to_phone": 10,
-    "phone_to_onsite": 20,
-    "onsite_to_offer": 25,
-    "offer_to_hired": 77
+    "app_to_phone": 3,
+    "phone_to_onsite": 30,
+    "onsite_to_offer": 8,
+    "offer_to_hired": 750
   },
   "outreach": [
     {
@@ -71,21 +71,81 @@ var DASHBOARD_DATA = {
     }
   ],
   "ytd_hires": [
-    { "name": "Anoop Ranganath", "date": "2026-06-23", "status": "Accepted" },
-    { "name": "Danny Smith",     "date": "2026-06-17", "status": "Accepted" },
-    { "name": "Amy Brown",       "date": "2026-06-10", "status": "Accepted" },
-    { "name": "Lydia Yi",        "date": "2026-05-26", "status": "Accepted" },
-    { "name": "Pieter Montoulieu","date": "2026-04-24", "status": "Accepted" },
-    { "name": "Brittany Ellich", "date": "2026-04-24", "status": "Accepted" },
-    { "name": "Jeffrey Gleason", "date": "2026-04-17", "status": "Accepted" },
-    { "name": "Danielle Yuhan",  "date": "2026-04-09", "status": "Accepted" },
-    { "name": "Cameron Sweeney", "date": "2026-04-09", "status": "Accepted" },
-    { "name": "Michael Black",   "date": "2026-04-07", "status": "Accepted" },
-    { "name": "Alexander Corbeil","date": "2026-02-19", "status": "Accepted" },
-    { "name": "William Brannon", "date": "2026-02-05", "status": "Accepted" },
-    { "name": "Josh Petri",      "date": "2026-01-19", "status": "Accepted" },
-    { "name": "Spencer Pope",    "date": "2026-01-12", "status": "Accepted" },
-    { "name": "DS Boyce",        "date": "2026-01-08", "status": "Accepted" }
+    {
+      "name": "Anoop Ranganath",
+      "date": "2026-06-24",
+      "status": "Accepted"
+    },
+    {
+      "name": "Danny Smith",
+      "date": "2026-06-18",
+      "status": "Accepted"
+    },
+    {
+      "name": "Amy Brown",
+      "date": "2026-06-10",
+      "status": "Accepted"
+    },
+    {
+      "name": "Lydia Yi",
+      "date": "2026-05-26",
+      "status": "Accepted"
+    },
+    {
+      "name": "Pieter Montoulieu",
+      "date": "2026-05-05",
+      "status": "Accepted"
+    },
+    {
+      "name": "Brittany Ellich",
+      "date": "2026-05-05",
+      "status": "Accepted"
+    },
+    {
+      "name": "Jeffrey Gleason",
+      "date": "2026-04-24",
+      "status": "Accepted"
+    },
+    {
+      "name": "Danielle Yuhan",
+      "date": "2026-04-09",
+      "status": "Accepted"
+    },
+    {
+      "name": "Cameron Sweeney",
+      "date": "2026-04-09",
+      "status": "Accepted"
+    },
+    {
+      "name": "Michael Black",
+      "date": "2026-04-07",
+      "status": "Accepted"
+    },
+    {
+      "name": "Alexander Corbeil",
+      "date": "2026-02-19",
+      "status": "Accepted"
+    },
+    {
+      "name": "William Brannon",
+      "date": "2026-02-12",
+      "status": "Accepted"
+    },
+    {
+      "name": "Josh Petri",
+      "date": "2026-01-20",
+      "status": "Accepted"
+    },
+    {
+      "name": "Spencer Pope",
+      "date": "2026-01-12",
+      "status": "Accepted"
+    },
+    {
+      "name": "DS Boyce",
+      "date": "2026-01-08",
+      "status": "Accepted"
+    }
   ],
   "recruiter_tth": [
     {
@@ -123,162 +183,116 @@ var DASHBOARD_DATA = {
   ],
   "roles": [
     {
-      "title": "Backend Go Engineer — T&S",
-      "req_id": "R33",
-      "recruiter": "Andres",
-      "date_opened": "2026-03-01",
-      "headcount": 1,
-      "meta": "R33 · Andres · Hiring 1",
-      "priority": "high",
-      "stages": [
-        {
-          "label": "Screen 4",
-          "type": "default"
-        },
-        {
-          "label": "HM 2",
-          "type": "default"
-        },
-        {
-          "label": "PP 1",
-          "type": "default"
-        }
-      ],
-      "status": "at-risk",
-      "status_label": "At risk",
-      "note": "Comp needs increase to IC4–IC5. Sydney Klei promising — move forward if team agrees on range."
-    },
-    {
-      "title": "Fullstack TS Engineer — T&S",
-      "req_id": "R34",
-      "recruiter": "Anabella",
-      "date_opened": "2026-03-15",
-      "headcount": 2,
-      "meta": "R34 · Anabella · Hiring 2",
-      "priority": "high",
-      "stages": [
-        {
-          "label": "Screen 3",
-          "type": "default"
-        },
-        {
-          "label": "HM 2",
-          "type": "default"
-        }
-      ],
-      "status": "progress",
-      "status_label": "In progress",
-      "note": "Anabella prioritizing. No candidates in pair programming yet — next threshold to hit."
-    },
-    {
-      "title": "ML Engineer",
+      "title": "Senior Machine Learning Engineer - ML Team",
       "req_id": "R21",
       "recruiter": "Andres",
       "date_opened": "2025-10-01",
       "headcount": 5,
-      "meta": "R21 · Andres · 2 of 5 remaining",
+      "meta": "R21 · Andres",
       "priority": "high",
       "stages": [
         {
-          "label": "Screen 12",
+          "label": "Application 422",
           "type": "default"
         },
         {
-          "label": "PP 1",
+          "label": "Recruiter 5",
           "type": "default"
         },
         {
-          "label": "DD 1",
-          "type": "dd"
+          "label": "Technical 1",
+          "type": "default"
+        },
+        {
+          "label": "HM 1",
+          "type": "default"
         }
       ],
-      "status": "progress",
+      "status": "risk",
+      "status_overridden": false,
       "status_label": "In progress",
       "note": "Maxwell in pair programming with Ian. Sahil in deep dive. Strong pipeline depth."
     },
     {
-      "title": "BI Data Scientist",
+      "title": "Senior Business Intelligence Data Scientist - App Team",
       "req_id": "R31",
       "recruiter": "Andres",
       "date_opened": "2025-07-01",
       "headcount": 1,
-      "meta": "R31 · Andres · Open Jul '25",
+      "meta": "R31 · Andres",
       "priority": "high",
       "stages": [
         {
-          "label": "DD 2",
-          "type": "dd"
+          "label": "Recruiter 18",
+          "type": "default"
+        },
+        {
+          "label": "Technical 4",
+          "type": "default"
+        },
+        {
+          "label": "Application 139",
+          "type": "default"
         }
       ],
-      "status": "blocked",
+      "status": "risk",
+      "status_overridden": false,
       "status_label": "Blocked",
       "note": "Team meeting to align on scope before proceeding. Sohan & Yufei in DD. Rishav on hold. 2 prior offers fell through."
     },
     {
-      "title": "Finance & Business Ops Lead",
-      "req_id": "R53",
-      "recruiter": "Andres",
-      "date_opened": "2026-02-01",
-      "headcount": 1,
-      "meta": "R53 · Andres · Hiring 1",
-      "priority": "high",
-      "stages": [
-        {
-          "label": "HM 1",
-          "type": "default"
-        },
-        {
-          "label": "Take home 2",
-          "type": "default"
-        },
-        {
-          "label": "DD 2",
-          "type": "dd"
-        }
-      ],
-      "status": "near-offer",
-      "status_label": "Near offer",
-      "note": "Danny Smith trial day Tue. Potential offer as early as this week."
-    },
-    {
-      "title": "VP of Engineering",
-      "req_id": "",
+      "title": "Senior Backend Developer - Trust & Safety",
+      "req_id": "R33",
       "recruiter": "Andres",
       "date_opened": "2026-03-01",
       "headcount": 1,
-      "meta": "Andres · Hiring 1",
-      "priority": "normal",
+      "meta": "R33 · Andres",
+      "priority": "high",
       "stages": [
         {
-          "label": "Exec 3",
+          "label": "Pair 2",
           "type": "default"
         },
         {
-          "label": "HM 1",
+          "label": "Application 59",
+          "type": "default"
+        },
+        {
+          "label": "Recruiter 18",
           "type": "default"
         }
       ],
-      "status": "progress",
-      "status_label": "In progress",
-      "note": "Michi meeting with Jay & Rose this week. Annop trial day Tue. Decision likely within 2 weeks."
+      "status": "risk",
+      "status_overridden": false,
+      "status_label": "At risk",
+      "note": "Comp needs increase to IC4–IC5. Sydney Klei promising — move forward if team agrees on range."
     },
     {
-      "title": "Sr Product Engineer, Agentic",
-      "req_id": "R49",
+      "title": "Senior Fullstack Developer- Trust & Safety",
+      "req_id": "R34",
       "recruiter": "Andres",
-      "date_opened": "2026-02-15",
-      "headcount": 1,
-      "meta": "R49 · Andres · Hiring 1",
-      "priority": "normal",
+      "date_opened": "2026-03-15",
+      "headcount": 2,
+      "meta": "R34 · Andres",
+      "priority": "high",
       "stages": [
         {
-          "label": "Offer 1",
-          "type": "offer"
+          "label": "Application 325",
+          "type": "default"
+        },
+        {
+          "label": "Recruiter 23",
+          "type": "default"
+        },
+        {
+          "label": "Hiring 6",
+          "type": "default"
         }
       ],
-      "status": "offer",
-      "status_label": "Offer out 🎉",
-      "note": "Aaron offer extended. Awaiting response."
+      "status": "risk",
+      "status_overridden": false,
+      "status_label": "In progress",
+      "note": "Anabella prioritizing. No candidates in pair programming yet — next threshold to hit."
     },
     {
       "title": "Sports Partnership Manager",
@@ -286,21 +300,45 @@ var DASHBOARD_DATA = {
       "recruiter": "Andres",
       "date_opened": "2026-03-10",
       "headcount": 1,
-      "meta": "R47 · Andres · Hiring 1",
+      "meta": "R47 · Andres",
       "priority": "normal",
       "stages": [
         {
-          "label": "Screen 2",
+          "label": "Application 47",
           "type": "default"
         },
         {
-          "label": "DD 3",
-          "type": "dd"
+          "label": "Recruiter 4",
+          "type": "default"
+        },
+        {
+          "label": "Culture 1",
+          "type": "default"
         }
       ],
-      "status": "progress",
+      "status": "risk",
+      "status_overridden": false,
       "status_label": "In progress",
       "note": "Mary, Patrick, Brooklyn in deep dive. Decision expected soon."
+    },
+    {
+      "title": "Senior Product Engineer, Agentic Systems - Exploration Team",
+      "req_id": "R49",
+      "recruiter": "Andres",
+      "date_opened": "2026-02-15",
+      "headcount": 1,
+      "meta": "R49 · Andres",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "Application 44",
+          "type": "default"
+        }
+      ],
+      "status": "risk",
+      "status_overridden": false,
+      "status_label": "Offer out 🎉",
+      "note": "Aaron offer extended. Awaiting response."
     },
     {
       "title": "Lead Product Designer",
@@ -308,79 +346,137 @@ var DASHBOARD_DATA = {
       "recruiter": "Andres",
       "date_opened": "2026-01-15",
       "headcount": 1,
-      "meta": "R51 · Andres · Hiring 1",
+      "meta": "R51 · Andres",
       "priority": "normal",
       "stages": [
         {
-          "label": "Screen 2",
+          "label": "Offer 1",
           "type": "default"
         },
         {
-          "label": "HM 1",
+          "label": "Hiring 3",
+          "type": "default"
+        },
+        {
+          "label": "Recruiter 2",
+          "type": "default"
+        },
+        {
+          "label": "Application 5",
           "type": "default"
         }
       ],
       "status": "signed",
+      "status_overridden": false,
       "status_label": "Signed 🎉",
       "note": "Rafe contract signed. Needs Rose countersignature. Role closing."
     },
     {
-      "title": "Social Media Manager",
-      "req_id": "R59",
+      "title": "Staff Fullstack Engineer - App Team",
+      "req_id": "R52",
       "recruiter": "Andres",
-      "date_opened": "2026-04-01",
+      "date_opened": "2026-06-01",
       "headcount": 1,
-      "meta": "R59 · Andres · Hiring 1",
+      "meta": "R52 · Andres",
       "priority": "normal",
       "stages": [
         {
-          "label": "Take home 2",
+          "label": "Application 200",
           "type": "default"
         },
         {
-          "label": "HM 2",
+          "label": "Recruiter 9",
           "type": "default"
-        }
-      ],
-      "status": "offer",
-      "status_label": "Offer out 🎉",
-      "note": "Amy — extending offer. Working on rate & contract terms."
-    },
-    {
-      "title": "Staff Fullstack Eng, App Team",
-      "req_id": "R52",
-      "recruiter": "Anabella",
-      "date_opened": "2026-06-01",
-      "headcount": 1,
-      "meta": "R52 · Anabella · Hiring 1",
-      "priority": "normal",
-      "stages": [
+        },
         {
-          "label": "—",
+          "label": "Hiring 1",
           "type": "default"
         }
       ],
       "status": "new",
+      "status_overridden": false,
       "status_label": "Just kicked off",
       "note": "Anabella ramping sourcing. Building pipeline."
     },
     {
-      "title": "Senior SRE, Platform",
-      "req_id": "",
-      "recruiter": "Andres",
-      "date_opened": "2026-06-10",
+      "title": "Staff Fullstack Engineer, App Team",
+      "req_id": "R60",
+      "recruiter": "Anabella",
+      "date_opened": "2026-06-01",
       "headcount": 1,
-      "meta": "Andres · Hiring 1",
+      "meta": "R60 · Anabella",
       "priority": "normal",
       "stages": [
         {
-          "label": "—",
+          "label": "Application 213",
           "type": "default"
         }
       ],
-      "status": "new",
-      "status_label": "Kickoff this week",
-      "note": "Kickoff this week. JD and intake in progress."
+      "status": "progress",
+      "status_overridden": false,
+      "status_label": "In progress",
+      "note": ""
+    },
+    {
+      "title": "Staff Site Reliability Engineer",
+      "req_id": "R61",
+      "recruiter": "Andres",
+      "date_opened": "2026-06-22",
+      "headcount": 1,
+      "meta": "R61 · Andres",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "Take 1",
+          "type": "default"
+        },
+        {
+          "label": "Application 116",
+          "type": "default"
+        }
+      ],
+      "status": "progress",
+      "status_overridden": false,
+      "status_label": "In progress",
+      "note": ""
+    },
+    {
+      "title": "Senior Product Manager, AI Safety",
+      "req_id": "R62",
+      "recruiter": "Andres",
+      "date_opened": "2026-06-23",
+      "headcount": 1,
+      "meta": "R62 · Andres",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "Application 144",
+          "type": "default"
+        }
+      ],
+      "status": "progress",
+      "status_overridden": false,
+      "status_label": "In progress",
+      "note": ""
+    },
+    {
+      "title": "Senior Fullstack Engineer, Network Services",
+      "req_id": "R64",
+      "recruiter": "Andres",
+      "date_opened": "2026-06-30",
+      "headcount": 1,
+      "meta": "R64 · Andres",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "Application 360",
+          "type": "default"
+        }
+      ],
+      "status": "progress",
+      "status_overridden": false,
+      "status_label": "In progress",
+      "note": ""
     }
   ],
   "hires_ytd": [
