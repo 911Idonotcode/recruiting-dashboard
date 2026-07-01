@@ -505,31 +505,32 @@ function render(d) {
     <!-- PIPELINE TAB -->
     <div class="tab-panel" id="tab-pipeline">
       <div class="section">
-        <div class="section-title">Q2 pipeline summary</div>
+        <div class="section-title">Pipeline summary &nbsp;·&nbsp; <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:13px;color:var(--text-2)">${drLabel(activeDR)}</span></div>
+        <div style="font-size:12px;color:var(--text-3);margin-bottom:10px;">Stage counts reflect current active candidates. Hired count is filtered by selected date range.</div>
         <div class="kpi-grid">
           <div class="kpi-card">
             <div class="kpi-label">App Review</div>
             <div class="kpi-value">${p.app_review.count.toLocaleString()}</div>
-            <div class="kpi-sub">Avg ${_avgDays('app_review')} days</div>
+            <div class="kpi-sub">Avg ${_avgDays('app_review')} days · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
           <div class="kpi-card">
             <div class="kpi-label">Phone Screen</div>
             <div class="kpi-value">${p.phone_screen.count}</div>
-            <div class="kpi-sub">Avg ${_avgDays('phone_screen')} days · ${pt.app_to_phone}% PT</div>
+            <div class="kpi-sub">Avg ${_avgDays('phone_screen')} days · ${pt.app_to_phone}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
           <div class="kpi-card">
             <div class="kpi-label">Onsite</div>
             <div class="kpi-value">${p.onsite.count}</div>
-            <div class="kpi-sub">Avg ${_avgDays('onsite')} days · ${pt.phone_to_onsite}% PT</div>
+            <div class="kpi-sub">Avg ${_avgDays('onsite')} days · ${pt.phone_to_onsite}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
           <div class="kpi-card">
             <div class="kpi-label">Offer</div>
             <div class="kpi-value">${p.offer.count}</div>
-            <div class="kpi-sub">Avg ${_avgDays('offer')} days · ${pt.onsite_to_offer}% PT</div>
+            <div class="kpi-sub">Avg ${_avgDays('offer')} days · ${pt.onsite_to_offer}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
           <div class="kpi-card">
             <div class="kpi-label">Hired</div>
-            <div class="kpi-value">${p.hired.count}</div>
+            <div class="kpi-value">${applyDRFilter(d.ytd_hires||[]).length}</div>
             <div class="kpi-sub">${pt.offer_to_hired}% offer acceptance</div>
           </div>
         </div>
