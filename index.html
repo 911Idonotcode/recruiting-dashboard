@@ -155,13 +155,22 @@
     .save-btn.primary:hover { background: var(--blue-dark); border-color: var(--blue-dark); box-shadow: 0 2px 8px rgba(5,96,255,0.25); }
     .save-btn:hover { background: var(--bg-2); }
     .flag-list { display: flex; flex-direction: column; gap: 10px; }
-    .flag { border-radius: var(--radius); padding: 14px 16px; border-left: 3px solid transparent; }
+    .flag { border-radius: var(--radius); padding: 14px 16px; border-left: 3px solid transparent; position: relative; }
     .flag.red    { background: var(--red-light);    border-color: var(--red); }
     .flag.yellow { background: var(--yellow-light); border-color: var(--yellow); }
     .flag.green  { background: var(--green-light);  border-color: var(--green); }
     .flag-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
     .flag.red    .flag-title { color: var(--red); }
     .flag.yellow .flag-title { color: var(--yellow); }
+    .flag-title[contenteditable="true"], .flag-body[contenteditable="true"] { outline: none; border-bottom: 1px dashed rgba(0,0,0,0.2); cursor: text; min-width: 40px; display: block; }
+    .flag-title[contenteditable="true"]:focus, .flag-body[contenteditable="true"]:focus { border-bottom-color: currentColor; background: rgba(255,255,255,0.3); border-radius: 2px; }
+    .flag-actions { position: absolute; top: 10px; right: 10px; display: flex; gap: 6px; opacity: 0; transition: opacity 0.15s; }
+    .flag:hover .flag-actions { opacity: 1; }
+    .flag-color-btn { font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.15); cursor: pointer; background: rgba(255,255,255,0.6); color: var(--text-1); font-family: inherit; }
+    .flag-delete-btn { font-size: 13px; padding: 2px 6px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.15); cursor: pointer; background: rgba(255,255,255,0.6); color: var(--text-2); font-family: inherit; }
+    .flag-delete-btn:hover { background: var(--red-light); color: var(--red); border-color: var(--red); }
+    .flag-add-btn { display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-radius: var(--radius); border: 1.5px dashed var(--border); background: none; color: var(--text-3); font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit; width: 100%; transition: border-color 0.15s, color 0.15s; }
+    .flag-add-btn:hover { border-color: var(--blue); color: var(--blue); }
     .flag.green  .flag-title { color: var(--green); }
     .flag-body { font-size: 17px; color: var(--text-2); line-height: 1.55; }
     .footer { display: flex; gap: 20px; font-size: 13px; color: var(--text-3); flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border); }
@@ -375,11 +384,23 @@ function render(d) {
       <div class="section">
         <div class="section-title">Key topics for discussion</div>
         <div class="flag-list">
-          ${d.flags.map(f => `
+          ${d.flags.map((f, i) => `
             <div class="flag ${f.color}">
-              <div class="flag-title">${esc(f.title)}</div>
-              <div class="flag-body">${esc(f.body)}</div>
+              <div class="flag-actions">
+                <button class="flag-color-btn" onclick="cycleColor(${i})" title="Change color">● Color</button>
+                <button class="flag-delete-btn" onclick="deleteFlag(${i})" title="Remove">✕</button>
+              </div>
+              <div class="flag-title" contenteditable="true" spellcheck="false"
+                   onblur="onFlagBlur(this,${i},'title')"
+                   onkeydown="if(event.key==='Enter'){event.preventDefault();this.blur();}"
+              >${esc(f.title)}</div>
+              <div class="flag-body" contenteditable="true" spellcheck="false"
+                   onblur="onFlagBlur(this,${i},'body')"
+              >${esc(f.body)}</div>
             </div>`).join('')}
+          <button class="flag-add-btn" onclick="addFlag()">
+            <span style="font-size:18px;line-height:1">+</span> Add discussion topic
+          </button>
         </div>
       </div>
     </div>
@@ -765,7 +786,7 @@ function applyLocalEdits(data) {
       }
     });
   } catch(_) {}
-  return data;
+  return applyFlagEdits(data);
 }
 
 function markDirty() {
@@ -848,7 +869,60 @@ function startEditNote(td) {
 
 function discardEdits() {
   localStorage.removeItem('dashboard-edits');
+  localStorage.removeItem('flag-edits');
   location.reload();
+}
+
+// ── flags (Key Topics) ───────────────────────────────────────────────────
+function loadFlagEdits() {
+  try { return JSON.parse(localStorage.getItem('flag-edits') || 'null'); } catch(e) { return null; }
+}
+function saveFlagEdits() {
+  localStorage.setItem('flag-edits', JSON.stringify(DASHBOARD_DATA.flags));
+  markDirty();
+}
+function applyFlagEdits(data) {
+  const saved = loadFlagEdits();
+  if (saved) data.flags = saved;
+  return data;
+}
+
+function addFlag() {
+  DASHBOARD_DATA.flags.push({ color: 'yellow', title: 'New topic', body: 'Add details here.' });
+  saveFlagEdits();
+  render(DASHBOARD_DATA);
+  // focus the new flag title after render
+  setTimeout(() => {
+    const titles = document.querySelectorAll('.flag-title[contenteditable]');
+    const last = titles[titles.length - 1];
+    if (last) { last.focus(); selectAll(last); }
+  }, 50);
+}
+
+function deleteFlag(i) {
+  DASHBOARD_DATA.flags.splice(i, 1);
+  saveFlagEdits();
+  render(DASHBOARD_DATA);
+}
+
+function cycleColor(i) {
+  const colors = ['red', 'yellow', 'green'];
+  const cur = DASHBOARD_DATA.flags[i].color;
+  DASHBOARD_DATA.flags[i].color = colors[(colors.indexOf(cur) + 1) % colors.length];
+  saveFlagEdits();
+  render(DASHBOARD_DATA);
+}
+
+function onFlagBlur(el, i, field) {
+  const val = el.innerText.trim();
+  if (val) { DASHBOARD_DATA.flags[i][field] = val; saveFlagEdits(); }
+}
+
+function selectAll(el) {
+  const range = document.createRange();
+  range.selectNodeContents(el);
+  const sel = window.getSelection();
+  sel.removeAllRanges(); sel.addRange(range);
 }
 
 function exportDataJs() {
@@ -867,7 +941,7 @@ loadData()
   .then(render)
   .then(() => {
     // Show save bar if there are unsaved edits in localStorage
-    if (localStorage.getItem('dashboard-edits')) markDirty();
+    if (localStorage.getItem('dashboard-edits') || localStorage.getItem('flag-edits')) markDirty();
   })
   .catch(err => {
     document.getElementById('loading').textContent = 'Failed to load dashboard — ' + err.message;
