@@ -57,6 +57,9 @@
     .bar-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; min-width: 24px; }
     .bar-fill-val { font-size: 13px; font-weight: 500; color: #fff; white-space: nowrap; }
     .bar-outside-val { font-size: 13px; font-weight: 500; color: var(--text-2); white-space: nowrap; margin-left: 6px; }
+    .avg-days-val { font-size: 13px; font-weight: 500; color: var(--text-2); white-space: nowrap; margin-left: 6px; cursor: pointer; border-bottom: 1px dashed var(--border); }
+    .avg-days-val:hover { color: var(--blue); border-bottom-color: var(--blue); }
+    .avg-days-input { width: 52px; font-size: 13px; font-weight: 500; border: 1px solid var(--blue); border-radius: 4px; padding: 1px 4px; margin-left: 6px; outline: none; color: var(--text-1); }
     .bar-fill.blue { background: var(--blue); }
     .bar-fill.green { background: var(--green); }
     .bar-fill.muted { background: var(--bg-3); border: 1px solid var(--border); }
@@ -204,6 +207,48 @@ function bar(label, pct, color, val) {
   </div>`;
 }
 
+// avg-days edits are stored separately from role edits
+function loadAvgDays() {
+  try { return JSON.parse(localStorage.getItem('avgDaysEdits') || '{}'); } catch(e) { return {}; }
+}
+function saveAvgDays(key, val) {
+  const m = loadAvgDays(); m[key] = val;
+  localStorage.setItem('avgDaysEdits', JSON.stringify(m));
+}
+
+function avgDaysBar(label, stageKey, apiDays, color, maxDays) {
+  const overrides = loadAvgDays();
+  const days = overrides[stageKey] !== undefined ? overrides[stageKey] : apiDays;
+  const pct  = days > 0 ? Math.round(days / maxDays * 100) : 3;
+  const displayColor = stageKey === 'onsite' && days > 25 ? 'warn' : color;
+  const inside = pct >= 20;
+  const valHtml = `<span class="avg-days-val" onclick="editAvgDays('${stageKey}',${days},this)" title="Click to edit">${days > 0 ? days + ' days' : 'click to set'}</span>`;
+  return `<div class="bar-row" id="avgbar-${stageKey}">
+    <span class="bar-label">${label}</span>
+    <div class="bar-track"><div class="bar-fill ${displayColor}" style="width:${Math.max(pct,3)}%">
+      ${inside ? `<span class="bar-fill-val">${days > 0 ? days + 'd' : ''}</span>` : ''}
+    </div></div>
+    ${!inside ? valHtml : valHtml}
+  </div>`;
+}
+
+function editAvgDays(stageKey, currentVal, el) {
+  const input = document.createElement('input');
+  input.type = 'number'; input.min = 0; input.max = 365;
+  input.value = currentVal || '';
+  input.className = 'avg-days-input';
+  input.placeholder = 'days';
+  el.replaceWith(input);
+  input.focus(); input.select();
+  function commit() {
+    const v = parseInt(input.value, 10);
+    if (!isNaN(v) && v >= 0) { saveAvgDays(stageKey, v); render(DASHBOARD_DATA); }
+    else { render(DASHBOARD_DATA); }
+  }
+  input.addEventListener('blur', commit);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') commit(); if (e.key === 'Escape') render(DASHBOARD_DATA); });
+}
+
 function stagePill(s) {
   const cls = s.type === 'offer' ? 'offer' : s.type === 'dd' ? 'dd' : '';
   return `<span class="stage-pill ${cls}">${esc(s.label)}</span>`;
@@ -221,7 +266,6 @@ function render(d) {
   const pctHires = Math.round((k.hires / k.hires_target) * 100);
   const tthDelta = k.avg_time_to_hire_prev - k.avg_time_to_hire;
   const maxPipelineCount = p.app_review.count;
-  const maxDays = 40;
 
   // Pipeline bar widths
   const pipelineStages = [
@@ -231,13 +275,9 @@ function render(d) {
     { label: 'Offer',         count: p.offer.count,         pct: Math.round(p.offer.count / maxPipelineCount * 100 * 10) / 10 },
     { label: 'Hired',         count: p.hired.count,         pct: Math.round(p.hired.count / maxPipelineCount * 100 * 10) / 10 },
   ];
-  const daysStages = [
-    { label: 'App review',   days: p.app_review.avg_days,  color: 'blue', pct: Math.round(p.app_review.avg_days / maxDays * 100) },
-    { label: 'Phone screen', days: p.phone_screen.avg_days, color: 'blue', pct: Math.round(p.phone_screen.avg_days / maxDays * 100) },
-    { label: 'Onsite',       days: p.onsite.avg_days,       color: p.onsite.avg_days > 25 ? 'warn' : 'blue', pct: Math.round(p.onsite.avg_days / maxDays * 100) },
-    { label: 'Offer',        days: p.offer.avg_days,        color: 'blue', pct: Math.round(p.offer.avg_days / maxDays * 100) },
-    { label: 'Hired',        days: p.hired.avg_days,        color: 'muted', pct: 3 },
-  ];
+  const _avgOvr = loadAvgDays();
+  const _avgDays = key => _avgOvr[key] !== undefined ? _avgOvr[key] : p[key].avg_days;
+  const maxDaysActual = Math.max(40, _avgDays('app_review'), _avgDays('phone_screen'), _avgDays('onsite'), _avgDays('offer'));
 
   const pt = d.passthrough;
   const roleCount = d.roles.length;
@@ -321,9 +361,13 @@ function render(d) {
           <div class="chart-card">
             <div class="chart-card-title">Average days in stage</div>
             <div class="bar-chart">
-              ${daysStages.map(s => bar(s.label, s.pct, s.color, s.days > 0 ? s.days + ' days' : '0d')).join('')}
+              ${avgDaysBar('App review',   'app_review',   p.app_review.avg_days,   'blue',  maxDaysActual)}
+              ${avgDaysBar('Phone screen', 'phone_screen', p.phone_screen.avg_days, 'blue',  maxDaysActual)}
+              ${avgDaysBar('Onsite',       'onsite',       p.onsite.avg_days,       'blue',  maxDaysActual)}
+              ${avgDaysBar('Offer',        'offer',        p.offer.avg_days,        'blue',  maxDaysActual)}
+              ${avgDaysBar('Hired',        'hired',        p.hired.avg_days,        'muted', maxDaysActual)}
             </div>
-            <div class="chart-note">${p.onsite.avg_days > 25 ? `<span class="warn">⚠ Onsite stage averaging ${p.onsite.avg_days} days</span> — primary bottleneck.` : `Onsite stage: ${p.onsite.avg_days} days.`} Faster scheduling would push time-to-hire toward industry benchmark (${k.bench_time_to_hire}d).</div>
+            <div class="chart-note">${_avgDays('onsite') > 25 ? `<span class="warn">⚠ Onsite stage averaging ${_avgDays('onsite')} days</span> — primary bottleneck.` : `Onsite stage: ${_avgDays('onsite')} days.`} Faster scheduling would push time-to-hire toward industry benchmark (${k.bench_time_to_hire}d).</div>
           </div>
         </div>
       </div>
@@ -348,22 +392,22 @@ function render(d) {
           <div class="kpi-card">
             <div class="kpi-label">App Review</div>
             <div class="kpi-value">${p.app_review.count.toLocaleString()}</div>
-            <div class="kpi-sub">Avg ${p.app_review.avg_days} days</div>
+            <div class="kpi-sub">Avg ${_avgDays('app_review')} days</div>
           </div>
           <div class="kpi-card">
             <div class="kpi-label">Phone Screen</div>
             <div class="kpi-value">${p.phone_screen.count}</div>
-            <div class="kpi-sub">Avg ${p.phone_screen.avg_days} days · ${pt.app_to_phone}% PT</div>
+            <div class="kpi-sub">Avg ${_avgDays('phone_screen')} days · ${pt.app_to_phone}% PT</div>
           </div>
           <div class="kpi-card">
             <div class="kpi-label">Onsite</div>
             <div class="kpi-value">${p.onsite.count}</div>
-            <div class="kpi-sub">Avg ${p.onsite.avg_days} days · ${pt.phone_to_onsite}% PT</div>
+            <div class="kpi-sub">Avg ${_avgDays('onsite')} days · ${pt.phone_to_onsite}% PT</div>
           </div>
           <div class="kpi-card">
             <div class="kpi-label">Offer</div>
             <div class="kpi-value">${p.offer.count}</div>
-            <div class="kpi-sub">Avg ${p.offer.avg_days} days · ${pt.onsite_to_offer}% PT</div>
+            <div class="kpi-sub">Avg ${_avgDays('offer')} days · ${pt.onsite_to_offer}% PT</div>
           </div>
           <div class="kpi-card">
             <div class="kpi-label">Hired</div>

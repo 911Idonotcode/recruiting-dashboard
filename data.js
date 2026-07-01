@@ -14,11 +14,11 @@ var DASHBOARD_DATA = {
     "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2383
+    "active_candidates": 2391
   },
   "pipeline": {
     "app_review": {
-      "count": 2277,
+      "count": 2285,
       "avg_days": 0
     },
     "phone_screen": {
@@ -469,7 +469,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 360",
+          "label": "Application 368",
           "type": "default"
         }
       ],
