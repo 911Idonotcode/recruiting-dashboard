@@ -171,6 +171,16 @@
     .flag-delete-btn:hover { background: var(--red-light); color: var(--red); border-color: var(--red); }
     .flag-add-btn { display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-radius: var(--radius); border: 1.5px dashed var(--border); background: none; color: var(--text-3); font-size: 14px; font-weight: 500; cursor: pointer; font-family: inherit; width: 100%; transition: border-color 0.15s, color 0.15s; }
     .flag-add-btn:hover { border-color: var(--blue); color: var(--blue); }
+    /* ── date range picker ── */
+    .date-range-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .dr-btn { font-size: 13px; font-weight: 500; padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border); background: var(--bg-2); color: var(--text-2); cursor: pointer; font-family: inherit; transition: all 0.12s; white-space: nowrap; }
+    .dr-btn:hover { border-color: var(--blue); color: var(--blue); }
+    .dr-btn.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .dr-custom { display: flex; align-items: center; gap: 6px; margin-left: 4px; }
+    .dr-date-input { font-size: 13px; font-family: inherit; border: 1px solid var(--border); border-radius: 8px; padding: 4px 8px; color: var(--text-1); background: var(--bg-2); outline: none; }
+    .dr-date-input:focus { border-color: var(--blue); }
+    .dr-sep { font-size: 13px; color: var(--text-3); }
+    .dr-snapshot-note { font-size: 12px; color: var(--text-3); margin-left: auto; font-style: italic; }
     .flag.green  .flag-title { color: var(--green); }
     .flag-body { font-size: 17px; color: var(--text-2); line-height: 1.55; }
     .footer { display: flex; gap: 20px; font-size: 13px; color: var(--text-3); flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border); }
@@ -258,6 +268,82 @@ function editAvgDays(stageKey, currentVal, el) {
   input.addEventListener('keydown', e => { if (e.key === 'Enter') commit(); if (e.key === 'Escape') render(DASHBOARD_DATA); });
 }
 
+// ── date range ───────────────────────────────────────────────────────────
+const DR_PRESETS = [
+  { key: 'this_quarter', label: 'This Quarter' },
+  { key: 'last_quarter', label: 'Last Quarter' },
+  { key: 'ytd',         label: 'YTD'           },
+  { key: 'monthly',     label: 'Monthly'        },
+  { key: 'weekly',      label: 'Weekly'         },
+  { key: 'last_year',   label: 'Last Year'      },
+  { key: 'custom',      label: 'Custom'         },
+];
+
+let activeDR = localStorage.getItem('activeDR') || 'ytd';
+let customStart = localStorage.getItem('drCustomStart') || '';
+let customEnd   = localStorage.getItem('drCustomEnd')   || '';
+
+function drRange(key) {
+  const now = new Date();
+  const y = now.getFullYear();
+  const m = now.getMonth(); // 0-indexed
+  const q = Math.floor(m / 3);
+  switch(key) {
+    case 'weekly':
+      const dow = now.getDay();
+      const mon = new Date(now); mon.setDate(now.getDate() - ((dow + 6) % 7));
+      const sun = new Date(mon); sun.setDate(mon.getDate() + 6);
+      return [fmt(mon), fmt(sun)];
+    case 'monthly':
+      return [fmt(new Date(y, m, 1)), fmt(new Date(y, m + 1, 0))];
+    case 'this_quarter':
+      return [fmt(new Date(y, q * 3, 1)), fmt(new Date(y, q * 3 + 3, 0))];
+    case 'last_quarter':
+      const lq = q === 0 ? 3 : q - 1;
+      const ly = q === 0 ? y - 1 : y;
+      return [fmt(new Date(ly, lq * 3, 1)), fmt(new Date(ly, lq * 3 + 3, 0))];
+    case 'ytd':
+      return [fmt(new Date(y, 0, 1)), fmt(now)];
+    case 'last_year':
+      return [fmt(new Date(y - 1, 0, 1)), fmt(new Date(y - 1, 11, 31))];
+    case 'custom':
+      return [customStart || fmt(new Date(y, 0, 1)), customEnd || fmt(now)];
+    default:
+      return [fmt(new Date(y, 0, 1)), fmt(now)];
+  }
+}
+
+function fmt(d) {
+  return d.toISOString().slice(0, 10);
+}
+
+function drLabel(key) {
+  const [s, e] = drRange(key);
+  const fmtShort = iso => new Date(iso + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', d: 'numeric', day: 'numeric', year: 'numeric' });
+  return `${fmtShort(s)} – ${fmtShort(e)}`;
+}
+
+function setDR(key) {
+  activeDR = key;
+  localStorage.setItem('activeDR', key);
+  render(DASHBOARD_DATA);
+}
+
+function applyDRFilter(hires) {
+  const [s, e] = drRange(activeDR);
+  return hires.filter(h => h.date >= s && h.date <= e);
+}
+
+function onCustomDate() {
+  const s = document.getElementById('drStart');
+  const e = document.getElementById('drEnd');
+  if (s) customStart = s.value;
+  if (e) customEnd   = e.value;
+  localStorage.setItem('drCustomStart', customStart);
+  localStorage.setItem('drCustomEnd',   customEnd);
+  render(DASHBOARD_DATA);
+}
+
 function stagePill(s) {
   const cls = s.type === 'offer' ? 'offer' : s.type === 'dd' ? 'dd' : '';
   return `<span class="stage-pill ${cls}">${esc(s.label)}</span>`;
@@ -302,7 +388,18 @@ function render(d) {
           <p>Bluesky Recruiting Team · ${roleCount} active searches</p>
         </div>
       </div>
-      <div class="header-meta">${esc(m.period_label || m.quarter + ' · ' + m.period)} · Updated ${esc(m.updated)}</div>
+      <div class="header-meta">Updated ${esc(m.updated)}</div>
+    </div>
+
+    <div class="date-range-bar">
+      ${DR_PRESETS.map(p => `<button class="dr-btn${activeDR === p.key ? ' active' : ''}" onclick="setDR('${p.key}')">${p.label}</button>`).join('')}
+      ${activeDR === 'custom' ? `
+        <div class="dr-custom">
+          <input id="drStart" type="date" class="dr-date-input" value="${customStart}" onchange="onCustomDate()" title="Start date">
+          <span class="dr-sep">→</span>
+          <input id="drEnd" type="date" class="dr-date-input" value="${customEnd}" onchange="onCustomDate()" title="End date">
+        </div>` : ''}
+      <span class="dr-snapshot-note">${drLabel(activeDR)}</span>
     </div>
 
     <div class="tab-nav">
@@ -315,12 +412,12 @@ function render(d) {
     <!-- EXECUTIVE TAB -->
     <div class="tab-panel active" id="tab-executive">
       <div class="section">
-        <div class="section-title">Q2 at a glance</div>
+        <div class="section-title">At a glance &nbsp;·&nbsp; <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:13px;color:var(--text-2)">${drLabel(activeDR)}</span></div>
         <div class="kpi-grid">
           <div class="kpi-card">
-            <div class="kpi-label">Q2 Hires</div>
-            <div class="kpi-value green">${k.hires} <span class="unit">/ ${k.hires_target}</span></div>
-            <div class="kpi-sub">${pctHires}% of target</div>
+            <div class="kpi-label">Hires</div>
+            <div class="kpi-value green">${applyDRFilter(d.ytd_hires||[]).length} <span class="unit">/ ${k.hires_target}</span></div>
+            <div class="kpi-sub">${Math.round(applyDRFilter(d.ytd_hires||[]).length/k.hires_target*100)}% of target</div>
           </div>
           <div class="kpi-card">
             <div class="kpi-label">Avg Time to Hire</div>
@@ -443,14 +540,25 @@ function render(d) {
       <div class="section">
         <div class="section-title">Outreach performance</div>
         <div class="outreach-grid">
-          ${d.outreach.map(o => `
-            <div class="outreach-card">
-              <div class="outreach-month">${esc(o.month)}</div>
-              <div class="outreach-stat"><span class="key">Sent</span><span class="val">${o.sent.toLocaleString()}</span></div>
-              <div class="outreach-stat"><span class="key">Open rate</span><span class="val">${o.open_pct}%</span></div>
-              <div class="outreach-stat"><span class="key">Reply rate</span><span class="val">${o.reply_pct}%</span></div>
-              <div class="outreach-stat"><span class="key">Interested</span><span class="val${o.trending === 'down' ? ' trending-down' : o.trending === 'up' ? ' trending-up' : ''}">${o.interested_pct}%${o.trending === 'down' ? ' ↓' : o.trending === 'up' ? ' ↑' : ''}</span></div>
-            </div>`).join('')}
+          ${(() => {
+            const [drS, drE] = drRange(activeDR);
+            const filteredOutreach = d.outreach.filter(o => {
+              // parse "June 2026" → date range for that month
+              const dt = new Date(o.month + ' 1');
+              const monthStart = fmt(new Date(dt.getFullYear(), dt.getMonth(), 1));
+              const monthEnd   = fmt(new Date(dt.getFullYear(), dt.getMonth() + 1, 0));
+              return monthStart <= drE && monthEnd >= drS;
+            });
+            const shown = filteredOutreach.length ? filteredOutreach : d.outreach;
+            return shown.map(o => `
+              <div class="outreach-card">
+                <div class="outreach-month">${esc(o.month)}</div>
+                <div class="outreach-stat"><span class="key">Sent</span><span class="val">${o.sent.toLocaleString()}</span></div>
+                <div class="outreach-stat"><span class="key">Open rate</span><span class="val">${o.open_pct}%</span></div>
+                <div class="outreach-stat"><span class="key">Reply rate</span><span class="val">${o.reply_pct}%</span></div>
+                <div class="outreach-stat"><span class="key">Interested</span><span class="val${o.trending === 'down' ? ' trending-down' : o.trending === 'up' ? ' trending-up' : ''}">${o.interested_pct}%${o.trending === 'down' ? ' ↓' : o.trending === 'up' ? ' ↑' : ''}</span></div>
+              </div>`).join('');
+          })()}
         </div>
         <p style="font-size:12px; color:var(--text-3); margin-top:4px;">April volume was low (${d.outreach[2]?.sent ?? 0} sent), so rate comparison should be weighted against May/June. Trend direction still signals message fatigue.</p>
       </div>
@@ -513,41 +621,51 @@ function render(d) {
     <!-- YTD HIRES TAB -->
     <div class="tab-panel" id="tab-ytd">
       ${(() => {
-        const hires = d.ytd_hires || [];
+        const allHires = d.ytd_hires || [];
+        const hires = applyDRFilter(allHires);
         const total = hires.length;
+        const [drS, drE] = drRange(activeDR);
+        const rangeLabel = drLabel(activeDR);
 
         // Group by month
         const byMonth = {};
         hires.forEach(h => {
-          const dt = new Date(h.date);
+          const dt = new Date(h.date + 'T12:00:00');
           const key = dt.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
           byMonth[key] = (byMonth[key] || 0) + 1;
         });
         const months = Object.entries(byMonth);
-        const maxMonthCount = Math.max(...months.map(([,c]) => c));
+        const maxMonthCount = months.length ? Math.max(...months.map(([,c]) => c)) : 1;
 
-        // Q1 vs Q2 split
-        const q1 = hires.filter(h => new Date(h.date).getMonth() < 3).length;
-        const q2 = hires.filter(h => new Date(h.date).getMonth() >= 3).length;
+        // Q1 vs Q2 split within filtered range
+        const q1 = hires.filter(h => { const mo = new Date(h.date + 'T12:00:00').getMonth(); return mo >= 0 && mo < 3; }).length;
+        const q2 = hires.filter(h => { const mo = new Date(h.date + 'T12:00:00').getMonth(); return mo >= 3 && mo < 6; }).length;
+        const q3 = hires.filter(h => { const mo = new Date(h.date + 'T12:00:00').getMonth(); return mo >= 6 && mo < 9; }).length;
+        const q4 = hires.filter(h => { const mo = new Date(h.date + 'T12:00:00').getMonth(); return mo >= 9; }).length;
 
         return `
         <div class="section">
-          <div class="section-title">YTD Hires &nbsp;·&nbsp; Current fiscal year</div>
-          <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);max-width:600px;margin-bottom:24px;">
+          <div class="section-title">Hires &nbsp;·&nbsp; <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:13px;color:var(--text-2)">${rangeLabel}</span></div>
+          <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr);max-width:700px;margin-bottom:24px;">
             <div class="kpi-card">
-              <div class="kpi-label">Total YTD Hires</div>
+              <div class="kpi-label">Total Hires</div>
               <div class="kpi-value">${total}</div>
-              <div class="kpi-sub">Current fiscal year</div>
+              <div class="kpi-sub">Selected period</div>
             </div>
             <div class="kpi-card">
-              <div class="kpi-label">Q1 Hires</div>
+              <div class="kpi-label">Q1</div>
               <div class="kpi-value">${q1}</div>
-              <div class="kpi-sub">Jan – Mar 2026</div>
+              <div class="kpi-sub">Jan – Mar</div>
             </div>
             <div class="kpi-card">
-              <div class="kpi-label">Q2 Hires</div>
+              <div class="kpi-label">Q2</div>
               <div class="kpi-value">${q2}</div>
-              <div class="kpi-sub">Apr – Jun 2026</div>
+              <div class="kpi-sub">Apr – Jun</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Q3 / Q4</div>
+              <div class="kpi-value">${q3 + q4}</div>
+              <div class="kpi-sub">Jul – Dec</div>
             </div>
           </div>
         </div>
@@ -555,7 +673,7 @@ function render(d) {
         <div class="section">
           <div class="section-title">Hires by month</div>
           <div class="chart-card" style="max-width:600px;">
-            <div class="bar-chart">
+            ${months.length ? `<div class="bar-chart">
               ${months.map(([month, count]) => `
                 <div class="bar-row">
                   <span class="bar-label" style="width:130px">${month}</span>
@@ -566,7 +684,7 @@ function render(d) {
                   </div>
                   ${count < 2 ? `<span class="bar-outside-val">${count}</span>` : ''}
                 </div>`).join('')}
-            </div>
+            </div>` : `<div style="padding:24px;color:var(--text-3);text-align:center;">No hires in selected period</div>`}
           </div>
         </div>
 
@@ -581,14 +699,14 @@ function render(d) {
               </tr>
             </thead>
             <tbody>
-              ${hires.map(h => {
-                const fmtDate = new Date(h.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+              ${hires.length ? hires.map(h => {
+                const fmtDate = new Date(h.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                 return `<tr>
                   <td><div class="role-name">${esc(h.name)}</div></td>
                   <td><div class="role-meta" style="color:var(--text-1)">${fmtDate}</div></td>
                   <td><span class="badge status-signed">${esc(h.status)}</span></td>
                 </tr>`;
-              }).join('')}
+              }).join('') : `<tr><td colspan="3" style="text-align:center;color:var(--text-3);padding:24px;">No hires in selected period</td></tr>`}
             </tbody>
           </table>
         </div>`;
