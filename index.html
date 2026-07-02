@@ -790,20 +790,54 @@ function render(d) {
         </div>
 
         <div class="section">
-          <div class="section-title">Hires by month</div>
-          <div class="chart-card" style="max-width:600px;">
-            ${months.length ? `<div class="bar-chart">
-              ${months.map(([month, count]) => `
-                <div class="bar-row">
-                  <span class="bar-label" style="width:130px">${month}</span>
-                  <div class="bar-track">
-                    <div class="bar-fill blue" style="width:${Math.round(count/maxMonthCount*100)}%">
-                      ${count >= 2 ? `<span class="bar-fill-val">${count}</span>` : ''}
-                    </div>
-                  </div>
-                  ${count < 2 ? `<span class="bar-outside-val">${count}</span>` : ''}
-                </div>`).join('')}
-            </div>` : `<div style="padding:24px;color:var(--text-3);text-align:center;">No hires in selected period</div>`}
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;">
+            <div>
+              <div class="section-title">Hires by month</div>
+              <div class="chart-card">
+                ${(() => {
+                  if (!months.length) return `<div style="padding:24px;color:var(--text-3);text-align:center;">No hires in selected period</div>`;
+                  return `<div class="bar-chart">
+                    ${months.map(([month, count]) => `
+                      <div class="bar-row">
+                        <span class="bar-label" style="width:110px">${month}</span>
+                        <div class="bar-track">
+                          <div class="bar-fill blue" style="width:${Math.round(count/maxMonthCount*100)}%">
+                            ${count >= 2 ? `<span class="bar-fill-val">${count}</span>` : ''}
+                          </div>
+                        </div>
+                        ${count < 2 ? `<span class="bar-outside-val">${count}</span>` : ''}
+                      </div>`).join('')}
+                  </div>`;
+                })()}
+              </div>
+            </div>
+            <div>
+              <div class="section-title">Hires by team</div>
+              <div class="chart-card">
+                ${(() => {
+                  const byTeam = {};
+                  hires.forEach(h => {
+                    const key = h.team || h.department || 'Unknown';
+                    byTeam[key] = (byTeam[key] || 0) + 1;
+                  });
+                  const teams = Object.entries(byTeam).sort((a, b) => b[1] - a[1]);
+                  if (!teams.length) return `<div style="padding:24px;color:var(--text-3);text-align:center;">No hires in selected period</div>`;
+                  const maxTeamCount = Math.max(...teams.map(([,c]) => c));
+                  return `<div class="bar-chart">
+                    ${teams.map(([team, count]) => `
+                      <div class="bar-row">
+                        <span class="bar-label" style="width:110px;font-size:13px">${esc(team)}</span>
+                        <div class="bar-track">
+                          <div class="bar-fill blue" style="width:${Math.round(count/maxTeamCount*100)}%">
+                            ${count >= 2 ? `<span class="bar-fill-val">${count}</span>` : ''}
+                          </div>
+                        </div>
+                        ${count < 2 ? `<span class="bar-outside-val">${count}</span>` : ''}
+                      </div>`).join('')}
+                  </div>`;
+                })()}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -813,6 +847,8 @@ function render(d) {
             <thead>
               <tr>
                 <th>Name</th>
+                <th>Role</th>
+                <th>Team</th>
                 <th>Date hired</th>
                 <th>Status</th>
               </tr>
@@ -822,10 +858,12 @@ function render(d) {
                 const fmtDate = new Date(h.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                 return `<tr>
                   <td><div class="role-name">${esc(h.name)}</div></td>
+                  <td><div class="role-meta" style="color:var(--text-1)">${esc(h.role || '—')}</div></td>
+                  <td><div class="role-meta" style="color:var(--text-1)">${esc(h.team || h.department || '—')}</div></td>
                   <td><div class="role-meta" style="color:var(--text-1)">${fmtDate}</div></td>
                   <td><span class="badge status-signed">${esc(h.status)}</span></td>
                 </tr>`;
-              }).join('') : `<tr><td colspan="3" style="text-align:center;color:var(--text-3);padding:24px;">No hires in selected period</td></tr>`}
+              }).join('') : `<tr><td colspan="5" style="text-align:center;color:var(--text-3);padding:24px;">No hires in selected period</td></tr>`}
             </tbody>
           </table>
         </div>`;
