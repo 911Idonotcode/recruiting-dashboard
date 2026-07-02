@@ -323,6 +323,15 @@ function drLabel(key) {
   return `${fmtShort(s)} – ${fmtShort(e)}`;
 }
 
+function drDays(key) {
+  const [s, e] = drRange(key);
+  return Math.max(1, Math.round((new Date(e) - new Date(s)) / 86400000) + 1);
+}
+
+function periodTarget(annualTarget) {
+  return Math.max(1, Math.round(annualTarget * drDays(activeDR) / 365));
+}
+
 function setDR(key) {
   activeDR = key;
   localStorage.setItem('activeDR', key);
@@ -358,7 +367,8 @@ function render(d) {
   const k = d.kpis;
   const p = d.pipeline;
 
-  const pctHires = Math.round((k.hires / k.hires_target) * 100);
+  const hiresTarget = periodTarget(k.hires_target_annual || k.hires_target * 4);
+  const pctHires = Math.round((applyDRFilter(d.ytd_hires||[]).length / hiresTarget) * 100);
   const tthDelta = k.avg_time_to_hire_prev - k.avg_time_to_hire;
   const maxPipelineCount = p.app_review.count;
 
@@ -416,8 +426,8 @@ function render(d) {
         <div class="kpi-grid">
           <div class="kpi-card">
             <div class="kpi-label">Hires</div>
-            <div class="kpi-value green">${applyDRFilter(d.ytd_hires||[]).length} <span class="unit">/ ${k.hires_target}</span></div>
-            <div class="kpi-sub">${Math.round(applyDRFilter(d.ytd_hires||[]).length/k.hires_target*100)}% of target</div>
+            <div class="kpi-value green">${applyDRFilter(d.ytd_hires||[]).length} <span class="unit">/ ${hiresTarget}</span></div>
+            <div class="kpi-sub">${pctHires}% of target</div>
           </div>
           <div class="kpi-card">
             <div class="kpi-label">Avg Time to Hire</div>

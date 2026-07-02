@@ -8,6 +8,7 @@ var DASHBOARD_DATA = {
   "kpis": {
     "hires": 10,
     "hires_target": 5,
+    "hires_target_annual": 20,
     "avg_time_to_hire": 64,
     "avg_time_to_hire_prev": 88,
     "bench_time_to_hire": 44,
