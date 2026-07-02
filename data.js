@@ -148,6 +148,7 @@ var DASHBOARD_DATA = {
       "status": "Accepted"
     }
   ],
+  "offers": [],
   "recruiter_tth": [
     {
       "name": "Andres",

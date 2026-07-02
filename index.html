@@ -184,6 +184,29 @@
     .flag.green  .flag-title { color: var(--green); }
     .flag-body { font-size: 17px; color: var(--text-2); line-height: 1.55; }
     .footer { display: flex; gap: 20px; font-size: 13px; color: var(--text-3); flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border); }
+    /* ── detail modal ── */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 200; display: flex; align-items: flex-start; justify-content: flex-end; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+    .modal-overlay.open { opacity: 1; pointer-events: all; }
+    .modal-panel { background: var(--bg); width: 420px; max-width: 100vw; height: 100vh; overflow-y: auto; display: flex; flex-direction: column; box-shadow: -4px 0 24px rgba(0,0,0,0.12); transform: translateX(40px); transition: transform 0.2s; }
+    .modal-overlay.open .modal-panel { transform: translateX(0); }
+    .modal-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 20px 16px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--bg); z-index: 1; }
+    .modal-title { font-size: 17px; font-weight: 600; color: var(--text-1); }
+    .modal-close { background: none; border: none; font-size: 20px; color: var(--text-3); cursor: pointer; line-height: 1; padding: 4px; }
+    .modal-close:hover { color: var(--text-1); }
+    .modal-body { flex: 1; padding: 16px 20px; }
+    .modal-empty { text-align: center; color: var(--text-3); font-size: 15px; padding: 40px 0; }
+    .modal-row { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .modal-row:last-child { border-bottom: none; }
+    .modal-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--blue-light); color: var(--blue); font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .modal-avatar.declined { background: var(--red-light); color: var(--red); }
+    .modal-info { flex: 1; min-width: 0; }
+    .modal-name { font-size: 15px; font-weight: 500; color: var(--text-1); }
+    .modal-meta { font-size: 13px; color: var(--text-3); margin-top: 2px; line-height: 1.4; }
+    .modal-badge { display: inline-block; font-size: 12px; font-weight: 500; padding: 2px 8px; border-radius: 20px; margin-top: 4px; }
+    .modal-badge.accepted { background: var(--blue-light); color: var(--blue); }
+    .modal-badge.declined { background: var(--red-light); color: var(--red); }
+    .kpi-card.clickable { cursor: pointer; transition: background 0.12s, border-color 0.12s; }
+    .kpi-card.clickable:hover { background: var(--bg-3); border-color: var(--blue); }
     .tab-nav { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
     .tab { font-size: 16px; font-weight: 500; padding: 8px 16px; color: var(--text-3); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; background: none; border-top: none; border-left: none; border-right: none; transition: color 0.15s; }
     .tab:hover { color: var(--text-2); }
@@ -199,10 +222,95 @@
   <div id="app" style="display:none"></div>
 </div>
 
+<!-- Detail modal (shared) -->
+<div class="modal-overlay" id="detailModal" onclick="closeModal(event)">
+  <div class="modal-panel">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle"></div>
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
 <script src="data.js"></script>
 <script>
 function loadData() {
   return Promise.resolve(DASHBOARD_DATA);
+}
+
+// ── modal ──────────────────────────────────────────────────────────────────
+function openModal(title, bodyHtml) {
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalBody').innerHTML = bodyHtml;
+  document.getElementById('detailModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModalDirect() {
+  document.getElementById('detailModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModal(e) {
+  if (e.target === document.getElementById('detailModal')) closeModalDirect();
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+function initials(name) {
+  if (!name) return '?';
+  const parts = name.trim().split(' ');
+  return (parts[0][0] + (parts[parts.length - 1][0] || '')).toUpperCase();
+}
+
+function fmtDate(iso) {
+  if (!iso) return '—';
+  const [y, m, d] = iso.split('-');
+  return `${m}/${d}/${y}`;
+}
+
+function showHiresModal(d) {
+  const hires = applyDRFilter(d.ytd_hires || []);
+  if (!hires.length) {
+    openModal('Hires', '<div class="modal-empty">No hires in this period.</div>');
+    return;
+  }
+  const rows = hires.map(h => {
+    const role = h.role || '—';
+    const team = h.team || '';
+    const meta = [role, team].filter(Boolean).join(' · ');
+    return `<div class="modal-row">
+      <div class="modal-avatar">${initials(h.name)}</div>
+      <div class="modal-info">
+        <div class="modal-name">${h.name || '—'}</div>
+        <div class="modal-meta">${meta}</div>
+        <div class="modal-meta">Hired ${fmtDate(h.date)}</div>
+      </div>
+    </div>`;
+  }).join('');
+  openModal(`Hires · ${hires.length}`, rows);
+}
+
+function showOffersModal(d) {
+  const offers = d.offers || [];
+  if (!offers.length) {
+    openModal('Offer Acceptance', '<div class="modal-empty">No offer detail available.<br><br>Add an <code>offers</code> array to data.js with fields:<br><code>{ name, role, status: "Accepted"|"Declined", date }</code></div>');
+    return;
+  }
+  const accepted = offers.filter(o => o.status === 'Accepted');
+  const declined = offers.filter(o => o.status === 'Declined');
+  const section = (title, list) => {
+    if (!list.length) return '';
+    const rows = list.map(o => `<div class="modal-row">
+      <div class="modal-avatar${o.status === 'Declined' ? ' declined' : ''}">${initials(o.name)}</div>
+      <div class="modal-info">
+        <div class="modal-name">${o.name || '—'}</div>
+        <div class="modal-meta">${o.role || '—'}</div>
+        ${o.date ? `<div class="modal-meta">${fmtDate(o.date)}</div>` : ''}
+        <span class="modal-badge ${o.status === 'Accepted' ? 'accepted' : 'declined'}">${o.status}</span>
+      </div>
+    </div>`).join('');
+    return `<div style="font-size:13px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.07em;margin:12px 0 4px">${title}</div>${rows}`;
+  };
+  openModal(`Offer Acceptance · ${offers.length} offers`, section('Accepted', accepted) + section('Declined', declined));
 }
 
 function pct(color, value, label) {
@@ -424,7 +532,7 @@ function render(d) {
       <div class="section">
         <div class="section-title">At a glance &nbsp;·&nbsp; <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:13px;color:var(--text-2)">${drLabel(activeDR)}</span></div>
         <div class="kpi-grid">
-          <div class="kpi-card">
+          <div class="kpi-card clickable" onclick="showHiresModal(DASHBOARD_DATA)" title="Click to see hired candidates">
             <div class="kpi-label">Hires</div>
             <div class="kpi-value green">${applyDRFilter(d.ytd_hires||[]).length} <span class="unit">/ ${hiresTarget}</span></div>
             <div class="kpi-sub">${pctHires}% of target</div>
@@ -439,7 +547,7 @@ function render(d) {
             <div class="kpi-value blue">${k.open_roles}</div>
             <div class="kpi-sub">${roleCount} active searches</div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card clickable" onclick="showOffersModal(DASHBOARD_DATA)" title="Click to see offer details">
             <div class="kpi-label">Offer Acceptance</div>
             <div class="kpi-value green">${k.offer_acceptance_pct}<span class="unit">%</span></div>
             <div class="kpi-sub">${k.offers_extended} extended · ${k.hires} hired</div>

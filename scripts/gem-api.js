@@ -115,17 +115,26 @@ async function main() {
   console.log('  → hired applications');
   const hiredApps = await getAll('/ats/v0/applications?status=hired');
 
-  // 4. Candidate names for hired apps (batch lookup)
+  // 3b. Rejected applications that reached offer stage (for offer acceptance detail)
+  console.log('  → offer-stage rejections');
+  const rejectedApps = await getAll('/ats/v0/applications?status=rejected');
+  const offerRejected = rejectedApps.filter(a => {
+    const d = a.last_activity_at || a.applied_at;
+    return d && fyYear(d) === new Date().getFullYear() && stageBucket(a.current_stage?.name) === 'offer';
+  });
+
+  // 4. Candidate names for hired + offer-rejected apps (batch lookup)
   console.log('  → candidate names for hires');
   const candidateCache = {};
   const hiredThisYear = hiredApps.filter(a => {
     const d = a.last_activity_at || a.applied_at;
     return d && fyYear(d) === new Date().getFullYear();
   });
+  const offerApps = [...hiredThisYear, ...offerRejected];
   // fetch names in parallel (batched 10 at a time)
   const batch = 10;
-  for (let i = 0; i < hiredThisYear.length; i += batch) {
-    const slice = hiredThisYear.slice(i, i + batch);
+  for (let i = 0; i < offerApps.length; i += batch) {
+    const slice = offerApps.slice(i, i + batch);
     await Promise.all(slice.map(async a => {
       if (!a.candidate_id || candidateCache[a.candidate_id]) return;
       try {
@@ -198,13 +207,44 @@ async function main() {
 
   // ── build YTD hires ───────────────────────────────────────────────────────
   const currentYear = new Date().getFullYear();
+  // build job lookup for role/team on hired apps
+  const jobLookup = {};
+  for (const job of allJobs) { jobLookup[job.id] = job; }
+
   const ytdHires = hiredThisYear
     .sort((a, b) => new Date(b.last_activity_at) - new Date(a.last_activity_at))
-    .map(a => ({
+    .map(a => {
+      const jobId = a.jobs?.[0]?.id;
+      const job   = jobId ? jobLookup[jobId] : null;
+      return {
+        name:   candidateCache[a.candidate_id] || '',
+        role:   job?.name?.trim() || '',
+        team:   job?.department?.name?.trim() || '',
+        date:   (a.last_activity_at || a.applied_at || '').slice(0, 10),
+        status: 'Accepted',
+      };
+    });
+
+  // ── offers detail (accepted = hired this year, declined = offer-stage rejections) ──
+  const offers = [...hiredThisYear.map(a => {
+    const jobId = a.jobs?.[0]?.id;
+    const job   = jobId ? jobLookup[jobId] : null;
+    return {
       name:   candidateCache[a.candidate_id] || '',
-      date:   (a.last_activity_at || a.applied_at || '').slice(0, 10),
+      role:   job?.name?.trim() || '',
       status: 'Accepted',
-    }));
+      date:   (a.last_activity_at || '').slice(0, 10),
+    };
+  }), ...offerRejected.map(a => {
+    const jobId = a.jobs?.[0]?.id;
+    const job   = jobId ? jobLookup[jobId] : null;
+    return {
+      name:   candidateCache[a.candidate_id] || '',
+      role:   job?.name?.trim() || '',
+      status: 'Declined',
+      date:   (a.last_activity_at || '').slice(0, 10),
+    };
+  })].sort((a, b) => b.date.localeCompare(a.date));
 
   // ── KPIs ──────────────────────────────────────────────────────────────────
   const q2Hires = hiredApps.filter(a => {
@@ -256,6 +296,7 @@ async function main() {
     passthrough,
     outreach:       existing.outreach       || [],
     ytd_hires:      ytdHires,
+    offers,
     recruiter_tth:  existing.recruiter_tth  || [],
     flags:          existing.flags          || [],
     roles,
