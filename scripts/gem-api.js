@@ -172,12 +172,15 @@ async function main() {
     return d && fyYear(d) === new Date().getFullYear();
   }).length;
 
-  // passthrough rates
+  // passthrough rates — offer→hired uses acceptance rate from offers array (not snapshot/YTD ratio)
+  // NOTE: offers array is built later; compute offer acceptance inline here
+  const offersTotal    = hiredThisYear.length + offerRejected.length;
+  const offerAccepted  = hiredThisYear.length;
   const passthrough = {
     app_to_phone:    stageCounts.app_review  ? Math.round(stageCounts.phone_screen / stageCounts.app_review  * 100) : 0,
     phone_to_onsite: stageCounts.phone_screen ? Math.round(stageCounts.onsite       / stageCounts.phone_screen * 100) : 0,
     onsite_to_offer: stageCounts.onsite       ? Math.round(stageCounts.offer        / stageCounts.onsite       * 100) : 0,
-    offer_to_hired:  stageCounts.offer        ? Math.round(stageCounts.hired        / stageCounts.offer        * 100) : 0,
+    offer_to_hired:  offersTotal             ? Math.round(offerAccepted            / offersTotal              * 100) : 0,
   };
 
   // ── build roles from open jobs ───────────────────────────────────────────

@@ -14,11 +14,11 @@ var DASHBOARD_DATA = {
     "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2818
+    "active_candidates": 2819
   },
   "pipeline": {
     "app_review": {
-      "count": 2712,
+      "count": 2713,
       "avg_days": 0
     },
     "phone_screen": {
@@ -42,7 +42,7 @@ var DASHBOARD_DATA = {
     "app_to_phone": 3,
     "phone_to_onsite": 26,
     "onsite_to_offer": 10,
-    "offer_to_hired": 750
+    "offer_to_hired": 79
   },
   "outreach": [
     {
@@ -600,7 +600,7 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Application 116",
+          "label": "Application 117",
           "type": "default"
         }
       ],
