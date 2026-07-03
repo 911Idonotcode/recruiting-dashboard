@@ -584,11 +584,10 @@ function render(d) {
           <div class="chart-card">
             <div class="chart-card-title">Average days in stage</div>
             <div class="bar-chart">
-              ${avgDaysBar('App review',   'app_review',   p.app_review.avg_days,   'blue',  maxDaysActual)}
-              ${avgDaysBar('Phone screen', 'phone_screen', p.phone_screen.avg_days, 'blue',  maxDaysActual)}
-              ${avgDaysBar('Onsite',       'onsite',       p.onsite.avg_days,       'blue',  maxDaysActual)}
-              ${avgDaysBar('Offer',        'offer',        p.offer.avg_days,        'blue',  maxDaysActual)}
-              ${avgDaysBar('Hired',        'hired',        p.hired.avg_days,        'muted', maxDaysActual)}
+              ${avgDaysBar('App review',   'app_review',   p.app_review.avg_days,   'blue', maxDaysActual)}
+              ${avgDaysBar('Phone screen', 'phone_screen', p.phone_screen.avg_days, 'blue', maxDaysActual)}
+              ${avgDaysBar('Onsite',       'onsite',       p.onsite.avg_days,       'blue', maxDaysActual)}
+              ${avgDaysBar('Offer',        'offer',        p.offer.avg_days,        'blue', maxDaysActual)}
             </div>
             <div class="chart-note">${_avgDays('onsite') > 25 ? `<span class="warn">⚠ Onsite stage averaging ${_avgDays('onsite')} days</span> — primary bottleneck.` : `Onsite stage: ${_avgDays('onsite')} days.`} Faster scheduling would push time-to-hire toward industry benchmark (${k.bench_time_to_hire}d).</div>
           </div>
