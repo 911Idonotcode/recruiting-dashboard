@@ -475,9 +475,9 @@ function render(d) {
   const hiresTarget = periodTarget(k.hires_target_annual || k.hires_target * 4);
   const pctHires = Math.round((applyDRFilter(d.ytd_hires||[]).length / hiresTarget) * 100);
   const tthDelta = k.avg_time_to_hire_prev - k.avg_time_to_hire;
-  // App review always 100%; lower stages sized relative to each other
+  // App review always 100%; lower stages sized relative to each other, capped at 55%
   const maxLowerStageCount = Math.max(1, p.phone_screen.count, p.onsite.count, p.offer.count, p.hired.count);
-  const stagePct = n => Math.round(n / maxLowerStageCount * 100);
+  const stagePct = n => Math.round(n / maxLowerStageCount * 55);
 
   // Pipeline bar widths
   const pipelineStages = [
