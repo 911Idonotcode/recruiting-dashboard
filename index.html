@@ -324,13 +324,11 @@ function ptColor(pct, goodThreshold, warnThreshold) {
 }
 
 function bar(label, pct, color, val) {
-  const inside = pct >= 20;
   return `<div class="bar-row">
     <span class="bar-label">${label}</span>
     <div class="bar-track"><div class="bar-fill ${color}" style="width:${Math.max(pct,3)}%">
-      ${inside ? `<span class="bar-fill-val">${val}</span>` : ''}
+      <span class="bar-fill-val">${val}</span>
     </div></div>
-    ${!inside ? `<span class="bar-outside-val">${val}</span>` : ''}
   </div>`;
 }
 
@@ -348,14 +346,13 @@ function avgDaysBar(label, stageKey, apiDays, color, maxDays) {
   const days = overrides[stageKey] !== undefined ? overrides[stageKey] : apiDays;
   const pct  = days > 0 ? Math.round(days / maxDays * 100) : 3;
   const displayColor = stageKey === 'onsite' && days > 25 ? 'warn' : color;
-  const inside = pct >= 20;
   const valHtml = `<span class="avg-days-val" onclick="editAvgDays('${stageKey}',${days},this)" title="Click to edit">${days > 0 ? days + ' days' : 'click to set'}</span>`;
   return `<div class="bar-row" id="avgbar-${stageKey}">
     <span class="bar-label">${label}</span>
     <div class="bar-track"><div class="bar-fill ${displayColor}" style="width:${Math.max(pct,3)}%">
-      ${inside ? `<span class="bar-fill-val">${days > 0 ? days + 'd' : ''}</span>` : ''}
+      ${days > 0 ? `<span class="bar-fill-val">${days}d</span>` : ''}
     </div></div>
-    ${!inside ? valHtml : valHtml}
+    ${valHtml}
   </div>`;
 }
 
