@@ -3,31 +3,30 @@ var DASHBOARD_DATA = {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
     "period_label": "Custom Mar 31 – Jun 29",
-    "updated": "Jul 1"
+    "updated": "Jul 2"
   },
   "kpis": {
     "hires": 10,
     "hires_target": 5,
-    "hires_target_annual": 20,
     "avg_time_to_hire": 64,
     "avg_time_to_hire_prev": 88,
     "bench_time_to_hire": 44,
     "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2391
+    "active_candidates": 2816
   },
   "pipeline": {
     "app_review": {
-      "count": 2285,
+      "count": 2710,
       "avg_days": 0
     },
     "phone_screen": {
-      "count": 79,
+      "count": 81,
       "avg_days": 0
     },
     "onsite": {
-      "count": 24,
+      "count": 21,
       "avg_days": 0
     },
     "offer": {
@@ -41,8 +40,8 @@ var DASHBOARD_DATA = {
   },
   "passthrough": {
     "app_to_phone": 3,
-    "phone_to_onsite": 30,
-    "onsite_to_offer": 8,
+    "phone_to_onsite": 26,
+    "onsite_to_offer": 10,
     "offer_to_hired": 750
   },
   "outreach": [
@@ -74,81 +73,245 @@ var DASHBOARD_DATA = {
   "ytd_hires": [
     {
       "name": "Anoop Ranganath",
+      "role": "Vice President of Engineering",
+      "team": "Engineering",
       "date": "2026-06-24",
       "status": "Accepted"
     },
     {
       "name": "Danny Smith",
+      "role": "Finance and Business Operations Lead",
+      "team": "Operations",
       "date": "2026-06-18",
       "status": "Accepted"
     },
     {
       "name": "Amy Brown",
+      "role": "Social Media Manager (Contractor)",
+      "team": "Comunications/PR",
       "date": "2026-06-10",
       "status": "Accepted"
     },
     {
       "name": "Lydia Yi",
+      "role": "Entertainment Partnership Manager",
+      "team": "Operations",
       "date": "2026-05-26",
       "status": "Accepted"
     },
     {
       "name": "Pieter Montoulieu",
+      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
+      "team": "Exploration Team",
       "date": "2026-05-05",
       "status": "Accepted"
     },
     {
       "name": "Brittany Ellich",
+      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
+      "team": "Exploration Team",
       "date": "2026-05-05",
       "status": "Accepted"
     },
     {
       "name": "Jeffrey Gleason",
+      "role": "Senior Machine Learning Engineer",
+      "team": "Engineering",
       "date": "2026-04-24",
       "status": "Accepted"
     },
     {
       "name": "Danielle Yuhan",
+      "role": "Senior Product Designer",
+      "team": "Product",
       "date": "2026-04-09",
       "status": "Accepted"
     },
     {
       "name": "Cameron Sweeney",
+      "role": "Senior Backend Engineer, GO - Data/Infrastructure Team",
+      "team": "Engineering",
       "date": "2026-04-09",
       "status": "Accepted"
     },
     {
       "name": "Michael Black",
+      "role": "Senior Backend Engineer, GO & Typescript - App Team",
+      "team": "Product",
       "date": "2026-04-07",
       "status": "Accepted"
     },
     {
       "name": "Alexander Corbeil",
+      "role": "Policy Lead, Trust & Safety",
+      "team": "Trust & Safety",
       "date": "2026-02-19",
       "status": "Accepted"
     },
     {
       "name": "William Brannon",
+      "role": "Senior Machine Learning Engineer",
+      "team": "Engineering",
       "date": "2026-02-12",
       "status": "Accepted"
     },
     {
       "name": "Josh Petri",
+      "role": "Head of Communications",
+      "team": "Comms/PR",
       "date": "2026-01-20",
       "status": "Accepted"
     },
     {
       "name": "Spencer Pope",
+      "role": "Senior Product Engineer, React Native - App Team",
+      "team": "Engineering",
       "date": "2026-01-12",
       "status": "Accepted"
     },
     {
       "name": "DS Boyce",
+      "role": "Senior Product Engineer, React Native - App Team",
+      "team": "Engineering",
       "date": "2026-01-08",
       "status": "Accepted"
     }
   ],
-  "offers": [],
+  "offers": [
+    {
+      "name": "Anoop Ranganath",
+      "role": "Vice President of Engineering",
+      "team": "Engineering",
+      "status": "Accepted",
+      "date": "2026-06-24"
+    },
+    {
+      "name": "Danny Smith",
+      "role": "Finance and Business Operations Lead",
+      "team": "Operations",
+      "status": "Accepted",
+      "date": "2026-06-18"
+    },
+    {
+      "name": "Aaron Sanders",
+      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
+      "team": "Exploration Team",
+      "status": "Declined",
+      "date": "2026-06-18"
+    },
+    {
+      "name": "Amy Brown",
+      "role": "Social Media Manager (Contractor)",
+      "team": "Comunications/PR",
+      "status": "Accepted",
+      "date": "2026-06-10"
+    },
+    {
+      "name": "Lydia Yi",
+      "role": "Entertainment Partnership Manager",
+      "team": "Operations",
+      "status": "Accepted",
+      "date": "2026-05-26"
+    },
+    {
+      "name": "Dev Pal",
+      "role": "Senior Business Intelligence Data Scientist - App Team",
+      "team": "Product",
+      "status": "Declined",
+      "date": "2026-05-06"
+    },
+    {
+      "name": "Pieter Montoulieu",
+      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
+      "team": "Exploration Team",
+      "status": "Accepted",
+      "date": "2026-05-05"
+    },
+    {
+      "name": "Brittany Ellich",
+      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
+      "team": "Exploration Team",
+      "status": "Accepted",
+      "date": "2026-05-05"
+    },
+    {
+      "name": "Jeffrey Gleason",
+      "role": "Senior Machine Learning Engineer",
+      "team": "Engineering",
+      "status": "Accepted",
+      "date": "2026-04-24"
+    },
+    {
+      "name": "Danielle Yuhan",
+      "role": "Senior Product Designer",
+      "team": "Product",
+      "status": "Accepted",
+      "date": "2026-04-09"
+    },
+    {
+      "name": "Cameron Sweeney",
+      "role": "Senior Backend Engineer, GO - Data/Infrastructure Team",
+      "team": "Engineering",
+      "status": "Accepted",
+      "date": "2026-04-09"
+    },
+    {
+      "name": "Michael Black",
+      "role": "Senior Backend Engineer, GO & Typescript - App Team",
+      "team": "Product",
+      "status": "Accepted",
+      "date": "2026-04-07"
+    },
+    {
+      "name": "Dave Cheney",
+      "role": "Senior Backend Engineer, GO - Data/Infrastructure Team",
+      "team": "Engineering",
+      "status": "Declined",
+      "date": "2026-03-11"
+    },
+    {
+      "name": "Alexander Corbeil",
+      "role": "Policy Lead, Trust & Safety",
+      "team": "Trust & Safety",
+      "status": "Accepted",
+      "date": "2026-02-19"
+    },
+    {
+      "name": "William Brannon",
+      "role": "Senior Machine Learning Engineer",
+      "team": "Engineering",
+      "status": "Accepted",
+      "date": "2026-02-12"
+    },
+    {
+      "name": "Josh Petri",
+      "role": "Head of Communications",
+      "team": "Comms/PR",
+      "status": "Accepted",
+      "date": "2026-01-20"
+    },
+    {
+      "name": "Spencer Pope",
+      "role": "Senior Product Engineer, React Native - App Team",
+      "team": "Engineering",
+      "status": "Accepted",
+      "date": "2026-01-12"
+    },
+    {
+      "name": "DS Boyce",
+      "role": "Senior Product Engineer, React Native - App Team",
+      "team": "Engineering",
+      "status": "Accepted",
+      "date": "2026-01-08"
+    },
+    {
+      "name": "Alisa Tao",
+      "role": "Technical Recruiter",
+      "team": "Operations",
+      "status": "Declined",
+      "date": "2026-01-08"
+    }
+  ],
   "recruiter_tth": [
     {
       "name": "Andres",
@@ -185,7 +348,7 @@ var DASHBOARD_DATA = {
   ],
   "roles": [
     {
-      "title": "Senior Machine Learning Engineer - ML Team",
+      "title": "Senior Machine Learning Engineer",
       "req_id": "R21",
       "recruiter": "Andres",
       "date_opened": "2025-10-01",
@@ -194,7 +357,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application 422",
+          "label": "Application 438",
           "type": "default"
         },
         {
@@ -233,7 +396,7 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Application 139",
+          "label": "Application 146",
           "type": "default"
         }
       ],
@@ -256,11 +419,11 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Application 59",
+          "label": "Application 66",
           "type": "default"
         },
         {
-          "label": "Recruiter 18",
+          "label": "Recruiter 19",
           "type": "default"
         }
       ],
@@ -279,15 +442,19 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application 325",
+          "label": "Application 329",
           "type": "default"
         },
         {
-          "label": "Recruiter 23",
+          "label": "Recruiter 24",
           "type": "default"
         },
         {
-          "label": "Hiring 6",
+          "label": "Hiring 5",
+          "type": "default"
+        },
+        {
+          "label": "Pair 1",
           "type": "default"
         }
       ],
@@ -306,7 +473,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 47",
+          "label": "Application 48",
           "type": "default"
         },
         {
@@ -356,15 +523,15 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Hiring 3",
+          "label": "Recruiter 1",
           "type": "default"
         },
         {
-          "label": "Recruiter 2",
+          "label": "Portfolio 1",
           "type": "default"
         },
         {
-          "label": "Application 5",
+          "label": "Application 7",
           "type": "default"
         }
       ],
@@ -383,7 +550,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 200",
+          "label": "Application 205",
           "type": "default"
         },
         {
@@ -452,7 +619,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 144",
+          "label": "Application 170",
           "type": "default"
         }
       ],
@@ -471,7 +638,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 368",
+          "label": "Application 725",
+          "type": "default"
+        },
+        {
+          "label": "Phone 1",
           "type": "default"
         }
       ],

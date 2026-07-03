@@ -107,6 +107,10 @@ async function main() {
   console.log('  → jobs');
   const allJobs = await getAll('/ats/v0/jobs?status=open');
 
+  // Fetch closed jobs too — needed for team/role lookup on past hires
+  console.log('  → closed jobs (for hire lookup)');
+  const closedJobs = await getAll('/ats/v0/jobs?status=closed');
+
   // 2. All active applications (for pipeline counts)
   console.log('  → active applications');
   const activeApps = await getAll('/ats/v0/applications?status=active');
@@ -207,9 +211,9 @@ async function main() {
 
   // ── build YTD hires ───────────────────────────────────────────────────────
   const currentYear = new Date().getFullYear();
-  // build job lookup for role/team on hired apps
+  // build job lookup for role/team on hired apps (open + closed)
   const jobLookup = {};
-  for (const job of allJobs) { jobLookup[job.id] = job; }
+  for (const job of [...allJobs, ...closedJobs]) { jobLookup[job.id] = job; }
 
   const ytdHires = hiredThisYear
     .sort((a, b) => new Date(b.last_activity_at) - new Date(a.last_activity_at))
@@ -219,7 +223,7 @@ async function main() {
       return {
         name:   candidateCache[a.candidate_id] || '',
         role:   job?.name?.trim() || '',
-        team:   job?.department?.name?.trim() || '',
+        team:   job?.departments?.[0]?.name?.trim() || '',
         date:   (a.last_activity_at || a.applied_at || '').slice(0, 10),
         status: 'Accepted',
       };
@@ -232,6 +236,7 @@ async function main() {
     return {
       name:   candidateCache[a.candidate_id] || '',
       role:   job?.name?.trim() || '',
+      team:   job?.departments?.[0]?.name?.trim() || '',
       status: 'Accepted',
       date:   (a.last_activity_at || '').slice(0, 10),
     };
@@ -241,6 +246,7 @@ async function main() {
     return {
       name:   candidateCache[a.candidate_id] || '',
       role:   job?.name?.trim() || '',
+      team:   job?.departments?.[0]?.name?.trim() || '',
       status: 'Declined',
       date:   (a.last_activity_at || '').slice(0, 10),
     };
