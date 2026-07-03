@@ -14,11 +14,11 @@ var DASHBOARD_DATA = {
     "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2816
+    "active_candidates": 2818
   },
   "pipeline": {
     "app_review": {
-      "count": 2710,
+      "count": 2712,
       "avg_days": 0
     },
     "phone_screen": {
@@ -88,7 +88,7 @@ var DASHBOARD_DATA = {
     {
       "name": "Amy Brown",
       "role": "Social Media Manager (Contractor)",
-      "team": "Comunications/PR",
+      "team": "Communications/PR",
       "date": "2026-06-10",
       "status": "Accepted"
     },
@@ -102,14 +102,14 @@ var DASHBOARD_DATA = {
     {
       "name": "Pieter Montoulieu",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
-      "team": "Exploration Team",
+      "team": "Exploration",
       "date": "2026-05-05",
       "status": "Accepted"
     },
     {
       "name": "Brittany Ellich",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
-      "team": "Exploration Team",
+      "team": "Exploration",
       "date": "2026-05-05",
       "status": "Accepted"
     },
@@ -158,7 +158,7 @@ var DASHBOARD_DATA = {
     {
       "name": "Josh Petri",
       "role": "Head of Communications",
-      "team": "Comms/PR",
+      "team": "Communications/PR",
       "date": "2026-01-20",
       "status": "Accepted"
     },
@@ -195,14 +195,14 @@ var DASHBOARD_DATA = {
     {
       "name": "Aaron Sanders",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
-      "team": "Exploration Team",
+      "team": "Exploration",
       "status": "Declined",
       "date": "2026-06-18"
     },
     {
       "name": "Amy Brown",
       "role": "Social Media Manager (Contractor)",
-      "team": "Comunications/PR",
+      "team": "Communications/PR",
       "status": "Accepted",
       "date": "2026-06-10"
     },
@@ -223,14 +223,14 @@ var DASHBOARD_DATA = {
     {
       "name": "Pieter Montoulieu",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
-      "team": "Exploration Team",
+      "team": "Exploration",
       "status": "Accepted",
       "date": "2026-05-05"
     },
     {
       "name": "Brittany Ellich",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
-      "team": "Exploration Team",
+      "team": "Exploration",
       "status": "Accepted",
       "date": "2026-05-05"
     },
@@ -286,7 +286,7 @@ var DASHBOARD_DATA = {
     {
       "name": "Josh Petri",
       "role": "Head of Communications",
-      "team": "Comms/PR",
+      "team": "Communications/PR",
       "status": "Accepted",
       "date": "2026-01-20"
     },
@@ -419,7 +419,7 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Application 66",
+          "label": "Application 67",
           "type": "default"
         },
         {
@@ -442,7 +442,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application 329",
+          "label": "Application 330",
           "type": "default"
         },
         {

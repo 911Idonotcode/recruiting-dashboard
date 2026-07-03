@@ -59,6 +59,19 @@ async function getAll(endpoint) {
 }
 
 // ── stage name → dashboard bucket ─────────────────────────────────────────
+// normalize department names from Gem (fixes typos + aliases)
+const DEPT_MAP = {
+  'comunications/pr': 'Communications/PR',
+  'comms/pr':         'Communications/PR',
+  'communications/pr':'Communications/PR',
+  'trust & safety':   'Trust & Safety',
+  'exploration team': 'Exploration',
+};
+function normalizeDept(name) {
+  if (!name) return '';
+  return DEPT_MAP[name.toLowerCase().trim()] || name.trim();
+}
+
 function stageBucket(name) {
   if (!name) return null;
   const n = name.toLowerCase().trim();
@@ -223,7 +236,7 @@ async function main() {
       return {
         name:   candidateCache[a.candidate_id] || '',
         role:   job?.name?.trim() || '',
-        team:   job?.departments?.[0]?.name?.trim() || '',
+        team:   normalizeDept(job?.departments?.[0]?.name) || '',
         date:   (a.last_activity_at || a.applied_at || '').slice(0, 10),
         status: 'Accepted',
       };
@@ -236,7 +249,7 @@ async function main() {
     return {
       name:   candidateCache[a.candidate_id] || '',
       role:   job?.name?.trim() || '',
-      team:   job?.departments?.[0]?.name?.trim() || '',
+      team:   normalizeDept(job?.departments?.[0]?.name) || '',
       status: 'Accepted',
       date:   (a.last_activity_at || '').slice(0, 10),
     };
@@ -246,7 +259,7 @@ async function main() {
     return {
       name:   candidateCache[a.candidate_id] || '',
       role:   job?.name?.trim() || '',
-      team:   job?.departments?.[0]?.name?.trim() || '',
+      team:   normalizeDept(job?.departments?.[0]?.name) || '',
       status: 'Declined',
       date:   (a.last_activity_at || '').slice(0, 10),
     };

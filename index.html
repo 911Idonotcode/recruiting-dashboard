@@ -824,16 +824,18 @@ function render(d) {
                   if (!teams.length) return `<div style="padding:24px;color:var(--text-3);text-align:center;">No hires in selected period</div>`;
                   const maxTeamCount = Math.max(...teams.map(([,c]) => c));
                   return `<div class="bar-chart">
-                    ${teams.map(([team, count]) => `
+                    ${teams.map(([team, count]) => {
+                      const pct = Math.round(count/maxTeamCount*100);
+                      return `
                       <div class="bar-row">
                         <span class="bar-label" style="width:110px;font-size:13px">${esc(team)}</span>
                         <div class="bar-track">
-                          <div class="bar-fill blue" style="width:${Math.round(count/maxTeamCount*100)}%">
-                            ${count >= 2 ? `<span class="bar-fill-val">${count}</span>` : ''}
+                          <div class="bar-fill blue" style="width:${pct}%">
+                            <span class="bar-fill-val">${count}</span>
                           </div>
                         </div>
-                        ${count < 2 ? `<span class="bar-outside-val">${count}</span>` : ''}
-                      </div>`).join('')}
+                      </div>`;
+                    }).join('')}
                   </div>`;
                 })()}
               </div>
