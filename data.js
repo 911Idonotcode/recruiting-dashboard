@@ -3,26 +3,27 @@ var DASHBOARD_DATA = {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
     "period_label": "Custom Mar 31 – Jun 29",
-    "updated": "Jul 2"
+    "updated": "Jul 3"
   },
   "kpis": {
     "hires": 10,
     "hires_target": 5,
+    "hires_target_annual": 20,
     "avg_time_to_hire": 64,
     "avg_time_to_hire_prev": 88,
     "bench_time_to_hire": 44,
     "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2819
+    "active_candidates": 2873
   },
   "pipeline": {
     "app_review": {
-      "count": 2713,
+      "count": 2766,
       "avg_days": 0
     },
     "phone_screen": {
-      "count": 81,
+      "count": 82,
       "avg_days": 0
     },
     "onsite": {
@@ -357,7 +358,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application 438",
+          "label": "Application 440",
           "type": "default"
         },
         {
@@ -396,7 +397,7 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Application 146",
+          "label": "Application 148",
           "type": "default"
         }
       ],
@@ -419,11 +420,11 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Application 67",
+          "label": "Application 75",
           "type": "default"
         },
         {
-          "label": "Recruiter 19",
+          "label": "Recruiter 20",
           "type": "default"
         }
       ],
@@ -442,7 +443,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application 330",
+          "label": "Application 332",
           "type": "default"
         },
         {
@@ -473,7 +474,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 48",
+          "label": "Application 49",
           "type": "default"
         },
         {
@@ -550,7 +551,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 205",
+          "label": "Application 208",
           "type": "default"
         },
         {
@@ -619,7 +620,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 170",
+          "label": "Application 176",
           "type": "default"
         }
       ],
@@ -638,7 +639,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 725",
+          "label": "Application 754",
           "type": "default"
         },
         {

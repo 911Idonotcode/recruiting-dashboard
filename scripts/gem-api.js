@@ -286,6 +286,7 @@ async function main() {
   const kpis = {
     hires:                q2Hires,
     hires_target:         prev.hires_target         || 5,
+    hires_target_annual:  prev.hires_target_annual  || 20,
     avg_time_to_hire:     avgTTH || prev.avg_time_to_hire || 0,
     avg_time_to_hire_prev:prev.avg_time_to_hire_prev|| 0,
     bench_time_to_hire:   prev.bench_time_to_hire   || 44,
