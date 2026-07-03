@@ -475,15 +475,17 @@ function render(d) {
   const hiresTarget = periodTarget(k.hires_target_annual || k.hires_target * 4);
   const pctHires = Math.round((applyDRFilter(d.ytd_hires||[]).length / hiresTarget) * 100);
   const tthDelta = k.avg_time_to_hire_prev - k.avg_time_to_hire;
-  const maxPipelineCount = p.app_review.count;
+  // App review always 100%; lower stages sized relative to each other
+  const maxLowerStageCount = Math.max(1, p.phone_screen.count, p.onsite.count, p.offer.count, p.hired.count);
+  const stagePct = n => Math.round(n / maxLowerStageCount * 100);
 
   // Pipeline bar widths
   const pipelineStages = [
     { label: 'App review',    count: p.app_review.count,   pct: 100 },
-    { label: 'Phone screen',  count: p.phone_screen.count, pct: Math.round(p.phone_screen.count / maxPipelineCount * 100 * 10) / 10 },
-    { label: 'Onsite',        count: p.onsite.count,        pct: Math.round(p.onsite.count / maxPipelineCount * 100 * 10) / 10 },
-    { label: 'Offer',         count: p.offer.count,         pct: Math.round(p.offer.count / maxPipelineCount * 100 * 10) / 10 },
-    { label: 'Hired',         count: p.hired.count,         pct: Math.round(p.hired.count / maxPipelineCount * 100 * 10) / 10 },
+    { label: 'Phone screen',  count: p.phone_screen.count, pct: stagePct(p.phone_screen.count) },
+    { label: 'Onsite',        count: p.onsite.count,        pct: stagePct(p.onsite.count) },
+    { label: 'Offer',         count: p.offer.count,         pct: stagePct(p.offer.count) },
+    { label: 'Hired',         count: p.hired.count,         pct: stagePct(p.hired.count) },
   ];
   const _avgOvr = loadAvgDays();
   const _avgDays = key => _avgOvr[key] !== undefined ? _avgOvr[key] : p[key].avg_days;
