@@ -99,7 +99,7 @@
     .date-edit-btn { background: none; border: none; cursor: pointer; font-size: 13px; padding: 0 2px; opacity: 0.4; line-height: 1; }
     .date-edit-btn:hover { opacity: 1; }
     .stage-row { display: flex; flex-wrap: wrap; gap: 4px; }
-    .stage-pill { font-size: 13px; background: var(--bg-3); color: var(--text-2); border-radius: 4px; padding: 2px 7px; white-space: nowrap; }
+    .stage-pill { font-size: 12px; background: var(--bg-3); color: var(--text-2); border-radius: 4px; padding: 2px 7px; white-space: nowrap; display: inline-block; }
     .stage-pill.offer { background: var(--green-light); color: var(--green); }
     .stage-pill.dd    { background: var(--blue-light);  color: var(--blue);  }
     .badge { font-size: 13px; font-weight: 500; padding: 3px 10px; border-radius: 20px; white-space: nowrap; display: inline-block; letter-spacing: 0.01em; }
@@ -699,19 +699,21 @@ function render(d) {
     <div class="tab-panel" id="tab-roles">
       <div class="section">
         <div class="section-title">Active searches &nbsp;·&nbsp; ${roleCount} roles &nbsp;·&nbsp; ${esc(m.updated)}</div>
-        <table class="role-table">
+        <div style="overflow-x:auto;">
+        <table class="role-table" style="min-width:900px;">
           <thead>
             <tr>
-              <th style="width:26%" class="sortable" data-sort="role" onclick="sortRolesTable('role')">Role</th>
-              <th class="sortable" data-sort="priority" onclick="sortRolesTable('priority')">Priority</th>
-              <th class="sortable" data-sort="headcount" onclick="sortRolesTable('headcount')">Headcount</th>
-              <th>Pipeline</th>
-              <th class="sortable" data-sort="status" onclick="sortRolesTable('status')">Status</th>
-              <th style="width:28%">This week</th>
+              <th style="width:22%" class="sortable" data-sort="role" onclick="sortRolesTable('role')">Role</th>
+              <th style="width:80px" class="sortable" data-sort="priority" onclick="sortRolesTable('priority')">Priority</th>
+              <th style="width:80px" class="sortable" data-sort="headcount" onclick="sortRolesTable('headcount')">Headcount</th>
+              <th style="width:30%">Pipeline</th>
+              <th style="width:100px" class="sortable" data-sort="status" onclick="sortRolesTable('status')">Status</th>
+              <th style="width:24%">This week</th>
             </tr>
           </thead>
           <tbody id="roles-tbody"></tbody>
         </table>
+        </div>
       </div>
     </div>
 

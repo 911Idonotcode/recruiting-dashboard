@@ -72,6 +72,32 @@ function normalizeDept(name) {
   return DEPT_MAP[name.toLowerCase().trim()] || name.trim();
 }
 
+// canonical pipeline stages in display order
+const PIPELINE_STAGES = [
+  { key: 'app_review',   label: 'Application Review' },
+  { key: 'recruiter',    label: 'Recruiter Interview' },
+  { key: 'hm_interview', label: 'HM Interview'        },
+  { key: 'technical',    label: 'Technical Assessment' },
+  { key: 'deep_dive',    label: 'Deep Dive'            },
+  { key: 'culture',      label: 'Culture Interview'    },
+  { key: 'trial',        label: 'Trial Day'            },
+  { key: 'offer',        label: 'Offer'                },
+];
+
+function pipelineBucket(name) {
+  if (!name) return null;
+  const n = name.toLowerCase().trim();
+  if (n.includes('application') || n.includes('app review'))                    return 'app_review';
+  if (n.includes('recruiter') || n.includes('phone') || n.includes('screen'))   return 'recruiter';
+  if (n.includes('hiring manager') || n === 'hm' || n.startsWith('hm '))        return 'hm_interview';
+  if (n.includes('technical') || n.includes('coding') || n.includes('take home') || n.includes('assessment')) return 'technical';
+  if (n.includes('deep dive') || n.includes('pair') || n.includes('rose') || n.includes('onsite') || n.includes('for ')) return 'deep_dive';
+  if (n.includes('culture'))  return 'culture';
+  if (n.includes('trial'))    return 'trial';
+  if (n.includes('offer'))    return 'offer';
+  return null;
+}
+
 function stageBucket(name) {
   if (!name) return null;
   const n = name.toLowerCase().trim();
@@ -193,15 +219,18 @@ async function main() {
 
     // active applications for this job
     const jobApps = activeApps.filter(a => a.jobs?.some(j => j.id === job.id));
-    const stages  = [];
-    const stageGroups = {};
+    // group by canonical pipeline bucket, then emit in defined order
+    const bucketCounts = {};
     for (const app of jobApps) {
-      const sName = app.current_stage?.name?.trim() || '—';
-      stageGroups[sName] = (stageGroups[sName] || 0) + 1;
+      const bucket = pipelineBucket(app.current_stage?.name) || 'other';
+      bucketCounts[bucket] = (bucketCounts[bucket] || 0) + 1;
     }
-    for (const [label, count] of Object.entries(stageGroups)) {
-      stages.push({ label: `${label.split(' ')[0]} ${count}`, type: 'default' });
-    }
+    const stages = PIPELINE_STAGES
+      .filter(s => bucketCounts[s.key] > 0)
+      .map(s => ({
+        label: `${s.label} ${bucketCounts[s.key]}`,
+        type:  s.key === 'offer' ? 'offer' : s.key === 'deep_dive' ? 'dd' : 'default',
+      }));
     if (stages.length === 0) stages.push({ label: '—', type: 'default' });
 
     const recruiter = job.hiring_team?.recruiters?.[0]?.name?.split(' ')[0] || '';

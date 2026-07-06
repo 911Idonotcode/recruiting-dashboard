@@ -3,7 +3,7 @@ var DASHBOARD_DATA = {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
     "period_label": "Custom Mar 31 – Jun 29",
-    "updated": "Jul 3"
+    "updated": "Jul 6"
   },
   "kpis": {
     "hires": 10,
@@ -15,19 +15,19 @@ var DASHBOARD_DATA = {
     "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2873
+    "active_candidates": 2981
   },
   "pipeline": {
     "app_review": {
-      "count": 2766,
+      "count": 2871,
       "avg_days": 0
     },
     "phone_screen": {
-      "count": 82,
+      "count": 86,
       "avg_days": 0
     },
     "onsite": {
-      "count": 21,
+      "count": 20,
       "avg_days": 0
     },
     "offer": {
@@ -41,7 +41,7 @@ var DASHBOARD_DATA = {
   },
   "passthrough": {
     "app_to_phone": 3,
-    "phone_to_onsite": 26,
+    "phone_to_onsite": 23,
     "onsite_to_offer": 10,
     "offer_to_hired": 79
   },
@@ -358,19 +358,19 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application 440",
+          "label": "Application Review 446",
           "type": "default"
         },
         {
-          "label": "Recruiter 5",
+          "label": "Recruiter Interview 5",
           "type": "default"
         },
         {
-          "label": "Technical 1",
+          "label": "HM Interview 1",
           "type": "default"
         },
         {
-          "label": "HM 1",
+          "label": "Technical Assessment 1",
           "type": "default"
         }
       ],
@@ -389,15 +389,15 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Recruiter 18",
+          "label": "Application Review 152",
           "type": "default"
         },
         {
-          "label": "Technical 4",
+          "label": "Recruiter Interview 19",
           "type": "default"
         },
         {
-          "label": "Application 148",
+          "label": "Technical Assessment 4",
           "type": "default"
         }
       ],
@@ -416,16 +416,16 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Pair 2",
+          "label": "Application Review 81",
           "type": "default"
         },
         {
-          "label": "Application 75",
+          "label": "Recruiter Interview 22",
           "type": "default"
         },
         {
-          "label": "Recruiter 20",
-          "type": "default"
+          "label": "Deep Dive 2",
+          "type": "dd"
         }
       ],
       "status": "risk",
@@ -443,20 +443,20 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application 332",
+          "label": "Application Review 345",
           "type": "default"
         },
         {
-          "label": "Recruiter 24",
+          "label": "Recruiter Interview 25",
           "type": "default"
         },
         {
-          "label": "Hiring 5",
+          "label": "HM Interview 5",
           "type": "default"
         },
         {
-          "label": "Pair 1",
-          "type": "default"
+          "label": "Deep Dive 1",
+          "type": "dd"
         }
       ],
       "status": "risk",
@@ -474,15 +474,15 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 49",
+          "label": "Application Review 52",
           "type": "default"
         },
         {
-          "label": "Recruiter 4",
+          "label": "Recruiter Interview 4",
           "type": "default"
         },
         {
-          "label": "Culture 1",
+          "label": "Culture Interview 1",
           "type": "default"
         }
       ],
@@ -501,7 +501,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 44",
+          "label": "Application Review 44",
           "type": "default"
         }
       ],
@@ -520,20 +520,16 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
+          "label": "Application Review 7",
+          "type": "default"
+        },
+        {
+          "label": "Recruiter Interview 1",
+          "type": "default"
+        },
+        {
           "label": "Offer 1",
-          "type": "default"
-        },
-        {
-          "label": "Recruiter 1",
-          "type": "default"
-        },
-        {
-          "label": "Portfolio 1",
-          "type": "default"
-        },
-        {
-          "label": "Application 7",
-          "type": "default"
+          "type": "offer"
         }
       ],
       "status": "signed",
@@ -551,19 +547,15 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 208",
+          "label": "Application Review 213",
           "type": "default"
         },
         {
-          "label": "Recruiter 9",
-          "type": "default"
-        },
-        {
-          "label": "Hiring 1",
+          "label": "Recruiter Interview 9",
           "type": "default"
         }
       ],
-      "status": "new",
+      "status": "risk",
       "status_overridden": false,
       "status_label": "Just kicked off",
       "note": "Anabella ramping sourcing. Building pipeline."
@@ -578,7 +570,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 213",
+          "label": "Application Review 213",
           "type": "default"
         }
       ],
@@ -597,11 +589,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Take 1",
+          "label": "Application Review 101",
           "type": "default"
         },
         {
-          "label": "Application 117",
+          "label": "Technical Assessment 1",
           "type": "default"
         }
       ],
@@ -620,7 +612,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 176",
+          "label": "Application Review 199",
           "type": "default"
         }
       ],
@@ -639,11 +631,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application 754",
+          "label": "Application Review 815",
           "type": "default"
         },
         {
-          "label": "Phone 1",
+          "label": "Recruiter Interview 1",
           "type": "default"
         }
       ],
