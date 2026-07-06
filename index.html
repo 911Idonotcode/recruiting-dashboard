@@ -313,6 +313,77 @@ function showOffersModal(d) {
   openModal(`Offer Acceptance · ${offers.length} offers`, section('Accepted', accepted) + section('Declined', declined));
 }
 
+function showPipelineStageModal(stageKey, stageLabel, d) {
+  // Map pipeline summary stage keys to role stage label prefixes
+  const stagePrefixes = {
+    app_review:   ['Application Review'],
+    phone_screen: ['Recruiter Interview'],
+    onsite:       ['HM Interview', 'Technical Assessment', 'Deep Dive', 'Culture Interview', 'Trial Day'],
+    offer:        ['Offer'],
+  };
+  const prefixes = stagePrefixes[stageKey] || [];
+  const matches = [];
+  (d.roles || []).forEach(role => {
+    (role.stages || []).forEach(s => {
+      const matched = prefixes.find(p => s.label.startsWith(p));
+      if (matched) {
+        const countMatch = s.label.match(/(\d+)$/);
+        const count = countMatch ? +countMatch[1] : 0;
+        matches.push({ title: role.title, stageName: matched, count });
+      }
+    });
+  });
+  matches.sort((a, b) => b.count - a.count);
+  if (!matches.length) {
+    openModal(stageLabel, '<div class="modal-empty">No active candidates at this stage.</div>');
+    return;
+  }
+  const rows = matches.map(m => `
+    <div class="modal-row" style="align-items:center;">
+      <div style="flex:1;min-width:0;">
+        <div class="modal-name" style="white-space:normal">${esc(m.title)}</div>
+        <div class="modal-meta">${esc(m.stageName)}</div>
+      </div>
+      <div style="font-size:22px;font-weight:600;color:var(--blue);margin-left:12px;flex-shrink:0">${m.count}</div>
+    </div>`).join('');
+  openModal(`${stageLabel} · ${matches.reduce((s,m)=>s+m.count,0)} candidates`, rows);
+}
+
+function showHiredPipelineModal(d) {
+  const hires = applyDRFilter(d.ytd_hires || []);
+  if (!hires.length) {
+    openModal('Hired', '<div class="modal-empty">No hires in this period.</div>');
+    return;
+  }
+  const rows = hires.map(h => `
+    <div class="modal-row">
+      <div class="modal-avatar">${initials(h.name)}</div>
+      <div class="modal-info">
+        <div class="modal-name">${esc(h.name || '—')}</div>
+        <div class="modal-meta">${esc(h.role || '—')}</div>
+        <div class="modal-meta">${esc(h.team || '—')} · Hired ${fmtDate(h.date)}</div>
+      </div>
+    </div>`).join('');
+  openModal(`Hired · ${hires.length}`, rows);
+}
+
+function showOutreachModal(month, o) {
+  const body = `
+    <div style="margin-bottom:16px;">
+      <div style="font-size:22px;font-weight:600;color:var(--text-1);margin-bottom:4px;">${esc(month)}</div>
+    </div>
+    <div class="modal-row" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0;">
+      <div class="kpi-card" style="margin:0"><div class="kpi-label">Sent</div><div class="kpi-value">${o.sent.toLocaleString()}</div></div>
+      <div class="kpi-card" style="margin:0"><div class="kpi-label">Open Rate</div><div class="kpi-value">${o.open_pct}%</div></div>
+      <div class="kpi-card" style="margin:0"><div class="kpi-label">Reply Rate</div><div class="kpi-value">${o.reply_pct}%</div></div>
+      <div class="kpi-card" style="margin:0"><div class="kpi-label">Interested</div><div class="kpi-value${o.trending==='down'?' warn':o.trending==='up'?' good':''}">${o.interested_pct}%${o.trending==='down'?' ↓':o.trending==='up'?' ↑':''}</div></div>
+    </div>
+    <div style="margin-top:20px;padding:12px;background:var(--bg-2);border-radius:8px;font-size:13px;color:var(--text-3);line-height:1.5;">
+      Per-role outreach breakdown requires CRM API access. Contact your Gem CSM to enable the CRM integration.
+    </div>`;
+  openModal(`Outreach · ${month}`, body);
+}
+
 function pct(color, value, label) {
   return `<div class="pt-cell"><div class="pct ${color}">${value}%</div><div class="label">${label}</div></div>`;
 }
@@ -624,27 +695,27 @@ function render(d) {
         <div class="section-title">Pipeline summary &nbsp;·&nbsp; <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:13px;color:var(--text-2)">${drLabel(activeDR)}</span></div>
         <div style="font-size:12px;color:var(--text-3);margin-bottom:10px;">Stage counts reflect current active candidates. Hired count is filtered by selected date range.</div>
         <div class="kpi-grid">
-          <div class="kpi-card">
+          <div class="kpi-card clickable" onclick="showPipelineStageModal('app_review','App Review',DASHBOARD_DATA)">
             <div class="kpi-label">App Review</div>
             <div class="kpi-value">${p.app_review.count.toLocaleString()}</div>
             <div class="kpi-sub">Avg ${_avgDays('app_review')} days · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card clickable" onclick="showPipelineStageModal('phone_screen','Phone Screen',DASHBOARD_DATA)">
             <div class="kpi-label">Phone Screen</div>
             <div class="kpi-value">${p.phone_screen.count}</div>
             <div class="kpi-sub">Avg ${_avgDays('phone_screen')} days · ${pt.app_to_phone}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card clickable" onclick="showPipelineStageModal('onsite','Onsite',DASHBOARD_DATA)">
             <div class="kpi-label">Onsite</div>
             <div class="kpi-value">${p.onsite.count}</div>
             <div class="kpi-sub">Avg ${_avgDays('onsite')} days · ${pt.phone_to_onsite}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card clickable" onclick="showPipelineStageModal('offer','Offer',DASHBOARD_DATA)">
             <div class="kpi-label">Offer</div>
             <div class="kpi-value">${p.offer.count}</div>
             <div class="kpi-sub">Avg ${_avgDays('offer')} days · ${pt.onsite_to_offer}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card clickable" onclick="showHiredPipelineModal(DASHBOARD_DATA)">
             <div class="kpi-label">Hired</div>
             <div class="kpi-value">${applyDRFilter(d.ytd_hires||[]).length}</div>
             <div class="kpi-sub">${pt.offer_to_hired}% offer acceptance</div>
@@ -668,7 +739,7 @@ function render(d) {
             });
             const shown = filteredOutreach.length ? filteredOutreach : d.outreach;
             return shown.map(o => `
-              <div class="outreach-card">
+              <div class="outreach-card clickable" onclick="showOutreachModal('${esc(o.month)}',${JSON.stringify(o)})">
                 <div class="outreach-month">${esc(o.month)}</div>
                 <div class="outreach-stat"><span class="key">Sent</span><span class="val">${o.sent.toLocaleString()}</span></div>
                 <div class="outreach-stat"><span class="key">Open rate</span><span class="val">${o.open_pct}%</span></div>
