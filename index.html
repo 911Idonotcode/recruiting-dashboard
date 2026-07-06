@@ -322,16 +322,28 @@ function showPipelineStageModal(stageKey, stageLabel, d) {
     offer:        ['Offer'],
   };
   const prefixes = stagePrefixes[stageKey] || [];
+  const seen = new Set();
   const matches = [];
   (d.roles || []).forEach(role => {
+    // Primary: match via stages array
     (role.stages || []).forEach(s => {
       const matched = prefixes.find(p => s.label.startsWith(p));
-      if (matched) {
+      if (matched && !seen.has(role.title)) {
+        seen.add(role.title);
         const countMatch = s.label.match(/(\d+)$/);
         const count = countMatch ? +countMatch[1] : 0;
         matches.push({ title: role.title, stageName: matched, count });
       }
     });
+    // Fallback for offer: catch roles whose status label says "offer out" or "signed"
+    // when their stages snapshot didn't capture it
+    if (stageKey === 'offer' && !seen.has(role.title)) {
+      const sl = (role.status_label || '').toLowerCase();
+      if (sl.includes('offer') || sl.includes('signed')) {
+        seen.add(role.title);
+        matches.push({ title: role.title, stageName: 'Offer', count: 1 });
+      }
+    }
   });
   matches.sort((a, b) => b.count - a.count);
   if (!matches.length) {
