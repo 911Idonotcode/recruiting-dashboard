@@ -745,14 +745,18 @@ function render(d) {
         const [drS, drE] = drRange(activeDR);
         const rangeLabel = drLabel(activeDR);
 
-        // Group by month
+        // Group by month — key as YYYY-MM for reliable sorting
         const byMonth = {};
         hires.forEach(h => {
           const dt = new Date(h.date + 'T12:00:00');
-          const key = dt.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+          const key = `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}`;
           byMonth[key] = (byMonth[key] || 0) + 1;
         });
-        const months = Object.entries(byMonth).sort((a, b) => new Date(a[0]) - new Date(b[0]));
+        const months = Object.entries(byMonth).sort((a, b) => a[0] < b[0] ? -1 : 1).map(([key, count]) => {
+          const [yr, mo] = key.split('-');
+          const label = new Date(+yr, +mo-1, 1).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+          return [label, count];
+        });
         const maxMonthCount = months.length ? Math.max(...months.map(([,c]) => c)) : 1;
 
         // Q1 vs Q2 split within filtered range
@@ -798,7 +802,7 @@ function render(d) {
                   return `<div class="bar-chart">
                     ${months.map(([month, count]) => `
                       <div class="bar-row">
-                        <span class="bar-label" style="width:110px;font-size:13px">${month}</span>
+                        <span class="bar-label" style="width:110px">${month}</span>
                         <div class="bar-track">
                           <div class="bar-fill blue" style="width:${Math.max(Math.round(count/maxMonthCount*100),3)}%">
                             <span class="bar-fill-val">${count}</span>
@@ -826,7 +830,7 @@ function render(d) {
                       const pct = Math.round(count/maxTeamCount*100);
                       return `
                       <div class="bar-row">
-                        <span class="bar-label" style="width:110px;font-size:13px">${esc(team)}</span>
+                        <span class="bar-label" style="width:110px">${esc(team)}</span>
                         <div class="bar-track">
                           <div class="bar-fill blue" style="width:${pct}%">
                             <span class="bar-fill-val">${count}</span>
