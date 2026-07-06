@@ -383,7 +383,8 @@ const DR_PRESETS = [
   { key: 'custom',      label: 'Custom'          },
 ];
 
-let activeDR = localStorage.getItem('activeDR') || 'ytd';
+const _storedDR = localStorage.getItem('activeDR');
+let activeDR = DR_PRESETS.some(p => p.key === _storedDR) ? _storedDR : 'ytd';
 let customStart = localStorage.getItem('drCustomStart') || '';
 let customEnd   = localStorage.getItem('drCustomEnd')   || '';
 
