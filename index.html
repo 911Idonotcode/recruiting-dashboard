@@ -671,7 +671,7 @@ function render(d) {
           ${(() => {
             const OFFER_TARGET = 85;
             const diff = k.offer_acceptance_pct - OFFER_TARGET;
-            const diffStr = (diff >= 0 ? '+' : '') + diff + '%';
+            const diffStr = (diff >= 0 ? '↑' : '↓') + Math.abs(diff) + '%';
             const diffColor = diff >= 0 ? 'var(--green)' : 'var(--red,#e5484d)';
             return `<div class="kpi-card clickable" onclick="showOffersModal(DASHBOARD_DATA)" title="Click to see offer details">
             <div class="kpi-label">Offer Acceptance</div>
