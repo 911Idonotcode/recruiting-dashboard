@@ -333,7 +333,23 @@ function showOffersModal(d) {
     }).join('');
     return `<div style="font-size:13px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.07em;margin:12px 0 4px">${title}</div>${rows}`;
   };
-  openModal(`Offer Acceptance · ${offers.length} offers`, section('Accepted', accepted) + section('Declined', declined));
+  const OFFER_TARGET = 85;
+  const actualPct = offers.length ? Math.round(accepted.length / offers.length * 100) : 0;
+  const diff = actualPct - OFFER_TARGET;
+  const diffStr = (diff >= 0 ? '+' : '') + diff + '%';
+  const diffColor = diff >= 0 ? 'var(--green)' : 'var(--red,#e5484d)';
+  const benchmarkHtml = `
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--bg-2);border-radius:8px;margin-bottom:16px;">
+      <div>
+        <div style="font-size:22px;font-weight:600;color:var(--text-1)">${actualPct}%</div>
+        <div style="font-size:13px;color:var(--text-3)">Acceptance rate · ${accepted.length} of ${offers.length} offers</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:18px;font-weight:600;color:${diffColor}">${diffStr}</div>
+        <div style="font-size:13px;color:var(--text-3)">vs 85% target</div>
+      </div>
+    </div>`;
+  openModal(`Offer Acceptance · ${offers.length} offers`, benchmarkHtml + section('Accepted', accepted) + section('Declined', declined));
 }
 
 function showPipelineStageModal(stageKey, stageLabel, d) {
@@ -652,11 +668,17 @@ function render(d) {
             <div class="kpi-value blue">${k.open_roles}</div>
             <div class="kpi-sub">${roleCount} active searches</div>
           </div>
-          <div class="kpi-card clickable" onclick="showOffersModal(DASHBOARD_DATA)" title="Click to see offer details">
+          ${(() => {
+            const OFFER_TARGET = 85;
+            const diff = k.offer_acceptance_pct - OFFER_TARGET;
+            const diffStr = (diff >= 0 ? '+' : '') + diff + '%';
+            const diffColor = diff >= 0 ? 'var(--green)' : 'var(--red,#e5484d)';
+            return `<div class="kpi-card clickable" onclick="showOffersModal(DASHBOARD_DATA)" title="Click to see offer details">
             <div class="kpi-label">Offer Acceptance</div>
-            <div class="kpi-value green">${k.offer_acceptance_pct}<span class="unit">%</span></div>
-            <div class="kpi-sub">${k.offers_extended} extended · ${k.hires} hired</div>
-          </div>
+            <div class="kpi-value ${diff >= 0 ? 'green' : 'warn'}">${k.offer_acceptance_pct}<span class="unit">%</span></div>
+            <div class="kpi-sub">${k.offers_extended} extended · <span style="color:${diffColor};font-weight:600">${diffStr} vs 85% target</span></div>
+          </div>`;
+          })()}
           <div class="kpi-card">
             <div class="kpi-label">Active Candidates</div>
             <div class="kpi-value">${k.active_candidates}</div>
