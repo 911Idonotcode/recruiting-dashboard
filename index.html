@@ -676,7 +676,7 @@ function render(d) {
             return `<div class="kpi-card clickable" onclick="showOffersModal(DASHBOARD_DATA)" title="Click to see offer details">
             <div class="kpi-label">Offer Acceptance</div>
             <div class="kpi-value ${diff >= 0 ? 'green' : 'warn'}">${k.offer_acceptance_pct}<span class="unit">%</span></div>
-            <div class="kpi-sub">${k.offers_extended} extended / ${k.hires} accepted</div>
+            <div class="kpi-sub">${k.offers_extended} extended / ${k.hires} hired</div>
             <div class="kpi-sub" style="color:${diffColor};font-weight:600">${diffStr} vs 85% target</div>
           </div>`;
           })()}
