@@ -289,26 +289,48 @@ function showHiresModal(d) {
   openModal(`Hires · ${hires.length}`, rows);
 }
 
+function loadDeclineReasons() {
+  try { return JSON.parse(localStorage.getItem('declineReasons') || '{}'); } catch(e) { return {}; }
+}
+function saveDeclineReason(name, val) {
+  const r = loadDeclineReasons(); r[name] = val; localStorage.setItem('declineReasons', JSON.stringify(r));
+}
+
 function showOffersModal(d) {
   const offers = d.offers || [];
   if (!offers.length) {
     openModal('Offer Acceptance', '<div class="modal-empty">No offer detail available.<br><br>Add an <code>offers</code> array to data.js with fields:<br><code>{ name, role, status: "Accepted"|"Declined", date }</code></div>');
     return;
   }
+  const reasons = loadDeclineReasons();
   const accepted = offers.filter(o => o.status === 'Accepted');
   const declined = offers.filter(o => o.status === 'Declined');
   const section = (title, list) => {
     if (!list.length) return '';
-    const rows = list.map(o => `<div class="modal-row">
-      <div class="modal-avatar${o.status === 'Declined' ? ' declined' : ''}">${initials(o.name)}</div>
-      <div class="modal-info">
-        <div class="modal-name">${o.name || '—'}</div>
-        <div class="modal-meta">${o.role || '—'}</div>
-        ${o.date ? `<div class="modal-meta">${fmtDate(o.date)}</div>` : ''}
-        <span class="modal-badge ${o.status === 'Accepted' ? 'accepted' : 'declined'}">${o.status}</span>
-        ${o.status === 'Declined' && o.decline_reason ? `<div class="modal-meta" style="margin-top:4px;font-style:italic;color:var(--text-2)">Reason: ${esc(o.decline_reason)}</div>` : ''}
-      </div>
-    </div>`).join('');
+    const rows = list.map(o => {
+      const savedReason = reasons[o.name] || o.decline_reason || '';
+      const reasonHtml = o.status === 'Declined' ? `
+        <div style="margin-top:6px;">
+          <div style="font-size:11px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;">Decline reason</div>
+          <input
+            class="avg-days-input"
+            style="width:100%;box-sizing:border-box;font-size:13px;"
+            placeholder="Enter reason…"
+            value="${esc(savedReason)}"
+            oninput="saveDeclineReason('${esc(o.name)}', this.value)"
+          >
+        </div>` : '';
+      return `<div class="modal-row">
+        <div class="modal-avatar${o.status === 'Declined' ? ' declined' : ''}">${initials(o.name)}</div>
+        <div class="modal-info" style="flex:1;min-width:0;">
+          <div class="modal-name">${esc(o.name || '—')}</div>
+          <div class="modal-meta">${esc(o.role || '—')}</div>
+          ${o.date ? `<div class="modal-meta">${fmtDate(o.date)}</div>` : ''}
+          <span class="modal-badge ${o.status === 'Accepted' ? 'accepted' : 'declined'}">${o.status}</span>
+          ${reasonHtml}
+        </div>
+      </div>`;
+    }).join('');
     return `<div style="font-size:13px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.07em;margin:12px 0 4px">${title}</div>${rows}`;
   };
   openModal(`Offer Acceptance · ${offers.length} offers`, section('Accepted', accepted) + section('Declined', declined));
