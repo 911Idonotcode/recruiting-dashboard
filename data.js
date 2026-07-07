@@ -198,7 +198,8 @@ var DASHBOARD_DATA = {
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
       "team": "Exploration",
       "status": "Declined",
-      "date": "2026-06-18"
+      "date": "2026-06-18",
+      "decline_reason": ""
     },
     {
       "name": "Amy Brown",
@@ -219,7 +220,8 @@ var DASHBOARD_DATA = {
       "role": "Senior Business Intelligence Data Scientist - App Team",
       "team": "Product",
       "status": "Declined",
-      "date": "2026-05-06"
+      "date": "2026-05-06",
+      "decline_reason": ""
     },
     {
       "name": "Pieter Montoulieu",
@@ -268,7 +270,8 @@ var DASHBOARD_DATA = {
       "role": "Senior Backend Engineer, GO - Data/Infrastructure Team",
       "team": "Engineering",
       "status": "Declined",
-      "date": "2026-03-11"
+      "date": "2026-03-11",
+      "decline_reason": ""
     },
     {
       "name": "Alexander Corbeil",

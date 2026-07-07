@@ -306,6 +306,7 @@ function showOffersModal(d) {
         <div class="modal-meta">${o.role || '—'}</div>
         ${o.date ? `<div class="modal-meta">${fmtDate(o.date)}</div>` : ''}
         <span class="modal-badge ${o.status === 'Accepted' ? 'accepted' : 'declined'}">${o.status}</span>
+        ${o.status === 'Declined' && o.decline_reason ? `<div class="modal-meta" style="margin-top:4px;font-style:italic;color:var(--text-2)">Reason: ${esc(o.decline_reason)}</div>` : ''}
       </div>
     </div>`).join('');
     return `<div style="font-size:13px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.07em;margin:12px 0 4px">${title}</div>${rows}`;

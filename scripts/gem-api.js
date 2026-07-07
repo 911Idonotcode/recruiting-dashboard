@@ -288,12 +288,15 @@ async function main() {
   }), ...offerRejected.map(a => {
     const jobId = a.jobs?.[0]?.id;
     const job   = jobId ? jobLookup[jobId] : null;
+    const candidateName = candidateCache[a.candidate_id] || '';
+    const prevOffer = (prev.offers || []).find(o => o.name === candidateName && o.status === 'Declined');
     return {
-      name:   candidateCache[a.candidate_id] || '',
-      role:   job?.name?.trim() || '',
-      team:   normalizeDept(job?.departments?.[0]?.name) || '',
-      status: 'Declined',
-      date:   (a.last_activity_at || '').slice(0, 10),
+      name:           candidateName,
+      role:           job?.name?.trim() || '',
+      team:           normalizeDept(job?.departments?.[0]?.name) || '',
+      status:         'Declined',
+      date:           (a.last_activity_at || '').slice(0, 10),
+      decline_reason: prevOffer?.decline_reason || '',
     };
   })].sort((a, b) => b.date.localeCompare(a.date));
 
