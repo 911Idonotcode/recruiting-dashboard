@@ -77,7 +77,7 @@ const SOURCE_MAP = {
   'gem outreach':     'Sourced',
   'sourced':          'Sourced',
   'linkedin':         'LinkedIn',
-  'linkedin sourced': 'LinkedIn',
+  'linkedin sourced': 'Sourced',
   'referral':         'Referral',
   'employee referral':'Referral',
   'inbound':          'Inbound',
