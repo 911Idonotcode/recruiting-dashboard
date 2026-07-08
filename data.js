@@ -118,7 +118,7 @@ var DASHBOARD_DATA = {
       "team": "Exploration",
       "date": "2026-05-05",
       "status": "Accepted",
-      "source": "Sourced"
+      "source": "Referral"
     },
     {
       "name": "Jeffrey Gleason",
@@ -134,7 +134,7 @@ var DASHBOARD_DATA = {
       "team": "Product",
       "date": "2026-04-09",
       "status": "Accepted",
-      "source": "Sourced"
+      "source": "Referral"
     },
     {
       "name": "Cameron Sweeney",
@@ -182,7 +182,7 @@ var DASHBOARD_DATA = {
       "team": "Engineering",
       "date": "2026-01-12",
       "status": "Accepted",
-      "source": "Sourced"
+      "source": "Inbound"
     },
     {
       "name": "DS Boyce",
@@ -190,7 +190,7 @@ var DASHBOARD_DATA = {
       "team": "Engineering",
       "date": "2026-01-08",
       "status": "Accepted",
-      "source": "Sourced"
+      "source": "Inbound"
     }
   ],
   "offers": [
