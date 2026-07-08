@@ -142,7 +142,7 @@ var DASHBOARD_DATA = {
       "team": "Engineering",
       "date": "2026-04-09",
       "status": "Accepted",
-      "source": "Referral"
+      "source": "Sourced"
     },
     {
       "name": "Michael Black",
