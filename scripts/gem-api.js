@@ -72,6 +72,27 @@ function normalizeDept(name) {
   return DEPT_MAP[name.toLowerCase().trim()] || name.trim();
 }
 
+const SOURCE_MAP = {
+  'gem':              'Sourced',
+  'gem outreach':     'Sourced',
+  'sourced':          'Sourced',
+  'linkedin':         'LinkedIn',
+  'linkedin sourced': 'LinkedIn',
+  'referral':         'Referral',
+  'employee referral':'Referral',
+  'inbound':          'Inbound',
+  'applied':          'Inbound',
+  'careers page':     'Inbound',
+  'job board':        'Job Board',
+  'indeed':           'Indeed',
+  'greenhouse':       'Inbound',
+  'agency':           'Agency',
+};
+function normalizeSource(name) {
+  if (!name) return 'Other';
+  return SOURCE_MAP[name.toLowerCase().trim()] || name.trim();
+}
+
 // canonical pipeline stages in display order
 const PIPELINE_STAGES = [
   { key: 'app_review',   label: 'Application Review' },
@@ -271,6 +292,7 @@ async function main() {
         team:   normalizeDept(job?.departments?.[0]?.name) || '',
         date:   (a.last_activity_at || a.applied_at || '').slice(0, 10),
         status: 'Accepted',
+        source: normalizeSource(a.source || ''),
       };
     });
 

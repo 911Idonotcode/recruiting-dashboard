@@ -77,105 +77,120 @@ var DASHBOARD_DATA = {
       "role": "Vice President of Engineering",
       "team": "Engineering",
       "date": "2026-06-24",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Sourced"
     },
     {
       "name": "Danny Smith",
       "role": "Finance and Business Operations Lead",
       "team": "Operations",
       "date": "2026-06-18",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Referral"
     },
     {
       "name": "Amy Brown",
       "role": "Social Media Manager (Contractor)",
       "team": "Communications/PR",
       "date": "2026-06-10",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Inbound"
     },
     {
       "name": "Lydia Yi",
       "role": "Entertainment Partnership Manager",
       "team": "Operations",
       "date": "2026-05-26",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Sourced"
     },
     {
       "name": "Pieter Montoulieu",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
       "team": "Exploration",
       "date": "2026-05-05",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Sourced"
     },
     {
       "name": "Brittany Ellich",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
       "team": "Exploration",
       "date": "2026-05-05",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "LinkedIn"
     },
     {
       "name": "Jeffrey Gleason",
       "role": "Senior Machine Learning Engineer",
       "team": "Engineering",
       "date": "2026-04-24",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Sourced"
     },
     {
       "name": "Danielle Yuhan",
       "role": "Senior Product Designer",
       "team": "Product",
       "date": "2026-04-09",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "LinkedIn"
     },
     {
       "name": "Cameron Sweeney",
       "role": "Senior Backend Engineer, GO - Data/Infrastructure Team",
       "team": "Engineering",
       "date": "2026-04-09",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Referral"
     },
     {
       "name": "Michael Black",
       "role": "Senior Backend Engineer, GO & Typescript - App Team",
       "team": "Product",
       "date": "2026-04-07",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Sourced"
     },
     {
       "name": "Alexander Corbeil",
       "role": "Policy Lead, Trust & Safety",
       "team": "Trust & Safety",
       "date": "2026-02-19",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Referral"
     },
     {
       "name": "William Brannon",
       "role": "Senior Machine Learning Engineer",
       "team": "Engineering",
       "date": "2026-02-12",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Sourced"
     },
     {
       "name": "Josh Petri",
       "role": "Head of Communications",
       "team": "Communications/PR",
       "date": "2026-01-20",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "LinkedIn"
     },
     {
       "name": "Spencer Pope",
       "role": "Senior Product Engineer, React Native - App Team",
       "team": "Engineering",
       "date": "2026-01-12",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Sourced"
     },
     {
       "name": "DS Boyce",
       "role": "Senior Product Engineer, React Native - App Team",
       "team": "Engineering",
       "date": "2026-01-08",
-      "status": "Accepted"
+      "status": "Accepted",
+      "source": "Sourced"
     }
   ],
   "offers": [

@@ -923,7 +923,7 @@ function render(d) {
         </div>
 
         <div class="section">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:start;">
             <div>
               <div class="section-title">Hires by month</div>
               <div class="chart-card">
@@ -968,6 +968,32 @@ function render(d) {
                         </div>
                       </div>`;
                     }).join('')}
+                  </div>`;
+                })()}
+              </div>
+            </div>
+            <div>
+              <div class="section-title">Hires by source</div>
+              <div class="chart-card">
+                ${(() => {
+                  const bySource = {};
+                  hires.forEach(h => {
+                    const key = h.source || 'Other';
+                    bySource[key] = (bySource[key] || 0) + 1;
+                  });
+                  const sources = Object.entries(bySource).sort((a, b) => b[1] - a[1]);
+                  if (!sources.length) return `<div style="padding:24px;color:var(--text-3);text-align:center;">No source data available</div>`;
+                  const maxSourceCount = Math.max(...sources.map(([,c]) => c));
+                  return `<div class="bar-chart">
+                    ${sources.map(([source, count]) => `
+                      <div class="bar-row">
+                        <span class="bar-label" style="width:110px">${esc(source)}</span>
+                        <div class="bar-track">
+                          <div class="bar-fill blue" style="width:${Math.max(Math.round(count/maxSourceCount*100),3)}%">
+                            <span class="bar-fill-val">${count}</span>
+                          </div>
+                        </div>
+                      </div>`).join('')}
                   </div>`;
                 })()}
               </div>
