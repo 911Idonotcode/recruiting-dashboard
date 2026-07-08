@@ -118,7 +118,7 @@ var DASHBOARD_DATA = {
       "team": "Exploration",
       "date": "2026-05-05",
       "status": "Accepted",
-      "source": "LinkedIn"
+      "source": "Sourced"
     },
     {
       "name": "Jeffrey Gleason",
@@ -134,7 +134,7 @@ var DASHBOARD_DATA = {
       "team": "Product",
       "date": "2026-04-09",
       "status": "Accepted",
-      "source": "LinkedIn"
+      "source": "Sourced"
     },
     {
       "name": "Cameron Sweeney",
@@ -174,7 +174,7 @@ var DASHBOARD_DATA = {
       "team": "Communications/PR",
       "date": "2026-01-20",
       "status": "Accepted",
-      "source": "LinkedIn"
+      "source": "Sourced"
     },
     {
       "name": "Spencer Pope",

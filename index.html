@@ -418,6 +418,24 @@ function showHiredPipelineModal(d) {
   openModal(`Hired · ${hires.length}`, rows);
 }
 
+function showHiresBySourceModal(source, d) {
+  const hires = applyDRFilter(d.ytd_hires || []).filter(h => (h.source || 'Other') === source);
+  if (!hires.length) {
+    openModal(`Source: ${source}`, '<div class="modal-empty">No hires from this source in the selected period.</div>');
+    return;
+  }
+  const rows = hires.map(h => `
+    <div class="modal-row">
+      <div class="modal-avatar">${initials(h.name)}</div>
+      <div class="modal-info">
+        <div class="modal-name">${esc(h.name || '—')}</div>
+        <div class="modal-meta">${esc(h.role || '—')}</div>
+        <div class="modal-meta">${esc(h.team || '—')} · Hired ${fmtDate(h.date)}</div>
+      </div>
+    </div>`).join('');
+  openModal(`${source} · ${hires.length} hire${hires.length !== 1 ? 's' : ''}`, rows);
+}
+
 function showOutreachModal(month, o) {
   const body = `
     <div style="margin-bottom:16px;">
@@ -986,7 +1004,7 @@ function render(d) {
                   const maxSourceCount = Math.max(...sources.map(([,c]) => c));
                   return `<div class="bar-chart">
                     ${sources.map(([source, count]) => `
-                      <div class="bar-row">
+                      <div class="bar-row" style="cursor:pointer;" onclick="showHiresBySourceModal('${esc(source)}',DASHBOARD_DATA)">
                         <span class="bar-label" style="width:110px">${esc(source)}</span>
                         <div class="bar-track">
                           <div class="bar-fill blue" style="width:${Math.max(Math.round(count/maxSourceCount*100),3)}%">
