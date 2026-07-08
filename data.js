@@ -3,31 +3,31 @@ var DASHBOARD_DATA = {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
     "period_label": "Custom Mar 31 – Jun 29",
-    "updated": "Jul 6"
+    "updated": "Jul 8"
   },
   "kpis": {
-    "hires": 10,
+    "hires": 7,
     "hires_target": 5,
     "hires_target_annual": 20,
-    "avg_time_to_hire": 64,
+    "avg_time_to_hire": 85,
     "avg_time_to_hire_prev": 88,
     "bench_time_to_hire": 44,
     "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2981
+    "active_candidates": 2969
   },
   "pipeline": {
     "app_review": {
-      "count": 2871,
+      "count": 2877,
       "avg_days": 0
     },
     "phone_screen": {
-      "count": 86,
+      "count": 66,
       "avg_days": 0
     },
     "onsite": {
-      "count": 20,
+      "count": 24,
       "avg_days": 0
     },
     "offer": {
@@ -35,15 +35,15 @@ var DASHBOARD_DATA = {
       "avg_days": 0
     },
     "hired": {
-      "count": 15,
+      "count": 16,
       "avg_days": 0
     }
   },
   "passthrough": {
-    "app_to_phone": 3,
-    "phone_to_onsite": 23,
-    "onsite_to_offer": 10,
-    "offer_to_hired": 79
+    "app_to_phone": 2,
+    "phone_to_onsite": 36,
+    "onsite_to_offer": 8,
+    "offer_to_hired": 80
   },
   "outreach": [
     {
@@ -73,20 +73,44 @@ var DASHBOARD_DATA = {
   ],
   "ytd_hires": [
     {
-      "name": "Anoop Ranganath",
-      "role": "Vice President of Engineering",
-      "team": "Engineering",
-      "date": "2026-06-24",
+      "name": "Andres Castaneda",
+      "role": "Technical Recruiter",
+      "team": "Operations",
+      "date": "2026-07-08",
+      "status": "Accepted",
+      "source": "Referral"
+    },
+    {
+      "name": "Josh Petri",
+      "role": "Head of Communications",
+      "team": "Communications/PR",
+      "date": "2026-07-08",
       "status": "Accepted",
       "source": "Sourced"
+    },
+    {
+      "name": "Pieter Montoulieu",
+      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
+      "team": "Exploration",
+      "date": "2026-07-08",
+      "status": "Accepted",
+      "source": "Referral"
     },
     {
       "name": "Danny Smith",
       "role": "Finance and Business Operations Lead",
       "team": "Operations",
-      "date": "2026-06-18",
+      "date": "2026-07-08",
       "status": "Accepted",
       "source": "Referral"
+    },
+    {
+      "name": "Anoop Ranganath",
+      "role": "Vice President of Engineering",
+      "team": "Engineering",
+      "date": "2026-07-08",
+      "status": "Accepted",
+      "source": "Agency"
     },
     {
       "name": "Amy Brown",
@@ -94,21 +118,13 @@ var DASHBOARD_DATA = {
       "team": "Communications/PR",
       "date": "2026-06-10",
       "status": "Accepted",
-      "source": "Inbound"
+      "source": "Referral"
     },
     {
       "name": "Lydia Yi",
       "role": "Entertainment Partnership Manager",
       "team": "Operations",
       "date": "2026-05-26",
-      "status": "Accepted",
-      "source": "Referral"
-    },
-    {
-      "name": "Pieter Montoulieu",
-      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
-      "team": "Exploration",
-      "date": "2026-05-05",
       "status": "Accepted",
       "source": "Referral"
     },
@@ -126,7 +142,7 @@ var DASHBOARD_DATA = {
       "team": "Engineering",
       "date": "2026-04-24",
       "status": "Accepted",
-      "source": "Sourced"
+      "source": "Inbound"
     },
     {
       "name": "Danielle Yuhan",
@@ -142,7 +158,7 @@ var DASHBOARD_DATA = {
       "team": "Engineering",
       "date": "2026-04-09",
       "status": "Accepted",
-      "source": "Sourced"
+      "source": "Inbound"
     },
     {
       "name": "Michael Black",
@@ -158,7 +174,7 @@ var DASHBOARD_DATA = {
       "team": "Trust & Safety",
       "date": "2026-02-19",
       "status": "Accepted",
-      "source": "Referral"
+      "source": "Inbound"
     },
     {
       "name": "William Brannon",
@@ -167,14 +183,6 @@ var DASHBOARD_DATA = {
       "date": "2026-02-12",
       "status": "Accepted",
       "source": "Inbound"
-    },
-    {
-      "name": "Josh Petri",
-      "role": "Head of Communications",
-      "team": "Communications/PR",
-      "date": "2026-01-20",
-      "status": "Accepted",
-      "source": "Sourced"
     },
     {
       "name": "Spencer Pope",
@@ -195,18 +203,39 @@ var DASHBOARD_DATA = {
   ],
   "offers": [
     {
-      "name": "Anoop Ranganath",
-      "role": "Vice President of Engineering",
-      "team": "Engineering",
+      "name": "Andres Castaneda",
+      "role": "Technical Recruiter",
+      "team": "Operations",
       "status": "Accepted",
-      "date": "2026-06-24"
+      "date": "2026-07-08"
+    },
+    {
+      "name": "Josh Petri",
+      "role": "Head of Communications",
+      "team": "Communications/PR",
+      "status": "Accepted",
+      "date": "2026-07-08"
+    },
+    {
+      "name": "Pieter Montoulieu",
+      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
+      "team": "Exploration",
+      "status": "Accepted",
+      "date": "2026-07-08"
     },
     {
       "name": "Danny Smith",
       "role": "Finance and Business Operations Lead",
       "team": "Operations",
       "status": "Accepted",
-      "date": "2026-06-18"
+      "date": "2026-07-08"
+    },
+    {
+      "name": "Anoop Ranganath",
+      "role": "Vice President of Engineering",
+      "team": "Engineering",
+      "status": "Accepted",
+      "date": "2026-07-08"
     },
     {
       "name": "Aaron Sanders",
@@ -237,13 +266,6 @@ var DASHBOARD_DATA = {
       "status": "Declined",
       "date": "2026-05-06",
       "decline_reason": ""
-    },
-    {
-      "name": "Pieter Montoulieu",
-      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
-      "team": "Exploration",
-      "status": "Accepted",
-      "date": "2026-05-05"
     },
     {
       "name": "Brittany Ellich",
@@ -303,13 +325,6 @@ var DASHBOARD_DATA = {
       "date": "2026-02-12"
     },
     {
-      "name": "Josh Petri",
-      "role": "Head of Communications",
-      "team": "Communications/PR",
-      "status": "Accepted",
-      "date": "2026-01-20"
-    },
-    {
       "name": "Spencer Pope",
       "role": "Senior Product Engineer, React Native - App Team",
       "team": "Engineering",
@@ -328,7 +343,8 @@ var DASHBOARD_DATA = {
       "role": "Technical Recruiter",
       "team": "Operations",
       "status": "Declined",
-      "date": "2026-01-08"
+      "date": "2026-01-08",
+      "decline_reason": ""
     }
   ],
   "recruiter_tth": [
@@ -376,7 +392,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 446",
+          "label": "Application Review 453",
           "type": "default"
         },
         {
@@ -384,7 +400,7 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "HM Interview 1",
+          "label": "HM Review 1",
           "type": "default"
         },
         {
@@ -407,15 +423,23 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 152",
+          "label": "Application Review 157",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 19",
+          "label": "Recruiter Interview 1",
           "type": "default"
         },
         {
-          "label": "Technical Assessment 4",
+          "label": "HM Interview 1",
+          "type": "default"
+        },
+        {
+          "label": "Technical Assessment 1",
+          "type": "default"
+        },
+        {
+          "label": "Culture Interview 1",
           "type": "default"
         }
       ],
@@ -427,23 +451,27 @@ var DASHBOARD_DATA = {
     {
       "title": "Senior Backend Developer - Trust & Safety",
       "req_id": "R33",
-      "recruiter": "Andres",
+      "recruiter": "Anabella",
       "date_opened": "2026-03-01",
       "headcount": 1,
-      "meta": "R33 · Andres",
+      "meta": "R33 · Anabella",
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 81",
+          "label": "Application Review 85",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 22",
+          "label": "Recruiter Interview 19",
           "type": "default"
         },
         {
-          "label": "Deep Dive 2",
-          "type": "dd"
+          "label": "HM Interview 3",
+          "type": "default"
+        },
+        {
+          "label": "Pair Programming 2",
+          "type": "default"
         }
       ],
       "status": "risk",
@@ -454,27 +482,27 @@ var DASHBOARD_DATA = {
     {
       "title": "Senior Fullstack Developer- Trust & Safety",
       "req_id": "R34",
-      "recruiter": "Andres",
+      "recruiter": "Anabella",
       "date_opened": "2026-03-15",
       "headcount": 2,
-      "meta": "R34 · Andres",
+      "meta": "R34 · Anabella",
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 345",
+          "label": "Application Review 351",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 25",
+          "label": "Recruiter Interview 26",
           "type": "default"
         },
         {
-          "label": "HM Interview 5",
+          "label": "HM Interview 4",
           "type": "default"
         },
         {
-          "label": "Deep Dive 1",
-          "type": "dd"
+          "label": "Technical Assessment 1",
+          "type": "default"
         }
       ],
       "status": "risk",
@@ -492,11 +520,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 52",
+          "label": "Application Review 53",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 4",
+          "label": "Recruiter Interview 2",
           "type": "default"
         },
         {
@@ -538,11 +566,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 7",
+          "label": "Recruiter Interview 5",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 1",
+          "label": "Portfolio Review 1",
           "type": "default"
         },
         {
@@ -558,18 +586,18 @@ var DASHBOARD_DATA = {
     {
       "title": "Staff Fullstack Engineer - App Team",
       "req_id": "R52",
-      "recruiter": "Andres",
+      "recruiter": "Anabella",
       "date_opened": "2026-06-01",
       "headcount": 1,
-      "meta": "R52 · Andres",
+      "meta": "R52 · Anabella",
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 213",
+          "label": "Application Review 218",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 9",
+          "label": "Recruiter Interview 6",
           "type": "default"
         }
       ],
@@ -588,7 +616,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 213",
+          "label": "Application Review 143",
           "type": "default"
         }
       ],
@@ -600,14 +628,18 @@ var DASHBOARD_DATA = {
     {
       "title": "Staff Site Reliability Engineer",
       "req_id": "R61",
-      "recruiter": "Andres",
+      "recruiter": "Anabella",
       "date_opened": "2026-06-22",
       "headcount": 1,
-      "meta": "R61 · Andres",
+      "meta": "R61 · Anabella",
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 101",
+          "label": "Application Review 81",
+          "type": "default"
+        },
+        {
+          "label": "HM Interview 1",
           "type": "default"
         },
         {
@@ -630,7 +662,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 199",
+          "label": "Application Review 225",
           "type": "default"
         }
       ],
@@ -642,18 +674,18 @@ var DASHBOARD_DATA = {
     {
       "title": "Senior Fullstack Engineer, Network Services",
       "req_id": "R64",
-      "recruiter": "Andres",
+      "recruiter": "Anabella",
       "date_opened": "2026-06-30",
       "headcount": 1,
-      "meta": "R64 · Andres",
+      "meta": "R64 · Anabella",
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 815",
+          "label": "Application Review 864",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 1",
+          "label": "Recruiter Interview 2",
           "type": "default"
         }
       ],

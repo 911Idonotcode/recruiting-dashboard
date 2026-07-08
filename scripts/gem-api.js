@@ -73,34 +73,40 @@ function normalizeDept(name) {
 }
 
 const SOURCE_MAP = {
-  'gem':              'Sourced',
-  'gem outreach':     'Sourced',
-  'sourced':          'Sourced',
-  'linkedin':         'Sourced',
-  'linkedin sourced':  'Sourced',
-  'direct outbound':   'Sourced',
-  'referral':         'Referral',
-  'employee referral':'Referral',
-  'inbound':          'Inbound',
-  'applied':          'Inbound',
-  'careers page':     'Inbound',
-  'job board':        'Job Board',
-  'indeed':           'Indeed',
-  'greenhouse':       'Inbound',
-  'agency':           'Agency',
+  'gem sequence':       'Sourced',
+  'direct outbound':    'Sourced',
+  'eng outbound':       'Sourced',
+  'linkedin':           'Sourced',
+  'linkedin sourced':   'Sourced',
+  'gem':                'Sourced',
+  'gem outreach':       'Sourced',
+  'sourced':            'Sourced',
+  'direct referral':    'Referral',
+  'referral':           'Referral',
+  'employee referral':  'Referral',
+  'company career site':'Inbound',
+  'inbound':            'Inbound',
+  'applied':            'Inbound',
+  'careers page':       'Inbound',
+  'job board':          'Inbound',
+  'agency':             'Agency',
 };
-function normalizeSource(name) {
+function normalizeSource(sourceObj) {
+  if (!sourceObj) return 'Other';
+  const name = typeof sourceObj === 'string' ? sourceObj : (sourceObj.public_name || '');
   if (!name) return 'Other';
   return SOURCE_MAP[name.toLowerCase().trim()] || name.trim();
 }
 
-// canonical pipeline stages in display order
+// canonical pipeline stages in display order (derived from live Gem stage names)
 const PIPELINE_STAGES = [
-  { key: 'app_review',   label: 'Application Review' },
-  { key: 'recruiter',    label: 'Recruiter Interview' },
-  { key: 'hm_interview', label: 'HM Interview'        },
+  { key: 'app_review',   label: 'Application Review'  },
+  { key: 'recruiter',    label: 'Recruiter Interview'  },
+  { key: 'hm_review',    label: 'HM Review'            },
+  { key: 'hm_interview', label: 'HM Interview'         },
+  { key: 'portfolio',    label: 'Portfolio Review'     },
   { key: 'technical',    label: 'Technical Assessment' },
-  { key: 'deep_dive',    label: 'Deep Dive'            },
+  { key: 'pair_prog',    label: 'Pair Programming'     },
   { key: 'culture',      label: 'Culture Interview'    },
   { key: 'trial',        label: 'Trial Day'            },
   { key: 'offer',        label: 'Offer'                },
@@ -109,26 +115,49 @@ const PIPELINE_STAGES = [
 function pipelineBucket(name) {
   if (!name) return null;
   const n = name.toLowerCase().trim();
-  if (n.includes('application') || n.includes('app review'))                    return 'app_review';
-  if (n.includes('recruiter') || n.includes('phone') || n.includes('screen'))   return 'recruiter';
-  if (n.includes('hiring manager') || n === 'hm' || n.startsWith('hm '))        return 'hm_interview';
-  if (n.includes('technical') || n.includes('coding') || n.includes('take home') || n.includes('assessment')) return 'technical';
-  if (n.includes('deep dive') || n.includes('pair') || n.includes('rose') || n.includes('onsite') || n.includes('for ')) return 'deep_dive';
-  if (n.includes('culture'))  return 'culture';
-  if (n.includes('trial'))    return 'trial';
-  if (n.includes('offer'))    return 'offer';
+  if (n.includes('application') || n === 'app review')
+    return 'app_review';
+  if (n.includes('recruiter') || n.includes('phone') || n.includes('screen') ||
+      n.startsWith('intro'))
+    return 'recruiter';
+  // async HM-review / executive-review gates (not a live interview)
+  if (n === 'hm review' || n.includes('for rose') || n.includes('for hm') ||
+      n.includes('for aaron') || n === 'hm hold' || n === 'top picks' ||
+      n.includes('hiring manager review'))
+    return 'hm_review';
+  if (n.includes('hiring manager') || n === 'hm interview')
+    return 'hm_interview';
+  if (n.includes('portfolio'))
+    return 'portfolio';
+  if (n.includes('technical') || n.includes('take home') || n.includes('take-home') ||
+      n.includes('written') || n.includes('linux') || n.includes('assessment') ||
+      n.includes('platform') || n.includes('regulatory'))
+    return 'technical';
+  if (n.includes('pair') || n.includes('deep dive') || n.includes('hands-on') ||
+      n.includes('mgmt deep') || n.includes('team deep') || n.includes('design deep') ||
+      n.includes('case stud') || n.includes('onsite'))
+    return 'pair_prog';
+  if (n.includes('culture') || n.includes('team fit') || n.includes('executive') ||
+      n.includes('leadership') || n.includes('exec'))
+    return 'culture';
+  if (n.includes('trial'))
+    return 'trial';
+  if (n.includes('offer') || n.includes('comp call') || n.includes('compensation') ||
+      n.includes('ref') || n.includes('reference'))
+    return 'offer';
   return null;
 }
 
 function stageBucket(name) {
   if (!name) return null;
   const n = name.toLowerCase().trim();
-  if (n.includes('application') || n.includes('app review'))    return 'app_review';
-  if (n.includes('recruiter') || n.includes('phone') || n.includes('screen')) return 'phone_screen';
-  if (n.includes('onsite') || n.includes('pair') || n.includes('deep dive') ||
-      n.includes('technical') || n.includes('hm') || n.includes('hiring manager') ||
-      n.includes('rose') || n.includes('take home') || n.includes('for '))      return 'onsite';
-  if (n.includes('offer'))  return 'offer';
+  if (n.includes('application') || n === 'app review')           return 'app_review';
+  if (n.includes('recruiter') || n.includes('phone') || n.includes('screen') || n.startsWith('intro')) return 'phone_screen';
+  if (n === 'hm review' || n.includes('for rose') || n.includes('for hm') ||
+      n.includes('hiring manager') || n.includes('technical') || n.includes('take home') ||
+      n.includes('take-home') || n.includes('pair') || n.includes('deep dive') ||
+      n.includes('culture') || n.includes('portfolio') || n.includes('trial'))   return 'onsite';
+  if (n.includes('offer') || n.includes('comp call') || n.includes('compensation')) return 'offer';
   return null;
 }
 
@@ -163,6 +192,7 @@ async function main() {
   console.log('Fetching data from Gem ATS API…');
 
   const existing = readExisting();
+  const prev = existing.kpis || {};
 
   // 1. Jobs (open)
   console.log('  → jobs');
@@ -337,7 +367,6 @@ async function main() {
     ? Math.round(tthSamples.reduce((s, v) => s + v, 0) / tthSamples.length)
     : 0;
 
-  const prev = existing.kpis || {};
   const kpis = {
     hires:                q2Hires,
     hires_target:         prev.hires_target         || 5,
