@@ -104,9 +104,7 @@ const PIPELINE_STAGES = [
   { key: 'recruiter',    label: 'Recruiter Interview'  },
   { key: 'hm_review',    label: 'HM Review'            },
   { key: 'hm_interview', label: 'HM Interview'         },
-  { key: 'portfolio',    label: 'Portfolio Review'     },
   { key: 'technical',    label: 'Technical Assessment' },
-  { key: 'pair_prog',    label: 'Pair Programming'     },
   { key: 'culture',      label: 'Culture Interview'    },
   { key: 'trial',        label: 'Trial Day'            },
   { key: 'offer',        label: 'Offer'                },
@@ -127,16 +125,13 @@ function pipelineBucket(name) {
     return 'hm_review';
   if (n.includes('hiring manager') || n === 'hm interview')
     return 'hm_interview';
-  if (n.includes('portfolio'))
-    return 'portfolio';
   if (n.includes('technical') || n.includes('take home') || n.includes('take-home') ||
       n.includes('written') || n.includes('linux') || n.includes('assessment') ||
-      n.includes('platform') || n.includes('regulatory'))
-    return 'technical';
-  if (n.includes('pair') || n.includes('deep dive') || n.includes('hands-on') ||
+      n.includes('platform') || n.includes('regulatory') || n.includes('portfolio') ||
+      n.includes('pair') || n.includes('deep dive') || n.includes('hands-on') ||
       n.includes('mgmt deep') || n.includes('team deep') || n.includes('design deep') ||
       n.includes('case stud') || n.includes('onsite'))
-    return 'pair_prog';
+    return 'technical';
   if (n.includes('culture') || n.includes('team fit') || n.includes('executive') ||
       n.includes('leadership') || n.includes('exec'))
     return 'culture';

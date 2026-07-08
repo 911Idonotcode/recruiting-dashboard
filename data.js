@@ -15,15 +15,15 @@ var DASHBOARD_DATA = {
     "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2969
+    "active_candidates": 2976
   },
   "pipeline": {
     "app_review": {
-      "count": 2877,
+      "count": 2885,
       "avg_days": 0
     },
     "phone_screen": {
-      "count": 66,
+      "count": 65,
       "avg_days": 0
     },
     "onsite": {
@@ -35,15 +35,15 @@ var DASHBOARD_DATA = {
       "avg_days": 0
     },
     "hired": {
-      "count": 16,
+      "count": 17,
       "avg_days": 0
     }
   },
   "passthrough": {
     "app_to_phone": 2,
-    "phone_to_onsite": 36,
+    "phone_to_onsite": 37,
     "onsite_to_offer": 8,
-    "offer_to_hired": 80
+    "offer_to_hired": 81
   },
   "outreach": [
     {
@@ -72,6 +72,14 @@ var DASHBOARD_DATA = {
     }
   ],
   "ytd_hires": [
+    {
+      "name": "Megan Burton",
+      "role": "People Ops Coordinator",
+      "team": "People Ops",
+      "date": "2026-07-08",
+      "status": "Accepted",
+      "source": "Referral"
+    },
     {
       "name": "Andres Castaneda",
       "role": "Technical Recruiter",
@@ -202,6 +210,13 @@ var DASHBOARD_DATA = {
     }
   ],
   "offers": [
+    {
+      "name": "Megan Burton",
+      "role": "People Ops Coordinator",
+      "team": "People Ops",
+      "status": "Accepted",
+      "date": "2026-07-08"
+    },
     {
       "name": "Andres Castaneda",
       "role": "Technical Recruiter",
@@ -392,7 +407,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 453",
+          "label": "Application Review 454",
           "type": "default"
         },
         {
@@ -470,7 +485,7 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Pair Programming 2",
+          "label": "Technical Assessment 2",
           "type": "default"
         }
       ],
@@ -520,11 +535,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 53",
+          "label": "Application Review 55",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 2",
+          "label": "Recruiter Interview 1",
           "type": "default"
         },
         {
@@ -570,7 +585,7 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Portfolio Review 1",
+          "label": "Technical Assessment 1",
           "type": "default"
         },
         {
@@ -662,7 +677,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 225",
+          "label": "Application Review 228",
           "type": "default"
         }
       ],
@@ -681,7 +696,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 864",
+          "label": "Application Review 866",
           "type": "default"
         },
         {
