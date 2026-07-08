@@ -102,7 +102,7 @@ var DASHBOARD_DATA = {
       "team": "Operations",
       "date": "2026-05-26",
       "status": "Accepted",
-      "source": "Sourced"
+      "source": "Referral"
     },
     {
       "name": "Pieter Montoulieu",
@@ -110,7 +110,7 @@ var DASHBOARD_DATA = {
       "team": "Exploration",
       "date": "2026-05-05",
       "status": "Accepted",
-      "source": "Sourced"
+      "source": "Referral"
     },
     {
       "name": "Brittany Ellich",
