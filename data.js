@@ -166,7 +166,7 @@ var DASHBOARD_DATA = {
       "team": "Engineering",
       "date": "2026-02-12",
       "status": "Accepted",
-      "source": "Sourced"
+      "source": "Inbound"
     },
     {
       "name": "Josh Petri",
