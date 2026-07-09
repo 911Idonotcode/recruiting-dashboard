@@ -355,10 +355,10 @@ function showOffersModal(d) {
 function showPipelineStageModal(stageKey, stageLabel, d) {
   // Map pipeline summary stage keys to role stage label prefixes
   const stagePrefixes = {
-    app_review:   ['Application Review'],
-    phone_screen: ['Recruiter Interview'],
-    onsite:       ['HM Review', 'HM Interview', 'Portfolio Review', 'Technical Assessment', 'Pair Programming', 'Culture Interview', 'Trial Day'],
-    offer:        ['Offer'],
+    app_review:  ['Application Review'],
+    recruiter:   ['Recruiter Interview'],
+    technical:   ['HM Review', 'HM Interview', 'Portfolio Review', 'Technical Assessment', 'Pair Programming', 'Culture Interview', 'Trial Day'],
+    offer:       ['Offer'],
   };
   const prefixes = stagePrefixes[stageKey] || [];
   const seen = new Set();
@@ -485,7 +485,7 @@ function avgDaysBar(label, stageKey, apiDays, color, maxDays) {
   const overrides = loadAvgDays();
   const days = overrides[stageKey] !== undefined ? overrides[stageKey] : apiDays;
   const pct  = days > 0 ? Math.round(days / maxDays * 100) : 3;
-  const displayColor = stageKey === 'onsite' && days > 25 ? 'warn' : color;
+  const displayColor = stageKey === 'technical' && days > 25 ? 'warn' : color;
   const valHtml = `<span class="avg-days-val" onclick="editAvgDays('${stageKey}',${days},this)" title="Click to edit">${days > 0 ? days + ' days' : 'click to set'}</span>`;
   return `<div class="bar-row" id="avgbar-${stageKey}">
     <span class="bar-label">${label}</span>
@@ -616,20 +616,20 @@ function render(d) {
   const pctHires = Math.round((applyDRFilter(d.ytd_hires||[]).length / hiresTarget) * 100);
   const tthDelta = k.avg_time_to_hire_prev - k.avg_time_to_hire;
   // App review always 100%; lower stages sized relative to each other, capped at 55%
-  const maxLowerStageCount = Math.max(1, p.phone_screen.count, p.onsite.count, p.offer.count, p.hired.count);
+  const maxLowerStageCount = Math.max(1, p.recruiter.count, p.technical.count, p.offer.count, p.hired.count);
   const stagePct = n => Math.round(n / maxLowerStageCount * 55);
 
   // Pipeline bar widths
   const pipelineStages = [
-    { label: 'App review',    count: p.app_review.count,   pct: 100 },
-    { label: 'Phone screen',  count: p.phone_screen.count, pct: stagePct(p.phone_screen.count) },
-    { label: 'Onsite',        count: p.onsite.count,        pct: stagePct(p.onsite.count) },
-    { label: 'Offer',         count: p.offer.count,         pct: stagePct(p.offer.count) },
-    { label: 'Hired',         count: p.hired.count,         pct: stagePct(p.hired.count) },
+    { label: 'App review',           count: p.app_review.count, pct: 100 },
+    { label: 'Recruiter Interview',  count: p.recruiter.count,  pct: stagePct(p.recruiter.count) },
+    { label: 'Technical Assessment', count: p.technical.count,  pct: stagePct(p.technical.count) },
+    { label: 'Offer',                count: p.offer.count,       pct: stagePct(p.offer.count) },
+    { label: 'Hired',                count: p.hired.count,       pct: stagePct(p.hired.count) },
   ];
   const _avgOvr = loadAvgDays();
   const _avgDays = key => _avgOvr[key] !== undefined ? _avgOvr[key] : p[key].avg_days;
-  const maxDaysActual = Math.max(40, _avgDays('app_review'), _avgDays('phone_screen'), _avgDays('onsite'), _avgDays('offer'));
+  const maxDaysActual = Math.max(40, _avgDays('app_review'), _avgDays('recruiter'), _avgDays('technical'), _avgDays('offer'));
 
   const pt = d.passthrough;
   const roleCount = d.roles.length;
@@ -715,28 +715,28 @@ function render(d) {
               ${pipelineStages.map((s,i) => bar(s.label, s.pct, i >= 3 ? 'green' : 'blue', s.count.toLocaleString())).join('')}
             </div>
             <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-3); margin-top:4px; padding-left:120px;">
-              <span>Phone screen: <strong style="color:var(--text-2)">${p.phone_screen.count}</strong></span>
-              <span>Onsite: <strong style="color:var(--text-2)">${p.onsite.count}</strong></span>
+              <span>Recruiter: <strong style="color:var(--text-2)">${p.recruiter.count}</strong></span>
+              <span>Technical: <strong style="color:var(--text-2)">${p.technical.count}</strong></span>
               <span>Offer: <strong style="color:var(--text-2)">${p.offer.count}</strong></span>
               <span>Hired: <strong style="color:var(--green)">${p.hired.count}</strong></span>
             </div>
             <div class="chart-note">Outgoing passthrough rates shown below</div>
             <div class="pt-rates">
-              ${pct(ptColor(pt.app_to_phone, 30, 15), pt.app_to_phone, 'App → Phone screen')}
-              ${pct(ptColor(pt.phone_to_onsite, 35, 20), pt.phone_to_onsite, 'Phone → Onsite')}
-              ${pct(pt.onsite_to_offer < 20 ? 'warn' : 'med', pt.onsite_to_offer, 'Onsite → Offer' + (pt.onsite_to_offer < 20 ? ' ⚠' : ''))}
+              ${pct(ptColor(pt.app_to_recruiter, 30, 15), pt.app_to_recruiter, 'App → Recruiter')}
+              ${pct(ptColor(pt.recruiter_to_technical, 35, 20), pt.recruiter_to_technical, 'Recruiter → Technical')}
+              ${pct(pt.technical_to_offer < 20 ? 'warn' : 'med', pt.technical_to_offer, 'Technical → Offer' + (pt.technical_to_offer < 20 ? ' ⚠' : ''))}
               ${pct(pt.offer_to_hired >= 80 ? 'good' : 'warn', pt.offer_to_hired, 'Offer → Hired')}
             </div>
           </div>
           <div class="chart-card">
             <div class="chart-card-title">Average days in stage</div>
             <div class="bar-chart">
-              ${avgDaysBar('App review',   'app_review',   p.app_review.avg_days,   'blue', maxDaysActual)}
-              ${avgDaysBar('Phone screen', 'phone_screen', p.phone_screen.avg_days, 'blue', maxDaysActual)}
-              ${avgDaysBar('Onsite',       'onsite',       p.onsite.avg_days,       'blue', maxDaysActual)}
-              ${avgDaysBar('Offer',        'offer',        p.offer.avg_days,        'blue', maxDaysActual)}
+              ${avgDaysBar('App review',           'app_review', p.app_review.avg_days, 'blue', maxDaysActual)}
+              ${avgDaysBar('Recruiter Interview',  'recruiter',  p.recruiter.avg_days,  'blue', maxDaysActual)}
+              ${avgDaysBar('Technical Assessment', 'technical',  p.technical.avg_days,  'blue', maxDaysActual)}
+              ${avgDaysBar('Offer',                'offer',      p.offer.avg_days,      'blue', maxDaysActual)}
             </div>
-            <div class="chart-note">${_avgDays('onsite') > 25 ? `<span class="warn">⚠ Onsite stage averaging ${_avgDays('onsite')} days</span> — primary bottleneck.` : `Onsite stage: ${_avgDays('onsite')} days.`} Faster scheduling would push time-to-hire toward industry benchmark (${k.bench_time_to_hire}d).</div>
+            <div class="chart-note">${_avgDays('technical') > 25 ? `<span class="warn">⚠ Technical Assessment averaging ${_avgDays('technical')} days</span> — primary bottleneck.` : `Technical Assessment: ${_avgDays('technical')} days.`} Faster scheduling would push time-to-hire toward industry benchmark (${k.bench_time_to_hire}d).</div>
           </div>
         </div>
       </div>
@@ -776,20 +776,20 @@ function render(d) {
             <div class="kpi-value">${p.app_review.count.toLocaleString()}</div>
             <div class="kpi-sub">Avg ${_avgDays('app_review')} days · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
-          <div class="kpi-card clickable" onclick="showPipelineStageModal('phone_screen','Phone Screen',DASHBOARD_DATA)">
-            <div class="kpi-label">Phone Screen</div>
-            <div class="kpi-value">${p.phone_screen.count}</div>
-            <div class="kpi-sub">Avg ${_avgDays('phone_screen')} days · ${pt.app_to_phone}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
+          <div class="kpi-card clickable" onclick="showPipelineStageModal('recruiter','Recruiter Interview',DASHBOARD_DATA)">
+            <div class="kpi-label">Recruiter Interview</div>
+            <div class="kpi-value">${p.recruiter.count}</div>
+            <div class="kpi-sub">Avg ${_avgDays('recruiter')} days · ${pt.app_to_recruiter}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
-          <div class="kpi-card clickable" onclick="showPipelineStageModal('onsite','Onsite',DASHBOARD_DATA)">
-            <div class="kpi-label">Onsite</div>
-            <div class="kpi-value">${p.onsite.count}</div>
-            <div class="kpi-sub">Avg ${_avgDays('onsite')} days · ${pt.phone_to_onsite}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
+          <div class="kpi-card clickable" onclick="showPipelineStageModal('technical','Technical Assessment',DASHBOARD_DATA)">
+            <div class="kpi-label">Technical Assessment</div>
+            <div class="kpi-value">${p.technical.count}</div>
+            <div class="kpi-sub">Avg ${_avgDays('technical')} days · ${pt.recruiter_to_technical}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
           <div class="kpi-card clickable" onclick="showPipelineStageModal('offer','Offer',DASHBOARD_DATA)">
             <div class="kpi-label">Offer</div>
             <div class="kpi-value">${p.offer.count}</div>
-            <div class="kpi-sub">Avg ${_avgDays('offer')} days · ${pt.onsite_to_offer}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
+            <div class="kpi-sub">Avg ${_avgDays('offer')} days · ${pt.technical_to_offer}% PT · <span style="color:var(--text-3);font-size:11px;">live</span></div>
           </div>
           <div class="kpi-card clickable" onclick="showHiredPipelineModal(DASHBOARD_DATA)">
             <div class="kpi-label">Hired</div>
