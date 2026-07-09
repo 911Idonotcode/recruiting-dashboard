@@ -15,18 +15,18 @@ var DASHBOARD_DATA = {
     "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2976
+    "active_candidates": 2978
   },
   "pipeline": {
     "app_review": {
-      "count": 2885,
+      "count": 2887,
       "avg_days": 0
     },
-    "phone_screen": {
+    "recruiter": {
       "count": 65,
       "avg_days": 0
     },
-    "onsite": {
+    "technical": {
       "count": 24,
       "avg_days": 0
     },
@@ -40,9 +40,9 @@ var DASHBOARD_DATA = {
     }
   },
   "passthrough": {
-    "app_to_phone": 2,
-    "phone_to_onsite": 37,
-    "onsite_to_offer": 8,
+    "app_to_recruiter": 2,
+    "recruiter_to_technical": 37,
+    "technical_to_offer": 8,
     "offer_to_hired": 81
   },
   "outreach": [
@@ -504,7 +504,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 351",
+          "label": "Application Review 352",
           "type": "default"
         },
         {
@@ -608,7 +608,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 218",
+          "label": "Application Review 219",
           "type": "default"
         },
         {
