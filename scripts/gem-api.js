@@ -147,11 +147,11 @@ function stageBucket(name) {
   if (!name) return null;
   const n = name.toLowerCase().trim();
   if (n.includes('application') || n === 'app review')           return 'app_review';
-  if (n.includes('recruiter') || n.includes('phone') || n.includes('screen') || n.startsWith('intro')) return 'phone_screen';
+  if (n.includes('recruiter') || n.includes('phone') || n.includes('screen') || n.startsWith('intro')) return 'recruiter';
   if (n === 'hm review' || n.includes('for rose') || n.includes('for hm') ||
       n.includes('hiring manager') || n.includes('technical') || n.includes('take home') ||
       n.includes('take-home') || n.includes('pair') || n.includes('deep dive') ||
-      n.includes('culture') || n.includes('portfolio') || n.includes('trial'))   return 'onsite';
+      n.includes('culture') || n.includes('portfolio') || n.includes('trial'))   return 'technical';
   if (n.includes('offer') || n.includes('comp call') || n.includes('compensation')) return 'offer';
   return null;
 }
@@ -235,7 +235,7 @@ async function main() {
   }
 
   // ── build pipeline stage counts ──────────────────────────────────────────
-  const stageCounts = { app_review: 0, phone_screen: 0, onsite: 0, offer: 0, hired: 0 };
+  const stageCounts = { app_review: 0, recruiter: 0, technical: 0, offer: 0, hired: 0 };
   for (const app of activeApps) {
     const b = stageBucket(app.current_stage?.name);
     if (b) stageCounts[b]++;
@@ -250,10 +250,10 @@ async function main() {
   const offersTotal    = hiredThisYear.length + offerRejected.length;
   const offerAccepted  = hiredThisYear.length;
   const passthrough = {
-    app_to_phone:    stageCounts.app_review  ? Math.round(stageCounts.phone_screen / stageCounts.app_review  * 100) : 0,
-    phone_to_onsite: stageCounts.phone_screen ? Math.round(stageCounts.onsite       / stageCounts.phone_screen * 100) : 0,
-    onsite_to_offer: stageCounts.onsite       ? Math.round(stageCounts.offer        / stageCounts.onsite       * 100) : 0,
-    offer_to_hired:  offersTotal             ? Math.round(offerAccepted            / offersTotal              * 100) : 0,
+    app_to_recruiter:      stageCounts.app_review ? Math.round(stageCounts.recruiter  / stageCounts.app_review  * 100) : 0,
+    recruiter_to_technical:stageCounts.recruiter  ? Math.round(stageCounts.technical  / stageCounts.recruiter   * 100) : 0,
+    technical_to_offer:    stageCounts.technical  ? Math.round(stageCounts.offer      / stageCounts.technical   * 100) : 0,
+    offer_to_hired:        offersTotal            ? Math.round(offerAccepted          / offersTotal             * 100) : 0,
   };
 
   // ── build roles from open jobs ───────────────────────────────────────────
@@ -389,11 +389,11 @@ async function main() {
     },
     kpis,
     pipeline: {
-      app_review:   { count: stageCounts.app_review,  avg_days: existing.pipeline?.app_review?.avg_days  || 0 },
-      phone_screen: { count: stageCounts.phone_screen, avg_days: existing.pipeline?.phone_screen?.avg_days || 0 },
-      onsite:       { count: stageCounts.onsite,       avg_days: existing.pipeline?.onsite?.avg_days       || 0 },
-      offer:        { count: stageCounts.offer,        avg_days: existing.pipeline?.offer?.avg_days        || 0 },
-      hired:        { count: stageCounts.hired,        avg_days: existing.pipeline?.hired?.avg_days        || 0 },
+      app_review: { count: stageCounts.app_review, avg_days: existing.pipeline?.app_review?.avg_days || 0 },
+      recruiter:  { count: stageCounts.recruiter,  avg_days: existing.pipeline?.recruiter?.avg_days  || 0 },
+      technical:  { count: stageCounts.technical,  avg_days: existing.pipeline?.technical?.avg_days  || 0 },
+      offer:      { count: stageCounts.offer,      avg_days: existing.pipeline?.offer?.avg_days      || 0 },
+      hired:      { count: stageCounts.hired,      avg_days: existing.pipeline?.hired?.avg_days      || 0 },
     },
     passthrough,
     outreach:       existing.outreach       || [],
@@ -412,7 +412,7 @@ async function main() {
   console.log(`  Open roles:      ${allJobs.length}`);
   console.log(`  Active apps:     ${activeApps.length}`);
   console.log(`  YTD hires:       ${ytdHires.length}`);
-  console.log(`  Pipeline counts: App ${stageCounts.app_review} | Screen ${stageCounts.phone_screen} | Onsite ${stageCounts.onsite} | Offer ${stageCounts.offer}`);
+  console.log(`  Pipeline counts: App ${stageCounts.app_review} | Recruiter ${stageCounts.recruiter} | Technical ${stageCounts.technical} | Offer ${stageCounts.offer}`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

@@ -480,6 +480,14 @@ function saveAvgDays(key, val) {
   const m = loadAvgDays(); m[key] = val;
   localStorage.setItem('avgDaysEdits', JSON.stringify(m));
 }
+// One-time migration: rename old stage keys to new names
+(function migrateAvgDays() {
+  const m = loadAvgDays();
+  let changed = false;
+  if (m.phone_screen !== undefined) { m.recruiter  = m.recruiter  ?? m.phone_screen; delete m.phone_screen; changed = true; }
+  if (m.onsite       !== undefined) { m.technical  = m.technical  ?? m.onsite;       delete m.onsite;       changed = true; }
+  if (changed) localStorage.setItem('avgDaysEdits', JSON.stringify(m));
+})();
 
 function avgDaysBar(label, stageKey, apiDays, color, maxDays) {
   const overrides = loadAvgDays();
@@ -610,7 +618,14 @@ function esc(s) {
 function render(d) {
   const m = d._meta;
   const k = d.kpis;
-  const p = d.pipeline;
+  const _empty = { count: 0, avg_days: 0 };
+  const p = {
+    app_review: d.pipeline?.app_review || _empty,
+    recruiter:  d.pipeline?.recruiter  || d.pipeline?.phone_screen || _empty,
+    technical:  d.pipeline?.technical  || d.pipeline?.onsite       || _empty,
+    offer:      d.pipeline?.offer      || _empty,
+    hired:      d.pipeline?.hired      || _empty,
+  };
 
   const hiresTarget = periodTarget(k.hires_target_annual || k.hires_target * 4);
   const pctHires = Math.round((applyDRFilter(d.ytd_hires||[]).length / hiresTarget) * 100);
@@ -631,7 +646,13 @@ function render(d) {
   const _avgDays = key => _avgOvr[key] !== undefined ? _avgOvr[key] : p[key].avg_days;
   const maxDaysActual = Math.max(40, _avgDays('app_review'), _avgDays('recruiter'), _avgDays('technical'), _avgDays('offer'));
 
-  const pt = d.passthrough;
+  const _pt = d.passthrough || {};
+  const pt = {
+    app_to_recruiter:       _pt.app_to_recruiter       ?? _pt.app_to_phone    ?? 0,
+    recruiter_to_technical: _pt.recruiter_to_technical ?? _pt.phone_to_onsite ?? 0,
+    technical_to_offer:     _pt.technical_to_offer     ?? _pt.onsite_to_offer ?? 0,
+    offer_to_hired:         _pt.offer_to_hired         ?? 0,
+  };
   const roleCount = d.roles.length;
 
   const html = `
