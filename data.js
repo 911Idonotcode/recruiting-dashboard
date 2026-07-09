@@ -3,7 +3,7 @@ var DASHBOARD_DATA = {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
     "period_label": "Custom Mar 31 – Jun 29",
-    "updated": "Jul 8"
+    "updated": "Jul 9"
   },
   "kpis": {
     "hires": 7,
@@ -15,23 +15,27 @@ var DASHBOARD_DATA = {
     "open_roles": 12,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2978
+    "active_candidates": 2869
   },
   "pipeline": {
     "app_review": {
-      "count": 2887,
+      "count": 2776,
       "avg_days": 0
     },
     "recruiter": {
-      "count": 65,
+      "count": 67,
+      "avg_days": 0
+    },
+    "hm_interview": {
+      "count": 15,
       "avg_days": 0
     },
     "technical": {
-      "count": 24,
+      "count": 8,
       "avg_days": 0
     },
     "offer": {
-      "count": 2,
+      "count": 3,
       "avg_days": 0
     },
     "hired": {
@@ -41,8 +45,9 @@ var DASHBOARD_DATA = {
   },
   "passthrough": {
     "app_to_recruiter": 2,
-    "recruiter_to_technical": 37,
-    "technical_to_offer": 8,
+    "recruiter_to_hm": 22,
+    "hm_to_technical": 53,
+    "technical_to_offer": 38,
     "offer_to_hired": 81
   },
   "outreach": [
@@ -407,7 +412,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 454",
+          "label": "Application Review 457",
           "type": "default"
         },
         {
@@ -438,7 +443,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 157",
+          "label": "Application Review 161",
           "type": "default"
         },
         {
@@ -473,7 +478,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 85",
+          "label": "Application Review 86",
           "type": "default"
         },
         {
@@ -508,7 +513,7 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 26",
+          "label": "Recruiter Interview 27",
           "type": "default"
         },
         {
@@ -535,7 +540,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 55",
+          "label": "Application Review 57",
           "type": "default"
         },
         {
@@ -543,8 +548,8 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "Culture Interview 1",
-          "type": "default"
+          "label": "Offer 1",
+          "type": "offer"
         }
       ],
       "status": "risk",
@@ -608,7 +613,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 219",
+          "label": "Application Review 223",
           "type": "default"
         },
         {
@@ -631,7 +636,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 143",
+          "label": "Recruiter Interview 1",
           "type": "default"
         }
       ],
@@ -677,7 +682,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 228",
+          "label": "Application Review 232",
           "type": "default"
         }
       ],
@@ -696,7 +701,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 866",
+          "label": "Application Review 880",
           "type": "default"
         },
         {
