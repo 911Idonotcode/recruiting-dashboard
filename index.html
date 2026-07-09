@@ -467,9 +467,8 @@ function ptColor(pct, goodThreshold, warnThreshold) {
 function bar(label, pct, color, val) {
   return `<div class="bar-row">
     <span class="bar-label">${label}</span>
-    <div class="bar-track"><div class="bar-fill ${color}" style="width:${Math.max(pct,3)}%">
-      <span class="bar-fill-val">${val}</span>
-    </div></div>
+    <div class="bar-track"><div class="bar-fill ${color}" style="width:${Math.max(pct,3)}%"></div></div>
+    <span class="bar-fill-val" style="color:var(--text-2);min-width:28px">${val}</span>
   </div>`;
 }
 
@@ -737,7 +736,7 @@ function render(d) {
           <div class="chart-card">
             <div class="chart-card-title">Candidates by stage</div>
             <div class="bar-chart">
-              ${pipelineStages.map((s,i) => bar(s.label, s.pct, i >= 3 ? 'green' : 'blue', s.count.toLocaleString())).join('')}
+              ${pipelineStages.map((s,i) => bar(s.label, s.pct, i >= pipelineStages.length - 2 ? 'green' : 'blue', s.count.toLocaleString())).join('')}
             </div>
             <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-3); margin-top:4px; padding-left:120px;">
               <span>Recruiter: <strong style="color:var(--text-2)">${p.recruiter.count}</strong></span>
