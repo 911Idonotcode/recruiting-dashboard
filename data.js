@@ -3,23 +3,23 @@ var DASHBOARD_DATA = {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
     "period_label": "Custom Mar 31 – Jun 29",
-    "updated": "Jul 9"
+    "updated": "Jul 12"
   },
   "kpis": {
     "hires": 7,
     "hires_target": 5,
     "hires_target_annual": 20,
-    "avg_time_to_hire": 85,
+    "avg_time_to_hire": 82,
     "avg_time_to_hire_prev": 88,
     "bench_time_to_hire": 44,
-    "open_roles": 12,
+    "open_roles": 10,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2869
+    "active_candidates": 2747
   },
   "pipeline": {
     "app_review": {
-      "count": 2776,
+      "count": 2656,
       "avg_days": 0
     },
     "recruiter": {
@@ -27,28 +27,28 @@ var DASHBOARD_DATA = {
       "avg_days": 0
     },
     "hm_interview": {
-      "count": 15,
+      "count": 13,
       "avg_days": 0
     },
     "technical": {
-      "count": 8,
+      "count": 9,
       "avg_days": 0
     },
     "offer": {
-      "count": 3,
+      "count": 2,
       "avg_days": 0
     },
     "hired": {
-      "count": 17,
+      "count": 18,
       "avg_days": 0
     }
   },
   "passthrough": {
-    "app_to_recruiter": 2,
-    "recruiter_to_hm": 22,
-    "hm_to_technical": 53,
-    "technical_to_offer": 38,
-    "offer_to_hired": 81
+    "app_to_recruiter": 3,
+    "recruiter_to_hm": 19,
+    "hm_to_technical": 69,
+    "technical_to_offer": 22,
+    "offer_to_hired": 82
   },
   "outreach": [
     {
@@ -77,6 +77,14 @@ var DASHBOARD_DATA = {
     }
   ],
   "ytd_hires": [
+    {
+      "name": "Sam Tasch",
+      "role": "Sports Partnership Manager",
+      "team": "Partnerships",
+      "date": "2026-07-13",
+      "status": "Accepted",
+      "source": "Inbound"
+    },
     {
       "name": "Megan Burton",
       "role": "People Ops Coordinator",
@@ -215,6 +223,13 @@ var DASHBOARD_DATA = {
     }
   ],
   "offers": [
+    {
+      "name": "Sam Tasch",
+      "role": "Sports Partnership Manager",
+      "team": "Partnerships",
+      "status": "Accepted",
+      "date": "2026-07-13"
+    },
     {
       "name": "Megan Burton",
       "role": "People Ops Coordinator",
@@ -412,7 +427,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 457",
+          "label": "Application Review 488",
           "type": "default"
         },
         {
@@ -443,7 +458,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 161",
+          "label": "Application Review 164",
           "type": "default"
         },
         {
@@ -478,15 +493,15 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 86",
+          "label": "Application Review 6",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 19",
+          "label": "Recruiter Interview 15",
           "type": "default"
         },
         {
-          "label": "HM Interview 3",
+          "label": "HM Interview 2",
           "type": "default"
         },
         {
@@ -509,7 +524,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 352",
+          "label": "Application Review 364",
           "type": "default"
         },
         {
@@ -517,11 +532,11 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "HM Interview 4",
+          "label": "HM Interview 3",
           "type": "default"
         },
         {
-          "label": "Technical Assessment 1",
+          "label": "Technical Assessment 2",
           "type": "default"
         }
       ],
@@ -529,33 +544,6 @@ var DASHBOARD_DATA = {
       "status_overridden": false,
       "status_label": "In progress",
       "note": "Anabella prioritizing. No candidates in pair programming yet — next threshold to hit."
-    },
-    {
-      "title": "Sports Partnership Manager",
-      "req_id": "R47",
-      "recruiter": "Andres",
-      "date_opened": "2026-03-10",
-      "headcount": 1,
-      "meta": "R47 · Andres",
-      "priority": "normal",
-      "stages": [
-        {
-          "label": "Application Review 57",
-          "type": "default"
-        },
-        {
-          "label": "Recruiter Interview 1",
-          "type": "default"
-        },
-        {
-          "label": "Offer 1",
-          "type": "offer"
-        }
-      ],
-      "status": "risk",
-      "status_overridden": false,
-      "status_label": "In progress",
-      "note": "Mary, Patrick, Brooklyn in deep dive. Decision expected soon."
     },
     {
       "title": "Senior Product Engineer, Agentic Systems - Exploration Team",
@@ -586,7 +574,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Recruiter Interview 5",
+          "label": "Application Review 4",
+          "type": "default"
+        },
+        {
+          "label": "Recruiter Interview 6",
           "type": "default"
         },
         {
@@ -613,11 +605,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 223",
+          "label": "Application Review 233",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 6",
+          "label": "Recruiter Interview 5",
           "type": "default"
         }
       ],
@@ -625,25 +617,6 @@ var DASHBOARD_DATA = {
       "status_overridden": false,
       "status_label": "Just kicked off",
       "note": "Anabella ramping sourcing. Building pipeline."
-    },
-    {
-      "title": "Staff Fullstack Engineer, App Team",
-      "req_id": "R60",
-      "recruiter": "Anabella",
-      "date_opened": "2026-06-01",
-      "headcount": 1,
-      "meta": "R60 · Anabella",
-      "priority": "normal",
-      "stages": [
-        {
-          "label": "Recruiter Interview 1",
-          "type": "default"
-        }
-      ],
-      "status": "progress",
-      "status_overridden": false,
-      "status_label": "In progress",
-      "note": ""
     },
     {
       "title": "Staff Site Reliability Engineer",
@@ -655,7 +628,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 81",
+          "label": "Application Review 80",
           "type": "default"
         },
         {
@@ -682,7 +655,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 232",
+          "label": "Application Review 245",
           "type": "default"
         }
       ],
@@ -692,7 +665,7 @@ var DASHBOARD_DATA = {
       "note": ""
     },
     {
-      "title": "Senior Fullstack Engineer, Network Services",
+      "title": "Senior Fullstack Engineer, Atmosphere",
       "req_id": "R64",
       "recruiter": "Anabella",
       "date_opened": "2026-06-30",
@@ -701,11 +674,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 880",
+          "label": "Application Review 825",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 2",
+          "label": "Recruiter Interview 7",
           "type": "default"
         }
       ],
