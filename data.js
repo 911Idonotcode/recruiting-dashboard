@@ -3,35 +3,35 @@ var DASHBOARD_DATA = {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
     "period_label": "Custom Mar 31 – Jun 29",
-    "updated": "Jul 12"
+    "updated": "Jul 21"
   },
   "kpis": {
     "hires": 7,
     "hires_target": 5,
     "hires_target_annual": 20,
-    "avg_time_to_hire": 82,
+    "avg_time_to_hire": 80,
     "avg_time_to_hire_prev": 88,
     "bench_time_to_hire": 44,
-    "open_roles": 10,
+    "open_roles": 8,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2747
+    "active_candidates": 2490
   },
   "pipeline": {
     "app_review": {
-      "count": 2656,
+      "count": 2392,
       "avg_days": 0
     },
     "recruiter": {
-      "count": 67,
+      "count": 76,
       "avg_days": 0
     },
     "hm_interview": {
-      "count": 13,
+      "count": 12,
       "avg_days": 0
     },
     "technical": {
-      "count": 9,
+      "count": 8,
       "avg_days": 0
     },
     "offer": {
@@ -39,16 +39,16 @@ var DASHBOARD_DATA = {
       "avg_days": 0
     },
     "hired": {
-      "count": 18,
+      "count": 20,
       "avg_days": 0
     }
   },
   "passthrough": {
     "app_to_recruiter": 3,
-    "recruiter_to_hm": 19,
-    "hm_to_technical": 69,
-    "technical_to_offer": 22,
-    "offer_to_hired": 82
+    "recruiter_to_hm": 16,
+    "hm_to_technical": 67,
+    "technical_to_offer": 25,
+    "offer_to_hired": 83
   },
   "outreach": [
     {
@@ -77,6 +77,22 @@ var DASHBOARD_DATA = {
     }
   ],
   "ytd_hires": [
+    {
+      "name": "Hailey Elizabeth",
+      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
+      "team": "Exploration",
+      "date": "2026-07-21",
+      "status": "Accepted",
+      "source": "Bluesky Social"
+    },
+    {
+      "name": "Jamie Williams",
+      "role": "Senior Business Intelligence Data Scientist - App Team",
+      "team": "Product",
+      "date": "2026-07-17",
+      "status": "Accepted",
+      "source": "Inbound"
+    },
     {
       "name": "Sam Tasch",
       "role": "Sports Partnership Manager",
@@ -223,6 +239,20 @@ var DASHBOARD_DATA = {
     }
   ],
   "offers": [
+    {
+      "name": "Hailey Elizabeth",
+      "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
+      "team": "Exploration",
+      "status": "Accepted",
+      "date": "2026-07-21"
+    },
+    {
+      "name": "Jamie Williams",
+      "role": "Senior Business Intelligence Data Scientist - App Team",
+      "team": "Product",
+      "status": "Accepted",
+      "date": "2026-07-17"
+    },
     {
       "name": "Sam Tasch",
       "role": "Sports Partnership Manager",
@@ -427,7 +457,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 488",
+          "label": "Application Review 664",
           "type": "default"
         },
         {
@@ -449,41 +479,6 @@ var DASHBOARD_DATA = {
       "note": "Maxwell in pair programming with Ian. Sahil in deep dive. Strong pipeline depth."
     },
     {
-      "title": "Senior Business Intelligence Data Scientist - App Team",
-      "req_id": "R31",
-      "recruiter": "Andres",
-      "date_opened": "2025-07-01",
-      "headcount": 1,
-      "meta": "R31 · Andres",
-      "priority": "high",
-      "stages": [
-        {
-          "label": "Application Review 164",
-          "type": "default"
-        },
-        {
-          "label": "Recruiter Interview 1",
-          "type": "default"
-        },
-        {
-          "label": "HM Interview 1",
-          "type": "default"
-        },
-        {
-          "label": "Technical Assessment 1",
-          "type": "default"
-        },
-        {
-          "label": "Culture Interview 1",
-          "type": "default"
-        }
-      ],
-      "status": "risk",
-      "status_overridden": false,
-      "status_label": "Blocked",
-      "note": "Team meeting to align on scope before proceeding. Sohan & Yufei in DD. Rishav on hold. 2 prior offers fell through."
-    },
-    {
       "title": "Senior Backend Developer - Trust & Safety",
       "req_id": "R33",
       "recruiter": "Anabella",
@@ -493,15 +488,15 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 6",
+          "label": "Application Review 25",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 15",
+          "label": "Recruiter Interview 14",
           "type": "default"
         },
         {
-          "label": "HM Interview 2",
+          "label": "HM Interview 1",
           "type": "default"
         },
         {
@@ -524,7 +519,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 364",
+          "label": "Application Review 36",
           "type": "default"
         },
         {
@@ -532,11 +527,11 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "HM Interview 3",
+          "label": "HM Interview 2",
           "type": "default"
         },
         {
-          "label": "Technical Assessment 2",
+          "label": "Technical Assessment 3",
           "type": "default"
         }
       ],
@@ -544,25 +539,6 @@ var DASHBOARD_DATA = {
       "status_overridden": false,
       "status_label": "In progress",
       "note": "Anabella prioritizing. No candidates in pair programming yet — next threshold to hit."
-    },
-    {
-      "title": "Senior Product Engineer, Agentic Systems - Exploration Team",
-      "req_id": "R49",
-      "recruiter": "Andres",
-      "date_opened": "2026-02-15",
-      "headcount": 1,
-      "meta": "R49 · Andres",
-      "priority": "normal",
-      "stages": [
-        {
-          "label": "Application Review 44",
-          "type": "default"
-        }
-      ],
-      "status": "risk",
-      "status_overridden": false,
-      "status_label": "Offer out 🎉",
-      "note": "Aaron offer extended. Awaiting response."
     },
     {
       "title": "Lead Product Designer",
@@ -574,11 +550,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 4",
+          "label": "Recruiter Interview 6",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 6",
+          "label": "HM Review 1",
           "type": "default"
         },
         {
@@ -590,7 +566,7 @@ var DASHBOARD_DATA = {
           "type": "offer"
         }
       ],
-      "status": "signed",
+      "status": "risk",
       "status_overridden": false,
       "status_label": "Signed 🎉",
       "note": "Rafe contract signed. Needs Rose countersignature. Role closing."
@@ -605,11 +581,19 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 233",
+          "label": "Application Review 201",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 5",
+          "label": "Recruiter Interview 6",
+          "type": "default"
+        },
+        {
+          "label": "HM Review 1",
+          "type": "default"
+        },
+        {
+          "label": "HM Interview 1",
           "type": "default"
         }
       ],
@@ -628,15 +612,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 80",
+          "label": "Application Review 59",
           "type": "default"
         },
         {
-          "label": "HM Interview 1",
-          "type": "default"
-        },
-        {
-          "label": "Technical Assessment 1",
+          "label": "Culture Interview 1",
           "type": "default"
         }
       ],
@@ -655,7 +635,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 245",
+          "label": "Application Review 266",
+          "type": "default"
+        },
+        {
+          "label": "Recruiter Interview 5",
           "type": "default"
         }
       ],
@@ -674,11 +658,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 825",
+          "label": "Application Review 894",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 7",
+          "label": "Recruiter Interview 12",
           "type": "default"
         }
       ],
