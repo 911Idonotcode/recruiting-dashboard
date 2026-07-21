@@ -618,18 +618,49 @@ function esc(s) {
 function render(d) {
   const m = d._meta;
   const k = d.kpis;
+
+  // Build pipeline counts filtered by the active date range
+  const [drS, drE] = drRange(activeDR);
+  const avgDaysMap = key => d.pipeline?.[key]?.avg_days || 0;
   const _empty = { count: 0, avg_days: 0 };
+
+  let sc = { app_review: 0, recruiter: 0, hm_interview: 0, technical: 0, offer: 0 };
+  if (d.pipeline_apps && d.pipeline_apps.length) {
+    for (const a of d.pipeline_apps) {
+      if (a.date >= drS && a.date <= drE && sc[a.stage] !== undefined) sc[a.stage]++;
+    }
+  } else {
+    // fallback to snapshot counts
+    sc.app_review   = d.pipeline?.app_review?.count   || 0;
+    sc.recruiter    = d.pipeline?.recruiter?.count    || 0;
+    sc.hm_interview = d.pipeline?.hm_interview?.count || 0;
+    sc.technical    = d.pipeline?.technical?.count    || 0;
+    sc.offer        = d.pipeline?.offer?.count        || 0;
+  }
+  const filteredHires = applyDRFilter(d.ytd_hires || []).length;
+
   const p = {
-    app_review:   d.pipeline?.app_review   || _empty,
-    recruiter:    d.pipeline?.recruiter    || d.pipeline?.phone_screen || _empty,
-    hm_interview: d.pipeline?.hm_interview || _empty,
-    technical:    d.pipeline?.technical    || d.pipeline?.onsite       || _empty,
-    offer:        d.pipeline?.offer        || _empty,
-    hired:        d.pipeline?.hired        || _empty,
+    app_review:   { count: sc.app_review,   avg_days: avgDaysMap('app_review')   },
+    recruiter:    { count: sc.recruiter,    avg_days: avgDaysMap('recruiter')    },
+    hm_interview: { count: sc.hm_interview, avg_days: avgDaysMap('hm_interview') },
+    technical:    { count: sc.technical,    avg_days: avgDaysMap('technical')    },
+    offer:        { count: sc.offer,        avg_days: avgDaysMap('offer')        },
+    hired:        { count: filteredHires,   avg_days: avgDaysMap('hired')        },
+  };
+
+  // Recompute passthrough rates from filtered counts
+  const pct2 = (n, d2) => d2 ? Math.round(n / d2 * 100) : 0;
+  const offersTotal  = (d.offers || []).filter(o => { const dt = (o.date||'').slice(0,10); return dt >= drS && dt <= drE; }).length;
+  const pt = {
+    app_to_recruiter:   pct2(sc.recruiter,    sc.app_review),
+    recruiter_to_hm:    pct2(sc.hm_interview, sc.recruiter),
+    hm_to_technical:    pct2(sc.technical,    sc.hm_interview),
+    technical_to_offer: pct2(sc.offer,        sc.technical),
+    offer_to_hired:     offersTotal ? Math.round(filteredHires / offersTotal * 100) : (d.passthrough?.offer_to_hired ?? 0),
   };
 
   const hiresTarget = periodTarget(k.hires_target_annual || k.hires_target * 4);
-  const pctHires = Math.round((applyDRFilter(d.ytd_hires||[]).length / hiresTarget) * 100);
+  const pctHires = Math.round((filteredHires / hiresTarget) * 100);
   const tthDelta = k.avg_time_to_hire_prev - k.avg_time_to_hire;
   // App review always 100%; lower stages sized relative to each other, capped at 55%
   const maxLowerStageCount = Math.max(1, p.recruiter.count, p.hm_interview.count, p.technical.count, p.offer.count, p.hired.count);
@@ -647,15 +678,6 @@ function render(d) {
   const _avgOvr = loadAvgDays();
   const _avgDays = key => _avgOvr[key] !== undefined ? _avgOvr[key] : p[key].avg_days;
   const maxDaysActual = Math.max(40, _avgDays('app_review'), _avgDays('recruiter'), _avgDays('hm_interview'), _avgDays('technical'), _avgDays('offer'));
-
-  const _pt = d.passthrough || {};
-  const pt = {
-    app_to_recruiter:       _pt.app_to_recruiter       ?? _pt.app_to_phone    ?? 0,
-    recruiter_to_hm:        _pt.recruiter_to_hm        ?? 0,
-    hm_to_technical:        _pt.hm_to_technical        ?? 0,
-    technical_to_offer:     _pt.technical_to_offer     ?? _pt.onsite_to_offer ?? 0,
-    offer_to_hired:         _pt.offer_to_hired         ?? 0,
-  };
   const roleCount = d.roles.length;
 
   const html = `

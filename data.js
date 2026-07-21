@@ -15,11 +15,11 @@ var DASHBOARD_DATA = {
     "open_roles": 8,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2490
+    "active_candidates": 2493
   },
   "pipeline": {
     "app_review": {
-      "count": 2392,
+      "count": 2395,
       "avg_days": 0
     },
     "recruiter": {
@@ -43,6 +43,9980 @@ var DASHBOARD_DATA = {
       "avg_days": 0
     }
   },
+  "pipeline_apps": [
+    {
+      "stage": "hm_interview",
+      "date": "2025-07-02"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2025-06-20"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2025-06-20"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2025-07-08"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2026-04-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-02-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-24"
+    },
+    {
+      "stage": "offer",
+      "date": "2026-04-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-04-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-20"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-31"
+    },
+    {
+      "stage": "technical",
+      "date": "2026-05-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-03-31"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-14"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-20"
+    },
+    {
+      "stage": "offer",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-23"
+    },
+    {
+      "stage": "technical",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-24"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-04-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-26"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-05-26"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-05-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-27"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-27"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-05-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-27"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-05-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-29"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-05-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-05-31"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-03"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-03"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-08"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-09"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-09"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-13"
+    },
+    {
+      "stage": "technical",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "technical",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "technical",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-21"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-21"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-22"
+    },
+    {
+      "stage": "technical",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "technical",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-23"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-25"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-26"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-27"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-27"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-28"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-28"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "technical",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-29"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-02"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-03"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-06"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-18"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-19"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-20"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "hm_interview",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-21"
+    }
+  ],
   "passthrough": {
     "app_to_recruiter": 3,
     "recruiter_to_hm": 16,
@@ -519,7 +10493,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 36",
+          "label": "Application Review 37",
           "type": "default"
         },
         {
@@ -635,7 +10609,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 266",
+          "label": "Application Review 268",
           "type": "default"
         },
         {

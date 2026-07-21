@@ -240,11 +240,16 @@ async function main() {
     }));
   }
 
-  // ── build pipeline stage counts ──────────────────────────────────────────
+  // ── build pipeline stage counts + per-app records for DR filtering ──────
   const stageCounts = { app_review: 0, recruiter: 0, hm_interview: 0, technical: 0, offer: 0, hired: 0 };
+  const pipelineApps = [];
   for (const app of activeApps) {
     const b = stageBucket(app.current_stage?.name);
-    if (b) stageCounts[b]++;
+    if (b) {
+      stageCounts[b]++;
+      const date = (app.current_stage?.entered_at || app.last_activity_at || app.applied_at || '').slice(0, 10);
+      if (date) pipelineApps.push({ stage: b, date });
+    }
   }
   stageCounts.hired = hiredApps.filter(a => {
     const d = a.last_activity_at || a.applied_at;
@@ -403,6 +408,7 @@ async function main() {
       offer:        { count: stageCounts.offer,        avg_days: existing.pipeline?.offer?.avg_days        || 0 },
       hired:        { count: stageCounts.hired,        avg_days: existing.pipeline?.hired?.avg_days        || 0 },
     },
+    pipeline_apps: pipelineApps,
     passthrough,
     outreach:       existing.outreach       || [],
     ytd_hires:      ytdHires,
