@@ -15,11 +15,11 @@ var DASHBOARD_DATA = {
     "open_roles": 8,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2830
+    "active_candidates": 2835
   },
   "pipeline": {
     "app_review": {
-      "count": 2758,
+      "count": 2763,
       "avg_days": 0
     },
     "recruiter": {
@@ -1002,7 +1002,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-06-19"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
@@ -11359,6 +11359,26 @@ var DASHBOARD_DATA = {
     {
       "stage": "app_review",
       "date": "2026-08-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-10"
     }
   ],
   "passthrough": {
@@ -11396,7 +11416,7 @@ var DASHBOARD_DATA = {
   ],
   "ytd_hires": [
     {
-      "name": "",
+      "name": "Hailey Elizabeth",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
       "team": "Exploration",
       "date": "2026-07-21",
@@ -11404,7 +11424,7 @@ var DASHBOARD_DATA = {
       "source": "Bluesky Social"
     },
     {
-      "name": "",
+      "name": "Jamie Williams",
       "role": "Senior Business Intelligence Data Scientist - App Team",
       "team": "Product",
       "date": "2026-07-17",
@@ -11412,7 +11432,7 @@ var DASHBOARD_DATA = {
       "source": "Inbound"
     },
     {
-      "name": "",
+      "name": "Sam Tasch",
       "role": "Sports Partnership Manager",
       "team": "Partnerships",
       "date": "2026-07-13",
@@ -11420,7 +11440,7 @@ var DASHBOARD_DATA = {
       "source": "Inbound"
     },
     {
-      "name": "",
+      "name": "Megan Burton",
       "role": "People Ops Coordinator",
       "team": "People Ops",
       "date": "2026-07-08",
@@ -11444,7 +11464,7 @@ var DASHBOARD_DATA = {
       "source": "Sourced"
     },
     {
-      "name": "",
+      "name": "Pieter Montoulieu",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
       "team": "Exploration",
       "date": "2026-07-08",
@@ -11452,7 +11472,7 @@ var DASHBOARD_DATA = {
       "source": "Referral"
     },
     {
-      "name": "",
+      "name": "Danny Smith",
       "role": "Finance and Business Operations Lead",
       "team": "Operations",
       "date": "2026-07-08",
@@ -11460,7 +11480,7 @@ var DASHBOARD_DATA = {
       "source": "Referral"
     },
     {
-      "name": "",
+      "name": "Anoop Ranganath",
       "role": "Vice President of Engineering",
       "team": "Engineering",
       "date": "2026-07-08",
@@ -11468,7 +11488,7 @@ var DASHBOARD_DATA = {
       "source": "Agency"
     },
     {
-      "name": "",
+      "name": "Amy Brown",
       "role": "Social Media Manager (Contractor)",
       "team": "Communications/PR",
       "date": "2026-06-10",
@@ -11476,7 +11496,7 @@ var DASHBOARD_DATA = {
       "source": "Referral"
     },
     {
-      "name": "",
+      "name": "Lydia Yi",
       "role": "Entertainment Partnership Manager",
       "team": "Operations",
       "date": "2026-05-26",
@@ -11484,7 +11504,7 @@ var DASHBOARD_DATA = {
       "source": "Referral"
     },
     {
-      "name": "",
+      "name": "Brittany Ellich",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
       "team": "Exploration",
       "date": "2026-05-05",
@@ -11558,28 +11578,28 @@ var DASHBOARD_DATA = {
   ],
   "offers": [
     {
-      "name": "",
+      "name": "Hailey Elizabeth",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
       "team": "Exploration",
       "status": "Accepted",
       "date": "2026-07-21"
     },
     {
-      "name": "",
+      "name": "Jamie Williams",
       "role": "Senior Business Intelligence Data Scientist - App Team",
       "team": "Product",
       "status": "Accepted",
       "date": "2026-07-17"
     },
     {
-      "name": "",
+      "name": "Sam Tasch",
       "role": "Sports Partnership Manager",
       "team": "Partnerships",
       "status": "Accepted",
       "date": "2026-07-13"
     },
     {
-      "name": "",
+      "name": "Megan Burton",
       "role": "People Ops Coordinator",
       "team": "People Ops",
       "status": "Accepted",
@@ -11600,21 +11620,21 @@ var DASHBOARD_DATA = {
       "date": "2026-07-08"
     },
     {
-      "name": "",
+      "name": "Pieter Montoulieu",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
       "team": "Exploration",
       "status": "Accepted",
       "date": "2026-07-08"
     },
     {
-      "name": "",
+      "name": "Danny Smith",
       "role": "Finance and Business Operations Lead",
       "team": "Operations",
       "status": "Accepted",
       "date": "2026-07-08"
     },
     {
-      "name": "",
+      "name": "Anoop Ranganath",
       "role": "Vice President of Engineering",
       "team": "Engineering",
       "status": "Accepted",
@@ -11629,14 +11649,14 @@ var DASHBOARD_DATA = {
       "decline_reason": ""
     },
     {
-      "name": "",
+      "name": "Amy Brown",
       "role": "Social Media Manager (Contractor)",
       "team": "Communications/PR",
       "status": "Accepted",
       "date": "2026-06-10"
     },
     {
-      "name": "",
+      "name": "Lydia Yi",
       "role": "Entertainment Partnership Manager",
       "team": "Operations",
       "status": "Accepted",
@@ -11651,7 +11671,7 @@ var DASHBOARD_DATA = {
       "decline_reason": ""
     },
     {
-      "name": "",
+      "name": "Brittany Ellich",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
       "team": "Exploration",
       "status": "Accepted",
@@ -11806,7 +11826,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 194",
+          "label": "Application Review 195",
           "type": "default"
         },
         {
@@ -11868,7 +11888,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 81",
+          "label": "Application Review 82",
           "type": "default"
         },
         {
@@ -11930,7 +11950,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 204",
+          "label": "Application Review 205",
           "type": "default"
         },
         {
@@ -11984,7 +12004,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 843",
+          "label": "Application Review 845",
           "type": "default"
         },
         {
