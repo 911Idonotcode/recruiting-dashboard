@@ -3,43 +3,43 @@ var DASHBOARD_DATA = {
     "quarter": "Q2 2026",
     "period": "Apr 1 – Jun 30",
     "period_label": "Custom Mar 31 – Jun 29",
-    "updated": "Aug 10"
+    "updated": "Aug 17"
   },
   "kpis": {
     "hires": 7,
     "hires_target": 5,
     "hires_target_annual": 20,
-    "avg_time_to_hire": 80,
+    "avg_time_to_hire": 79,
     "avg_time_to_hire_prev": 88,
     "bench_time_to_hire": 44,
     "open_roles": 8,
     "offer_acceptance_pct": 77,
     "offers_extended": 23,
-    "active_candidates": 2835
+    "active_candidates": 2651
   },
   "pipeline": {
     "app_review": {
-      "count": 2763,
+      "count": 2572,
       "avg_days": 0
     },
     "recruiter": {
-      "count": 39,
+      "count": 46,
       "avg_days": 0
     },
     "hm_interview": {
-      "count": 22,
+      "count": 17,
       "avg_days": 0
     },
     "technical": {
-      "count": 8,
+      "count": 11,
       "avg_days": 0
     },
     "offer": {
-      "count": 2,
+      "count": 3,
       "avg_days": 0
     },
     "hired": {
-      "count": 20,
+      "count": 21,
       "avg_days": 0
     }
   },
@@ -1229,10 +1229,6 @@ var DASHBOARD_DATA = {
       "date": "2026-04-20"
     },
     {
-      "stage": "offer",
-      "date": "2026-06-08"
-    },
-    {
       "stage": "app_review",
       "date": "2026-04-21"
     },
@@ -1275,10 +1271,6 @@ var DASHBOARD_DATA = {
     {
       "stage": "app_review",
       "date": "2026-04-23"
-    },
-    {
-      "stage": "technical",
-      "date": "2026-06-08"
     },
     {
       "stage": "app_review",
@@ -1342,7 +1334,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-17"
     },
     {
       "stage": "app_review",
@@ -2642,7 +2634,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-08"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
@@ -2681,8 +2673,8 @@ var DASHBOARD_DATA = {
       "date": "2026-06-13"
     },
     {
-      "stage": "technical",
-      "date": "2026-07-23"
+      "stage": "offer",
+      "date": "2026-08-17"
     },
     {
       "stage": "app_review",
@@ -2809,10 +2801,6 @@ var DASHBOARD_DATA = {
       "date": "2026-06-22"
     },
     {
-      "stage": "technical",
-      "date": "2026-07-24"
-    },
-    {
       "stage": "app_review",
       "date": "2026-06-23"
     },
@@ -3102,7 +3090,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "technical",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
@@ -3245,8 +3233,8 @@ var DASHBOARD_DATA = {
       "date": "2026-06-27"
     },
     {
-      "stage": "recruiter",
-      "date": "2026-06-27"
+      "stage": "hm_interview",
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
@@ -3529,8 +3517,8 @@ var DASHBOARD_DATA = {
       "date": "2026-07-24"
     },
     {
-      "stage": "hm_interview",
-      "date": "2026-08-04"
+      "stage": "technical",
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
@@ -3545,104 +3533,80 @@ var DASHBOARD_DATA = {
       "date": "2026-07-29"
     },
     {
+      "stage": "technical",
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-06-30"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-06"
+    },
+    {
       "stage": "hm_interview",
-      "date": "2026-08-04"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-06-30"
-    },
-    {
-      "stage": "recruiter",
-      "date": "2026-07-31"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-06-30"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-06-30"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-06-30"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-06-30"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-06-30"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-06-30"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-06-30"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-06-30"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-03"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "recruiter",
-      "date": "2026-08-06"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-03"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "recruiter",
-      "date": "2026-08-06"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "recruiter",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
@@ -3661,6 +3625,58 @@ var DASHBOARD_DATA = {
       "date": "2026-07-01"
     },
     {
+      "stage": "recruiter",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "technical",
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-16"
+    },
+    {
       "stage": "app_review",
       "date": "2026-07-01"
     },
@@ -3674,7 +3690,19 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "recruiter",
-      "date": "2026-08-06"
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-01"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-17"
     },
     {
       "stage": "app_review",
@@ -3689,180 +3717,24 @@ var DASHBOARD_DATA = {
       "date": "2026-07-01"
     },
     {
-      "stage": "app_review",
-      "date": "2026-07-01"
+      "stage": "recruiter",
+      "date": "2026-08-17"
     },
     {
       "stage": "app_review",
       "date": "2026-07-01"
     },
     {
-      "stage": "app_review",
-      "date": "2026-07-09"
+      "stage": "recruiter",
+      "date": "2026-08-17"
     },
     {
       "stage": "app_review",
       "date": "2026-07-01"
     },
     {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-07"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-07"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "hm_interview",
-      "date": "2026-08-04"
+      "stage": "recruiter",
+      "date": "2026-08-17"
     },
     {
       "stage": "app_review",
@@ -3895,1018 +3767,6 @@ var DASHBOARD_DATA = {
     {
       "stage": "app_review",
       "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-16"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-06"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-14"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-22"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-15"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-16"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-15"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-03"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-14"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-07"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-15"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-10"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
     },
     {
       "stage": "app_review",
@@ -5043,66 +3903,6 @@ var DASHBOARD_DATA = {
     {
       "stage": "app_review",
       "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-01"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
     },
     {
       "stage": "app_review",
@@ -5346,14 +4146,6 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
       "date": "2026-07-04"
     },
     {
@@ -5450,23 +4242,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
       "date": "2026-07-10"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-02"
     },
     {
       "stage": "app_review",
@@ -5898,10 +4674,6 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-03"
-    },
-    {
-      "stage": "app_review",
       "date": "2026-07-06"
     },
     {
@@ -6050,10 +4822,6 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-03"
-    },
-    {
-      "stage": "app_review",
       "date": "2026-07-04"
     },
     {
@@ -6111,10 +4879,6 @@ var DASHBOARD_DATA = {
     {
       "stage": "app_review",
       "date": "2026-07-03"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-31"
     },
     {
       "stage": "app_review",
@@ -6366,7 +5130,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
@@ -6414,7 +5178,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-06"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
@@ -6475,10 +5239,6 @@ var DASHBOARD_DATA = {
     {
       "stage": "app_review",
       "date": "2026-07-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-07"
     },
     {
       "stage": "app_review",
@@ -6553,10 +5313,6 @@ var DASHBOARD_DATA = {
       "date": "2026-07-07"
     },
     {
-      "stage": "app_review",
-      "date": "2026-07-07"
-    },
-    {
       "stage": "recruiter",
       "date": "2026-07-07"
     },
@@ -6591,10 +5347,6 @@ var DASHBOARD_DATA = {
     {
       "stage": "recruiter",
       "date": "2026-07-21"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-08"
     },
     {
       "stage": "app_review",
@@ -6889,8 +5641,8 @@ var DASHBOARD_DATA = {
       "date": "2026-07-10"
     },
     {
-      "stage": "app_review",
-      "date": "2026-07-10"
+      "stage": "recruiter",
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
@@ -7222,10 +5974,6 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-12"
-    },
-    {
-      "stage": "app_review",
       "date": "2026-07-13"
     },
     {
@@ -7330,10 +6078,6 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-13"
-    },
-    {
-      "stage": "app_review",
       "date": "2026-07-14"
     },
     {
@@ -7355,10 +6099,6 @@ var DASHBOARD_DATA = {
     {
       "stage": "app_review",
       "date": "2026-07-14"
-    },
-    {
-      "stage": "hm_interview",
-      "date": "2026-08-01"
     },
     {
       "stage": "app_review",
@@ -7455,10 +6195,6 @@ var DASHBOARD_DATA = {
     {
       "stage": "app_review",
       "date": "2026-07-15"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-14"
     },
     {
       "stage": "app_review",
@@ -7978,7 +6714,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-28"
+      "date": "2026-08-17"
     },
     {
       "stage": "app_review",
@@ -8133,10 +6869,6 @@ var DASHBOARD_DATA = {
       "date": "2026-07-16"
     },
     {
-      "stage": "hm_interview",
-      "date": "2026-07-24"
-    },
-    {
       "stage": "app_review",
       "date": "2026-07-16"
     },
@@ -8203,10 +6935,6 @@ var DASHBOARD_DATA = {
     {
       "stage": "app_review",
       "date": "2026-07-16"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-17"
     },
     {
       "stage": "app_review",
@@ -8554,11 +7282,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "hm_interview",
-      "date": "2026-07-29"
-    },
-    {
-      "stage": "recruiter",
-      "date": "2026-08-05"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
@@ -8602,7 +7326,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-21"
+      "date": "2026-08-14"
     },
     {
       "stage": "app_review",
@@ -8617,8 +7341,8 @@ var DASHBOARD_DATA = {
       "date": "2026-07-31"
     },
     {
-      "stage": "hm_interview",
-      "date": "2026-07-24"
+      "stage": "technical",
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
@@ -9666,51 +8390,7 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-23"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-07-24"
-    },
-    {
-      "stage": "hm_interview",
-      "date": "2026-07-29"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
@@ -9774,6 +8454,34 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
+      "date": "2026-08-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-24"
+    },
+    {
+      "stage": "app_review",
       "date": "2026-07-24"
     },
     {
@@ -9803,6 +8511,18 @@ var DASHBOARD_DATA = {
     {
       "stage": "app_review",
       "date": "2026-07-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-07-24"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
@@ -10157,8 +8877,8 @@ var DASHBOARD_DATA = {
       "date": "2026-07-27"
     },
     {
-      "stage": "recruiter",
-      "date": "2026-08-05"
+      "stage": "hm_interview",
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
@@ -10469,8 +9189,8 @@ var DASHBOARD_DATA = {
       "date": "2026-07-30"
     },
     {
-      "stage": "hm_interview",
-      "date": "2026-08-06"
+      "stage": "technical",
+      "date": "2026-08-14"
     },
     {
       "stage": "app_review",
@@ -10558,10 +9278,6 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "app_review",
-      "date": "2026-07-30"
-    },
-    {
-      "stage": "recruiter",
       "date": "2026-07-30"
     },
     {
@@ -10814,579 +9530,1123 @@ var DASHBOARD_DATA = {
     },
     {
       "stage": "recruiter",
-      "date": "2026-08-03"
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "technical",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
     },
     {
       "stage": "recruiter",
-      "date": "2026-08-03"
+      "date": "2026-08-10"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-04"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-12"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-05"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
     },
     {
       "stage": "recruiter",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-06"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-07"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-11"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-08"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-09"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-12"
     },
     {
       "stage": "hm_interview",
-      "date": "2026-08-06"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-09"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-09"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-09"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-09"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-09"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-04"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-07"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-05"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-05"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-05"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-05"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-05"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-05"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "recruiter",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-10"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-05"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
-    },
-    {
-      "stage": "recruiter",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
-      "stage": "app_review",
-      "date": "2026-08-06"
+      "stage": "offer",
+      "date": "2026-08-11"
     },
     {
       "stage": "hm_interview",
-      "date": "2026-08-08"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-11"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
-    },
-    {
-      "stage": "recruiter",
-      "date": "2026-08-06"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-06"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-07"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-07"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-07"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-08"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-09"
-    },
-    {
-      "stage": "app_review",
-      "date": "2026-08-09"
+      "date": "2026-08-12"
     },
     {
       "stage": "recruiter",
-      "date": "2026-08-09"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-09"
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-09"
+      "date": "2026-08-12"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-12"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-09"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-09"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-09"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
     },
     {
       "stage": "app_review",
-      "date": "2026-08-10"
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-13"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-14"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-15"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-15"
+    },
+    {
+      "stage": "recruiter",
+      "date": "2026-08-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-16"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
+    },
+    {
+      "stage": "app_review",
+      "date": "2026-08-17"
     }
   ],
   "passthrough": {
-    "app_to_recruiter": 1,
-    "recruiter_to_hm": 56,
-    "hm_to_technical": 36,
-    "technical_to_offer": 25,
-    "offer_to_hired": 83
+    "app_to_recruiter": 2,
+    "recruiter_to_hm": 37,
+    "hm_to_technical": 65,
+    "technical_to_offer": 27,
+    "offer_to_hired": 81
   },
   "outreach": [
     {
@@ -11415,6 +10675,14 @@ var DASHBOARD_DATA = {
     }
   ],
   "ytd_hires": [
+    {
+      "name": "Sarah Murphy",
+      "role": "Staff Site Reliability Engineer",
+      "team": "Engineering",
+      "date": "2026-08-14",
+      "status": "Accepted",
+      "source": "Referral"
+    },
     {
       "name": "Hailey Elizabeth",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
@@ -11577,6 +10845,21 @@ var DASHBOARD_DATA = {
     }
   ],
   "offers": [
+    {
+      "name": "Rafe Chisolm",
+      "role": "Lead Product Designer",
+      "team": "Product",
+      "status": "Declined",
+      "date": "2026-08-16",
+      "decline_reason": ""
+    },
+    {
+      "name": "Sarah Murphy",
+      "role": "Staff Site Reliability Engineer",
+      "team": "Engineering",
+      "status": "Accepted",
+      "date": "2026-08-14"
+    },
     {
       "name": "Hailey Elizabeth",
       "role": "Senior Product Engineer, Agentic Systems - Exploration Team",
@@ -11795,7 +11078,7 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 699",
+          "label": "Application Review 715",
           "type": "default"
         },
         {
@@ -11804,10 +11087,6 @@ var DASHBOARD_DATA = {
         },
         {
           "label": "HM Review 1",
-          "type": "default"
-        },
-        {
-          "label": "Technical Assessment 1",
           "type": "default"
         }
       ],
@@ -11826,15 +11105,15 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 195",
+          "label": "Application Review 207",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 2",
+          "label": "Recruiter Interview 3",
           "type": "default"
         },
         {
-          "label": "HM Interview 2",
+          "label": "HM Interview 3",
           "type": "default"
         },
         {
@@ -11857,11 +11136,11 @@ var DASHBOARD_DATA = {
       "priority": "high",
       "stages": [
         {
-          "label": "Application Review 120",
+          "label": "Application Review 143",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 10",
+          "label": "Recruiter Interview 8",
           "type": "default"
         },
         {
@@ -11871,6 +11150,10 @@ var DASHBOARD_DATA = {
         {
           "label": "Technical Assessment 2",
           "type": "default"
+        },
+        {
+          "label": "Offer 1",
+          "type": "offer"
         }
       ],
       "status": "risk",
@@ -11888,11 +11171,11 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 82",
+          "label": "Application Review 94",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 4",
+          "label": "Recruiter Interview 5",
           "type": "default"
         },
         {
@@ -11902,10 +11185,6 @@ var DASHBOARD_DATA = {
         {
           "label": "Technical Assessment 1",
           "type": "default"
-        },
-        {
-          "label": "Offer 1",
-          "type": "offer"
         }
       ],
       "status": "risk",
@@ -11923,7 +11202,7 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 65",
+          "label": "Application Review 67",
           "type": "default"
         },
         {
@@ -11931,7 +11210,11 @@ var DASHBOARD_DATA = {
           "type": "default"
         },
         {
-          "label": "HM Interview 5",
+          "label": "HM Interview 1",
+          "type": "default"
+        },
+        {
+          "label": "Technical Assessment 2",
           "type": "default"
         }
       ],
@@ -11939,29 +11222,6 @@ var DASHBOARD_DATA = {
       "status_overridden": false,
       "status_label": "Just kicked off",
       "note": "Anabella ramping sourcing. Building pipeline."
-    },
-    {
-      "title": "Staff Site Reliability Engineer",
-      "req_id": "R61",
-      "recruiter": "Anabella",
-      "date_opened": "2026-06-22",
-      "headcount": 1,
-      "meta": "R61 · Anabella",
-      "priority": "normal",
-      "stages": [
-        {
-          "label": "Application Review 205",
-          "type": "default"
-        },
-        {
-          "label": "Trial Day 1",
-          "type": "default"
-        }
-      ],
-      "status": "progress",
-      "status_overridden": false,
-      "status_label": "In progress",
-      "note": ""
     },
     {
       "title": "Senior Product Manager, AI Safety",
@@ -11973,19 +11233,19 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 305",
+          "label": "Application Review 328",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 6",
+          "label": "Recruiter Interview 7",
           "type": "default"
         },
         {
-          "label": "HM Interview 5",
+          "label": "HM Interview 2",
           "type": "default"
         },
         {
-          "label": "Technical Assessment 1",
+          "label": "Technical Assessment 4",
           "type": "default"
         }
       ],
@@ -12004,16 +11264,35 @@ var DASHBOARD_DATA = {
       "priority": "normal",
       "stages": [
         {
-          "label": "Application Review 845",
+          "label": "Application Review 546",
           "type": "default"
         },
         {
-          "label": "Recruiter Interview 7",
+          "label": "Recruiter Interview 13",
           "type": "default"
         },
         {
-          "label": "HM Interview 1",
+          "label": "HM Interview 2",
           "type": "default"
+        }
+      ],
+      "status": "progress",
+      "status_overridden": false,
+      "status_label": "In progress",
+      "note": ""
+    },
+    {
+      "title": "Technical Recruiter (Test)",
+      "req_id": "R66",
+      "recruiter": "Andres",
+      "date_opened": "2026-08-11",
+      "headcount": 1,
+      "meta": "R66 · Andres",
+      "priority": "normal",
+      "stages": [
+        {
+          "label": "Offer 1",
+          "type": "offer"
         }
       ],
       "status": "progress",
